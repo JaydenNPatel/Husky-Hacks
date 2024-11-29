@@ -1,26 +1,25 @@
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (1, 0001, 'Sales Summary Report', '2024-01-12 09:45:23', 'Monthly sales increased by 15%.');
+VALUES (1, 0001, 'Coding Progress Report', '2024-01-12 09:45:23', 'Tracked improvements in JavaScript and Python projects.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (2, 0002, 'User Activity Log', '2024-02-05 16:32:11', 'User activity has been stable.');
+VALUES (2, 0002, 'Data Analysis Feedback Report', '2024-01-20 16:32:11', 'Received feedback focused on improving dataset organization.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (3, 0003, 'Performance Metrics', '2024-03-08 10:17:45', 'Performance remained steady.');
+VALUES (3, 0003, 'System Health Check Report', '2024-01-25 11:10:45', 'All systems operational with minor performance lags.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (4, 0004, 'System Health Check', '2024-04-15 13:00:00', 'System passed all tests.');
+VALUES (4, 0004, 'User Engagement Metrics Report', '2024-02-05 13:00:00', 'Engagement rates are steady with a 5% increase this month.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (5, 0001, 'Error Analysis Report', '2024-05-20 14:25:36', 'Errors reduced by 20%.');
+VALUES (5, 0001, 'Interview Preparation Insights', '2024-02-12 14:25:36', 'Generated coding challenge insights for technical interviews.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (6, 0002, 'Network Usage Report', '2024-06-10 10:30:12', 'Network traffic increased slightly.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (7, 0003, 'Security Audit', '2024-07-25 11:45:33', 'No major security issues found.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (8, 0004, 'CPU Performance Report', '2024-08-19 14:10:45', 'CPU performance stable.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (9, 0001, 'Monthly Revenue Report', '2024-09-01 09:20:58', 'Revenue increased by 5%.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (10, 0002, 'Weekly Error Log', '2024-10-15 13:55:12', 'No critical errors reported.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
-VALUES (11, 0003, 'Server Load Report', '2024-01-05 14:20:45', 'Server load is within acceptable limits.');
-INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
+VALUES (6, 0002, 'Project Improvement Recommendations', '2024-02-20 09:30:12', 'Recommendations made for enhancing visual data presentation.');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (7, 0003, 8, 'Scheduled maintenance window for system upgrade.', 'system_upgrade', '2024-02-15 09:30:00');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (8, 0004, 10, 'Unusual spike in user activity detected.', 'user_spike', '2024-02-18 13:45:20');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (9, 0001, 9, 'New coding challenge available for data structures.', 'new_challenge', '2024-02-20 08:10:12');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (10, 0002, 6, 'Feedback received on your latest project submission.', 'project_feedback', '2024-02-23 15:22:45');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (11, 0003, 7, 'Data integrity issue detected during nightly backup.', 'backup_failure', '2024-02-25 11:55:32');
 VALUES (12, 0004, 'Database Integrity Report', '2024-01-10 09:45:15', 'Database integrity verified successfully.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
 VALUES (13, 0001, 'Network Security Report', '2024-01-15 11:35:40', 'Network security audit passed.');
