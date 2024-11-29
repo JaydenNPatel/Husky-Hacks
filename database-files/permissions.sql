@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (1, 0001, 'Admin', 0002, '3/11/2024 20:10:48');
 insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (2, 0001, 'Edit', 0003, '8/15/2024 21:50:35');
 insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (3, 0001, 'Edit', 0004, '1/28/2024 03:10:24');
