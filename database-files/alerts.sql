@@ -48,4 +48,4 @@ INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, c
 (47, 2, 8, 'System event: Scheduled maintenance.', 'System maintenance', '2024-09-17 16:45:30'),
 (48, 12, 5, 'Application crash detected.', 'Crash event', '2024-11-22 04:35:12'),
 (49, 8, 3, 'Report review completed.', 'Review finalized', '2024-09-24 18:00:20'),
-(50, 13, 7, 'Archived data access notification.', 'Archived data flagged', '2024-10-
+(50, 13, 7, 'Archived data access notification.', 'Archived data flagged', '2024-10-22 10:28:43');
