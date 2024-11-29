@@ -1,100 +1,101 @@
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (1, 0001, 3, 'System update successful.', 'update', '2024-01-15 10:23:45');
+VALUES (1, 0001, 3, 'Feedback received for your coding project.', 'feedback', '2024-01-15 10:23:45');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (2, 0002, 1, 'Failed login attempt detected.', 'login', '2024-02-20 08:10:12');
+VALUES (2, 0002, 1, 'Beginner-friendly guidance available for data analysis.', 'guidance', '2024-01-20 12:30:20');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (3, 0003, 2, 'Memory usage exceeded limit.', 'memory', '2024-03-05 14:45:32');
+VALUES (3, 0003, 2, 'System update scheduled for next week.', 'system_update', '2024-01-25 09:15:33');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (4, 0004, 4, 'Critical system error occurred.', 'system', '2024-04-10 09:12:00');
+VALUES (4, 0004, 5, 'Significant drop in user engagement detected.', 'metric_drop', '2024-02-01 14:12:00');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (5, 0001, 5, 'New notification received.', 'notification', '2024-05-22 11:30:54');
+VALUES (5, 0001, 4, 'New coding challenge added for web development.', 'new_challenge', '2024-02-05 11:45:54');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (6, 0002, 2, 'Database backup failed.', 'backup', '2024-06-15 08:40:10');
+VALUES (6, 0002, 5, 'Feedback provided on your soccer data analysis.', 'feedback', '2024-02-10 08:55:10');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (7, 0003, 4, 'Network latency detected.', 'network', '2024-07-01 12:25:33');
+VALUES (7, 0003, 8, 'Scheduled maintenance window for system upgrade.', 'system_upgrade', '2024-02-15 09:30:00');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (8, 0004, 3, 'High CPU usage detected.', 'CPU', '2024-08-10 14:58:44');
+VALUES (8, 0004, 10, 'Unusual spike in user activity detected.', 'user_spike', '2024-02-18 13:45:20');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (9, 0001, 1, 'Unauthorized access detected.', 'access', '2024-09-05 16:20:11');
+VALUES (9, 0001, 9, 'New coding challenge available for data structures.', 'new_challenge', '2024-02-20 08:10:12');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (10, 0002, 5, 'Server reboot required.', 'reboot', '2024-10-20 17:45:22');
+VALUES (10, 0002, 6, 'Feedback received on your latest project submission.', 'project_feedback', '2024-02-23 15:22:45');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (11, 0003, 3, 'User session timed out.', 'timeout', '2024-01-25 09:12:40');
+VALUES (11, 0003, 7, 'Data integrity issue detected during nightly backup.', 'backup_failure', '2024-02-25 11:55:32');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (12, 0004, 4, 'System overload alert.', 'overload', '2024-02-18 15:22:30');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (13, 0001, 2, 'Data threshold breached.', 'threshold', '2024-03-19 11:05:55');
+VALUES (12, 0001, 6, 'You have new feedback on your web development project.', 'project_feedback', '2024-03-03 10:12:45');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (14, 0002, 5, 'Notification sent.', 'email', '2024-04-01 13:45:25');
+VALUES (13, 0002, 10, 'User engagement increased significantly after your recent update.', 'engagement_increase', '2024-03-05 08:30:15');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (15, 0003, 1, 'Disk space running low.', 'disk_space', '2024-05-10 08:32:15');
+VALUES (14, 0003, 7, 'A potential data integrity issue was flagged in the backup.', 'data_integrity_flag', '2024-03-08 14:15:33');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (16, 0004, 3, 'CPU temperature high.', 'temperature', '2024-06-18 12:45:40');
+VALUES (15, 0004, 8, 'System load is higher than normal, monitoring initiated.', 'high_load', '2024-03-12 13:22:18');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (17, 0001, 4, 'Critical data loss detected.', 'data_loss', '2024-07-07 18:30:22');
+VALUES (16, 0001, 9, 'New coding challenge added for dynamic programming.', 'challenge_update', '2024-03-15 16:25:52');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (18, 0002, 2, 'Memory allocation failure.', 'memory_allocation', '2024-08-12 15:55:30');
+VALUES (17, 0002, 6, 'Received constructive feedback on your data analysis project.', 'feedback_received', '2024-03-18 09:50:44');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (19, 0003, 5, 'Backup completed successfully.', 'backup_complete', '2024-09-15 09:45:25');
+VALUES (18, 0003, 10, 'Engagement metrics dropped by 8% this week.', 'engagement_drop', '2024-03-22 15:35:30');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (20, 0004, 1, 'Error in data synchronization.', 'data_sync', '2024-10-01 11:55:12');
+VALUES (19, 0004, 7, 'Automated backup completed successfully.', 'backup_success', '2024-03-25 12:30:55');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (21, 0003, 2, 'High memory usage detected.', 'memory', '2024-10-05 13:40:15');
+VALUES (20, 0001, 8, 'System maintenance scheduled for tomorrow.', 'maintenance_scheduled', '2024-03-28 11:45:20');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (22, 0004, 3, 'Unauthorized file access attempt.', 'file_access', '2024-10-12 16:45:25');
+VALUES (21, 0002, 9, 'New coding challenge on machine learning is now available.', 'new_challenge', '2024-04-01 10:30:22');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (23, 0001, 4, 'Database query failed.', 'query_failure', '2024-10-18 11:22:33');
+VALUES (22, 0003, 6, 'Feedback available on system audit report.', 'feedback_audit', '2024-04-04 13:50:11');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (24, 0002, 5, 'New software version available.', 'update_available', '2024-10-20 14:33:52');
+VALUES (23, 0004, 7, 'Minor data discrepancy detected in recent analysis.', 'data_discrepancy', '2024-04-08 14:55:25');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (25, 0003, 1, 'User logged out unexpectedly.', 'user_logout', '2024-10-25 17:15:08');
+VALUES (24, 0001, 8, 'System load has returned to normal levels.', 'load_normal', '2024-04-12 09:12:32');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (26, 0004, 2, 'Failed API request detected.', 'api_failure', '2024-10-27 09:30:54');
+VALUES (25, 0002, 10, 'Engagement spike detected in your latest project.', 'engagement_spike', '2024-04-15 08:20:47');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (27, 0001, 3, 'Server downtime warning.', 'downtime_warning', '2024-10-30 12:40:22');
+VALUES (26, 0003, 9, 'A new coding challenge on sorting algorithms is available.', 'challenge_sorting', '2024-04-18 11:22:19');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (28, 0002, 4, 'New admin account created.', 'new_admin', '2024-11-02 10:10:18');
+VALUES (27, 0004, 7, 'Data backup process completed without issues.', 'backup_complete', '2024-04-21 12:55:08');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (29, 0003, 5, 'Email delivery failure.', 'email_failure', '2024-11-04 14:15:47');
+VALUES (28, 0001, 8, 'System performance optimization in progress.', 'performance_optimization', '2024-04-25 13:40:33');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (30, 0004, 1, 'Configuration settings changed.', 'config_change', '2024-11-08 09:05:34');
+VALUES (29, 0002, 6, 'Your project feedback session is scheduled for next week.', 'feedback_scheduled', '2024-04-28 10:12:15');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (31, 0001, 2, 'Database connection lost.', 'db_connection', '2024-11-10 08:23:12');
+VALUES (30, 0003, 10, 'User engagement metrics stabilized after last update.', 'metrics_stable', '2024-05-01 15:45:20');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (32, 0002, 3, 'Password reset request.', 'password_reset', '2024-11-13 11:40:52');
+VALUES (31, 0004, 7, 'Minor data inconsistency flagged in system audit.', 'data_flagged', '2024-05-04 09:30:41');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (33, 0003, 4, 'Service restart required.', 'service_restart', '2024-11-15 16:20:11');
+VALUES (32, 0001, 9, 'Coding challenge on recursion techniques released.', 'challenge_recursion', '2024-05-07 14:50:33');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (34, 0004, 5, 'Disk read error.', 'disk_error', '2024-11-17 09:30:27');
+VALUES (33, 0002, 8, 'Scheduled maintenance for database upgrade.', 'maintenance_database', '2024-05-10 12:25:47');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (35, 0001, 1, 'Malware scan completed.', 'malware_scan', '2024-11-20 08:45:32');
+VALUES (34, 0003, 6, 'New feedback provided on the server health report.', 'server_health', '2024-05-13 08:10:22');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (36, 0002, 2, 'Access log tampering detected.', 'log_tampering', '2024-11-23 10:10:55');
+VALUES (35, 0004, 10, 'Increased user engagement in your most recent study.', 'engagement_increase', '2024-05-16 16:30:15');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (37, 0003, 3, 'New IP address login detected.', 'ip_login', '2024-11-26 13:50:44');
+VALUES (36, 0001, 7, 'Backup process completed with minor warnings.', 'backup_warnings', '2024-05-20 14:45:30');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (38, 0004, 4, 'Memory allocation exceeded.', 'allocation_exceed', '2024-11-29 11:23:01');
+VALUES (37, 0002, 9, 'Challenge added for graph traversal techniques.', 'challenge_graph', '2024-05-23 09:12:14');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (39, 0001, 5, 'Low system resources.', 'low_resources', '2024-12-01 14:17:33');
+VALUES (38, 0003, 6, 'Feedback available on security audit report.', 'security_audit', '2024-05-26 15:35:22');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (40, 0002, 1, 'Service deployment failed.', 'deployment_failure', '2024-12-03 08:30:14');
+VALUES (39, 0004, 8, 'System load monitoring restored after incident.', 'load_restored', '2024-05-29 12:12:11');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (41, 0003, 2, 'Session hijacking attempt.', 'session_hijack', '2024-12-07 15:55:30');
+VALUES (40, 0001, 10, 'User engagement report for last quarter available.', 'quarterly_report', '2024-06-01 13:50:32');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (42, 0004, 3, 'SSL certificate expired.', 'ssl_expired', '2024-12-09 09:25:45');
+VALUES (41, 0002, 7, 'Automated system diagnostics completed successfully.', 'diagnostics_success', '2024-06-04 11:15:14');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (43, 0001, 4, 'Login credentials compromised.', 'credentials_compromise', '2024-12-12 14:40:33');
+VALUES (42, 0003, 9, 'New coding challenge for array manipulation.', 'challenge_array', '2024-06-07 14:30:27');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (44, 0002, 5, 'Data migration failed.', 'data_migration', '2024-12-15 16:10:58');
+VALUES (43, 0004, 6, 'Feedback session summary available for your audit.', 'audit_feedback', '2024-06-10 10:55:11');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (45, 0003, 1, 'Network packet loss detected.', 'packet_loss', '2024-12-18 17:50:45');
+VALUES (44, 0001, 8, 'System optimization procedures completed.', 'optimization_complete', '2024-06-13 09:40:44');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (46, 0004, 2, 'Backup verification failed.', 'backup_verify', '2024-12-21 10:55:14');
+VALUES (45, 0002, 10, 'Engagement metrics for your new project are live.', 'metrics_live', '2024-06-16 13:22:45');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (47, 0001, 3, 'External drive error detected.', 'drive_error', '2024-12-25 11:40:29');
+VALUES (46, 0003, 9, 'Challenge on linked list operations added.', 'challenge_linked_list', '2024-06-19 12:25:33');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (48, 0002, 4, 'Unauthorized application installed.', 'unauthorized_app', '2024-12-28 14:12:11');
+VALUES (47, 0004, 6, 'Updated feedback on your recent data upload.', 'data_upload_feedback', '2024-06-22 15:50:28');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (49, 0003, 5, 'System reboot completed.', 'reboot_completed', '2024-12-30 16:55:55');
+VALUES (48, 0001, 10, 'Engagement levels are steady across your projects.', 'steady_engagement', '2024-06-25 08:12:41');
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (50, 0004, 1, 'Critical network failure detected.', 'network_failure', '2024-12-31 23:55:22');
+VALUES (49, 0002, 7, 'System audit diagnostics flagged minor issues.', 'audit_issues_flagged', '2024-06-28 13:45:47');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
+VALUES (50, 0003, 8, 'System downtime alert resolved.', 'downtime_resolved', '2024-06-30 16:30:14');
