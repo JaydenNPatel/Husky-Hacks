@@ -224,6 +224,7 @@ CREATE TABLE real_time_dashboard (
 CREATE TABLE archived_data (
     archive_id int AUTO_INCREMENT NOT NULL,
     metric_id int NOT NULL,
+    metric_type varchar(50) NOT NULL;
     archived_timestamp datetime DEFAULT CURRENT_TIMESTAMP NOT NULL
                            ON UPDATE CURRENT_TIMESTAMP,
     archived_by int NOT NULL,
