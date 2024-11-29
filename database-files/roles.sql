@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into roles (role_id, role_title) values (1, 'Student');
 insert into roles (role_id, role_title) values (2, 'Student');
 insert into roles (role_id, role_title) values (3, 'System Administrator');

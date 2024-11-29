@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0101, 0001, 'Healthcare Correlation','Found the correlation between different healthcare providers and disease rates','Healthcare', '1/01/2023 10:58:38', true);
 insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0102, 0001, 'Web Development Basics','Coded for basic web development features','Web Development', '2/02/2023 15:52:43', false);
 insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0103, 0001, 'Website Visualization','Visualized a Website that had to do with Education','Website', '3/03/2023 06:17:42', false);

@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (1, 0101, 0002, 'Make code more efficient', 4, '1/02/2023 08:36:58');
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (2, 0102, 0002, 'Great use of functions', 8, '2/03/2023 09:17:37');
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (3, 0103, 0002, 'Great job visualizing', 6, '3/04/2023 04:26:34');

@@ -1,3 +1,4 @@
+use Husky_Hacks;
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 
 VALUES (1, 0001, 'Coding Progress Report', '2024-01-12 09:45:23', 'Tracked improvements in JavaScript and Python projects.');
 INSERT INTO reports (report_id, generated_by, name, generate_date, content) 

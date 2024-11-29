@@ -1,3 +1,4 @@
+use Husky_Hacks;
 INSERT INTO alert_type (type_id, type_name) VALUES (1, 'Feedback Request');
 INSERT INTO alert_type (type_id, type_name) VALUES (2, 'New Project Assigned');
 INSERT INTO alert_type (type_id, type_name) VALUES (3, 'Report Submission');

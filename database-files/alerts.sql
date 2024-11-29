@@ -1,3 +1,4 @@
+use Husky_Hacks;
 INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) VALUES 
 (1, 3, 1, 'Student requested feedback on project XYZ.', 'Feedback pending for 7 days', '2024-10-05 10:45:23'),
 (2, 4, 2, 'You have been assigned a new project: Data Analytics Dashboard.', 'Project assignment', '2024-09-12 14:22:10'),

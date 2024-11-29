@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into progress (progress_id, project_id, progress_description, progress_date) values (01, 0101, 'Completed correlation analysis', '1/06/2023 19:59:47');
 insert into progress (progress_id, project_id, progress_description, progress_date) values (02, 0102, 'Added two web development features', '2/07/2023 10:57:53');
 insert into progress (progress_id, project_id, progress_description, progress_date) values (03, 0103, 'Made title page', '3/08/2023 07:31:45');
