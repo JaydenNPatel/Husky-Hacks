@@ -210,6 +210,7 @@ CREATE TABLE real_time_dashboard (
     last_refreshed datetime DEFAULT CURRENT_TIMESTAMP NOT NULL
                                  ON UPDATE CURRENT_TIMESTAMP,
     metric_id int NOT NULL,
+    metric_type varchar(50) NOT NULL,
     PRIMARY KEY (dashboard_id),
     FOREIGN KEY (metric_id) references user_engagement_metrics(metric_id)
                                  ON UPDATE CASCADE ON DELETE RESTRICT,
