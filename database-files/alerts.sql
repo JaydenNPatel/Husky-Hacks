@@ -1,101 +1,51 @@
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (1, 0001, 3, 'Feedback received for your coding project.', 'feedback', '2024-01-15 10:23:45');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (2, 0002, 1, 'Beginner-friendly guidance available for data analysis.', 'guidance', '2024-01-20 12:30:20');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (3, 0003, 2, 'System update scheduled for next week.', 'system_update', '2024-01-25 09:15:33');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (4, 0004, 5, 'Significant drop in user engagement detected.', 'metric_drop', '2024-02-01 14:12:00');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (5, 0001, 4, 'New coding challenge added for web development.', 'new_challenge', '2024-02-05 11:45:54');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (6, 0002, 5, 'Feedback provided on your soccer data analysis.', 'feedback', '2024-02-10 08:55:10');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (7, 0003, 8, 'Scheduled maintenance window for system upgrade.', 'system_upgrade', '2024-02-15 09:30:00');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (8, 0004, 10, 'Unusual spike in user activity detected.', 'user_spike', '2024-02-18 13:45:20');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (9, 0001, 9, 'New coding challenge available for data structures.', 'new_challenge', '2024-02-20 08:10:12');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (10, 0002, 6, 'Feedback received on your latest project submission.', 'project_feedback', '2024-02-23 15:22:45');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (11, 0003, 7, 'Data integrity issue detected during nightly backup.', 'backup_failure', '2024-02-25 11:55:32');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (12, 0001, 6, 'You have new feedback on your web development project.', 'project_feedback', '2024-03-03 10:12:45');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (13, 0002, 10, 'User engagement increased significantly after your recent update.', 'engagement_increase', '2024-03-05 08:30:15');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (14, 0003, 7, 'A potential data integrity issue was flagged in the backup.', 'data_integrity_flag', '2024-03-08 14:15:33');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (15, 0004, 8, 'System load is higher than normal, monitoring initiated.', 'high_load', '2024-03-12 13:22:18');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (16, 0001, 9, 'New coding challenge added for dynamic programming.', 'challenge_update', '2024-03-15 16:25:52');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (17, 0002, 6, 'Received constructive feedback on your data analysis project.', 'feedback_received', '2024-03-18 09:50:44');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (18, 0003, 10, 'Engagement metrics dropped by 8% this week.', 'engagement_drop', '2024-03-22 15:35:30');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (19, 0004, 7, 'Automated backup completed successfully.', 'backup_success', '2024-03-25 12:30:55');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (20, 0001, 8, 'System maintenance scheduled for tomorrow.', 'maintenance_scheduled', '2024-03-28 11:45:20');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (21, 0002, 9, 'New coding challenge on machine learning is now available.', 'new_challenge', '2024-04-01 10:30:22');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (22, 0003, 6, 'Feedback available on system audit report.', 'feedback_audit', '2024-04-04 13:50:11');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (23, 0004, 7, 'Minor data discrepancy detected in recent analysis.', 'data_discrepancy', '2024-04-08 14:55:25');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (24, 0001, 8, 'System load has returned to normal levels.', 'load_normal', '2024-04-12 09:12:32');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (25, 0002, 10, 'Engagement spike detected in your latest project.', 'engagement_spike', '2024-04-15 08:20:47');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (26, 0003, 9, 'A new coding challenge on sorting algorithms is available.', 'challenge_sorting', '2024-04-18 11:22:19');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (27, 0004, 7, 'Data backup process completed without issues.', 'backup_complete', '2024-04-21 12:55:08');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (28, 0001, 8, 'System performance optimization in progress.', 'performance_optimization', '2024-04-25 13:40:33');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (29, 0002, 6, 'Your project feedback session is scheduled for next week.', 'feedback_scheduled', '2024-04-28 10:12:15');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (30, 0003, 10, 'User engagement metrics stabilized after last update.', 'metrics_stable', '2024-05-01 15:45:20');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (31, 0004, 7, 'Minor data inconsistency flagged in system audit.', 'data_flagged', '2024-05-04 09:30:41');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (32, 0001, 9, 'Coding challenge on recursion techniques released.', 'challenge_recursion', '2024-05-07 14:50:33');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (33, 0002, 8, 'Scheduled maintenance for database upgrade.', 'maintenance_database', '2024-05-10 12:25:47');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (34, 0003, 6, 'New feedback provided on the server health report.', 'server_health', '2024-05-13 08:10:22');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (35, 0004, 10, 'Increased user engagement in your most recent study.', 'engagement_increase', '2024-05-16 16:30:15');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (36, 0001, 7, 'Backup process completed with minor warnings.', 'backup_warnings', '2024-05-20 14:45:30');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (37, 0002, 9, 'Challenge added for graph traversal techniques.', 'challenge_graph', '2024-05-23 09:12:14');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (38, 0003, 6, 'Feedback available on security audit report.', 'security_audit', '2024-05-26 15:35:22');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (39, 0004, 8, 'System load monitoring restored after incident.', 'load_restored', '2024-05-29 12:12:11');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (40, 0001, 10, 'User engagement report for last quarter available.', 'quarterly_report', '2024-06-01 13:50:32');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (41, 0002, 7, 'Automated system diagnostics completed successfully.', 'diagnostics_success', '2024-06-04 11:15:14');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (42, 0003, 9, 'New coding challenge for array manipulation.', 'challenge_array', '2024-06-07 14:30:27');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (43, 0004, 6, 'Feedback session summary available for your audit.', 'audit_feedback', '2024-06-10 10:55:11');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (44, 0001, 8, 'System optimization procedures completed.', 'optimization_complete', '2024-06-13 09:40:44');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (45, 0002, 10, 'Engagement metrics for your new project are live.', 'metrics_live', '2024-06-16 13:22:45');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (46, 0003, 9, 'Challenge on linked list operations added.', 'challenge_linked_list', '2024-06-19 12:25:33');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (47, 0004, 6, 'Updated feedback on your recent data upload.', 'data_upload_feedback', '2024-06-22 15:50:28');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (48, 0001, 10, 'Engagement levels are steady across your projects.', 'steady_engagement', '2024-06-25 08:12:41');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (49, 0002, 7, 'System audit diagnostics flagged minor issues.', 'audit_issues_flagged', '2024-06-28 13:45:47');
-INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) 
-VALUES (50, 0003, 8, 'System downtime alert resolved.', 'downtime_resolved', '2024-06-30 16:30:14');
+INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, created_date) VALUES 
+(1, 3, 1, 'Student requested feedback on project XYZ.', 'Feedback pending for 7 days', '2024-10-05 10:45:23'),
+(2, 4, 2, 'You have been assigned a new project: Data Analytics Dashboard.', 'Project assignment', '2024-09-12 14:22:10'),
+(3, 5, 3, 'Report submitted for Project ABC.', 'Report status: Submitted', '2024-11-01 08:15:45'),
+(4, 7, 4, 'Your permissions have been updated to Admin.', 'Permission change approved', '2024-08-29 11:37:55'),
+(5, 9, 6, 'Progress review due for Project Delta.', 'Review scheduled', '2024-11-14 16:10:10'),
+(6, 2, 7, 'Data archived for Metrics Dashboard.', 'Archive policy applied', '2024-07-30 09:05:34'),
+(7, 8, 1, 'Feedback requested on system performance.', 'User submitted feedback', '2024-10-20 12:00:00'),
+(8, 11, 8, 'New notification: Threshold breached for CPU usage.', 'Threshold breach', '2024-11-10 18:23:49'),
+(9, 6, 9, 'Alert: Revenue metrics exceeded threshold.', 'Revenue > $1M', '2024-11-25 22:10:30'),
+(10, 12, 10, 'User status changed to Inactive.', 'Inactive for 30 days', '2024-09-07 13:18:40'),
+(11, 2, 1, 'Student requested additional feedback.', 'Pending review for Task 2', '2024-10-28 15:32:12'),
+(12, 3, 5, 'Critical system error reported.', 'Error code: 500', '2024-11-02 09:45:20'),
+(13, 1, 8, 'New notification: Data source updated.', 'Source refresh complete', '2024-09-15 19:12:50'),
+(14, 10, 6, 'Progress milestone reached for Project Epsilon.', 'Milestone: 50% Complete', '2024-10-05 14:55:45'),
+(15, 4, 9, 'Threshold exceeded: Transactions spike.', 'Transactions > 1K/hour', '2024-08-22 17:22:35'),
+(16, 13, 2, 'Project Alpha has been assigned to your team.', 'New project alert', '2024-09-30 11:47:02'),
+(17, 5, 1, 'Feedback requested on recent submission.', 'Feedback request', '2024-10-18 10:25:13'),
+(18, 7, 4, 'Access level changed to Viewer.', 'Permissions reduced', '2024-08-10 20:50:55'),
+(19, 9, 5, 'System downtime detected.', 'Downtime > 10 minutes', '2024-11-23 02:10:05'),
+(20, 2, 7, 'Archived data review required.', 'Data archive', '2024-09-19 06:15:18'),
+(21, 1, 3, 'New report submission for Metrics Dashboard.', 'Report uploaded', '2024-10-09 16:45:00'),
+(22, 8, 6, 'Progress milestone achieved: Report drafted.', 'Milestone reached', '2024-10-25 11:05:30'),
+(23, 6, 9, 'System resource usage critical.', 'CPU usage > 90%', '2024-11-28 03:10:20'),
+(24, 11, 1, 'Student feedback requested on final project.', 'Feedback needed', '2024-11-16 14:00:45'),
+(25, 5, 4, 'Permission update: Contributor role added.', 'User promoted', '2024-08-15 09:22:10'),
+(26, 12, 5, 'Error in data ingestion pipeline.', 'Job failed', '2024-11-27 13:42:33'),
+(27, 10, 10, 'User status set to pending review.', 'Manual review', '2024-09-28 07:25:00'),
+(28, 3, 8, 'New system notification: Backup completed.', 'Backup success', '2024-09-10 21:20:45'),
+(29, 7, 7, 'Data archive notification sent.', 'Archival policy triggered', '2024-11-12 08:50:22'),
+(30, 9, 6, 'Progress on research project documented.', 'Milestone log', '2024-10-04 18:14:56'),
+(31, 13, 9, 'Threshold breached for page views.', 'Page views > 500/day', '2024-10-17 10:12:00'),
+(32, 4, 1, 'Feedback required for submission.', 'Assignment pending', '2024-11-08 09:30:05'),
+(33, 2, 3, 'Final report submitted.', 'Project closed', '2024-09-26 14:11:14'),
+(34, 5, 5, 'System log recorded with error.', 'Log entry created', '2024-11-26 12:10:15'),
+(35, 1, 8, 'Notification about updated permissions.', 'Role change', '2024-10-13 15:00:00'),
+(36, 8, 10, 'User status switched to active.', 'Reactivation', '2024-09-05 11:55:40'),
+(37, 9, 4, 'Permission removal: Admin rights revoked.', 'Access updated', '2024-11-09 17:42:05'),
+(38, 12, 6, 'Progress check-in scheduled for next week.', 'Progress update', '2024-10-03 16:35:00'),
+(39, 6, 2, 'New project added to your tasks.', 'Project management', '2024-08-20 22:45:50'),
+(40, 3, 7, 'Archived data needs review.', 'Data policy', '2024-11-13 09:00:20'),
+(41, 10, 3, 'Submission acknowledged for report.', 'Acknowledged', '2024-10-19 05:15:44'),
+(42, 1, 9, 'Alert: Network latency detected.', 'Latency > 200ms', '2024-11-18 21:08:30'),
+(43, 4, 1, 'Feedback session scheduled.', 'Feedback due', '2024-11-21 13:14:15'),
+(44, 11, 2, 'Assigned new task: Market Analysis.', 'Task assignment', '2024-09-02 07:22:30'),
+(45, 5, 4, 'Permissions synchronized for team access.', 'Permissions adjusted', '2024-11-06 20:30:00'),
+(46, 7, 10, 'User account marked for audit.', 'Audit notice', '2024-10-29 02:15:00'),
+(47, 2, 8, 'System event: Scheduled maintenance.', 'System maintenance', '2024-09-17 16:45:30'),
+(48, 12, 5, 'Application crash detected.', 'Crash event', '2024-11-22 04:35:12'),
+(49, 8, 3, 'Report review completed.', 'Review finalized', '2024-09-24 18:00:20'),
+(50, 13, 7, 'Archived data access notification.', 'Archived data flagged', '2024-10-
