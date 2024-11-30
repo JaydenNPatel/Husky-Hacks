@@ -29,23 +29,29 @@ def get_user_0001_projects():
     return the_response
 
 #------------------------------------------------------------
-# Update customer info for customer with particular userID
-#   Notice the manner of constructing the query.
-@customers.route('/customers', methods=['PUT'])
-def update_customer():
-    current_app.logger.info('PUT /customers route')
-    cust_info = request.json
-    cust_id = cust_info['id']
-    first = cust_info['first_name']
-    last = cust_info['last_name']
-    company = cust_info['company']
+# Update progress description for one of alex's projects
+@alex.route('/progress', methods=['PUT'])
+def update_project_description():
+    current_app.logger.info('PUT /progress route')
+    progress_info = request.json
+    project_id = progress_info['project_id']
+    user_id = progress_info['user_id']
+    progress_description = progress_info['progress_description']
 
-    query = 'UPDATE customers SET first_name = %s, last_name = %s, company = %s where id = %s'
-    data = (first, last, company, cust_id)
+    query = '''
+        UPDATE progress 
+        SET progress_description = %s 
+        WHERE project_id = %s 
+          AND EXISTS (
+              SELECT 1 FROM projects 
+              WHERE projects.project_id = %s AND projects.user_id = %s
+          )
+    '''
+    data = (progress_description, project_id, project_id, user_id)
     cursor = db.get_db().cursor()
     r = cursor.execute(query, data)
     db.get_db().commit()
-    return 'customer updated!'
+    return 'Progress description updated!'
 
 #------------------------------------------------------------
 # Get customer detail for customer with particular userID
