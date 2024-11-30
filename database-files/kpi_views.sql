@@ -1,6 +1,6 @@
 use Husky_Hacks;
 INSERT INTO kpi_views (view_name, created_by, created_date, last_updated) VALUES
-('Monthly Revenue Analysis', 1, '9/1/2023 08:15:45', '9/5/2023 10:00:00'),
+('Revenue Analysis', 1, '9/1/2023 08:15:45', '9/5/2023 10:00:00'),
 ('Website Traffic Growth Report', 3, '9/10/2023 14:30:00', '9/12/2023 16:45:30'),
 ('Quarterly Profit and Loss Statement', 5, '9/20/2023 09:00:00', '9/22/2023 12:30:00'),
 ('New Hire Onboarding Metrics', 7, '10/5/2023 07:45:20', '10/6/2023 09:15:40'),
