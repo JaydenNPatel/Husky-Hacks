@@ -7,8 +7,7 @@ from backend.db_connection import db
 from backend.ml_models.model01 import predict
 
 #------------------------------------------------------------
-# Create a new Blueprint object, which is a collection of 
-# routes.
+# Create a new Blueprint 
 alex = Blueprint('alex', __name__)
 
 
@@ -28,8 +27,30 @@ def get_user_0001_projects():
     the_response.status_code = 200
     return the_response
 
+
 #------------------------------------------------------------
-# Update progress description for one of alex's projects
+# Get all feedback for Alex's projects
+@alex.route('/users/0001/feedback', methods=['GET'])
+def get_user_0001_feedback():
+
+    cursor = db.get_db().cursor()
+    cursor.execute('''
+        SELECT f.feedback_id, f.project_id, f.reviewer_id, f.feedback_text, 
+               f.rating, f.feedback_date 
+        FROM feedback f
+        JOIN projects p ON f.project_id = p.project_id
+        WHERE p.user_id = 0001
+    ''')
+    
+    theData = cursor.fetchall()
+    
+    the_response = make_response(jsonify(theData))
+    the_response.status_code = 200
+    return the_response
+
+
+#------------------------------------------------------------
+# Update progress description for one of Alex's projects
 @alex.route('/progress', methods=['PUT'])
 def update_project_description():
     current_app.logger.info('PUT /progress route')
@@ -51,35 +72,44 @@ def update_project_description():
     cursor = db.get_db().cursor()
     r = cursor.execute(query, data)
     db.get_db().commit()
-    return 'Progress description updated!'
+    return 'Updated progress description'
+
 
 #------------------------------------------------------------
-# Get customer detail for customer with particular userID
-#   Notice the manner of constructing the query. 
-@customers.route('/customers/<userID>', methods=['GET'])
-def get_customer(userID):
-    current_app.logger.info('GET /customers/<userID> route')
+# Adds new project for Alex
+@alex.route('/users/0001/projects', methods=['POST'])
+def add_project_for_user_0001():
+    current_app.logger.info('POST /users/0001/projects route')
+    project_info = request.json
+    title = project_info['title']
+    description = project_info.get('description', None)  
+    tags = project_info['tags']
+    is_archived = project_info.get('is_archived', False)  
+    
+    query = '''
+        INSERT INTO projects (user_id, title, description, tags, is_archived)
+        VALUES (%s, %s, %s, %s, %s)
+    '''
+    data = ('0001', title, description, tags, is_archived)  
     cursor = db.get_db().cursor()
-    cursor.execute('SELECT id, first_name, last_name FROM customers WHERE id = {0}'.format(userID))
-    
-    theData = cursor.fetchall()
-    
-    the_response = make_response(jsonify(theData))
-    the_response.status_code = 200
-    return the_response
+    r = cursor.execute(query, data)
+    db.get_db().commit()
+    return jsonify({"message": "New project added", "project_info": project_info}), 200
+
 
 #------------------------------------------------------------
-# Makes use of the very simple ML model in to predict a value
-# and returns it to the user
-@customers.route('/prediction/<var01>/<var02>', methods=['GET'])
-def predict_value(var01, var02):
-    current_app.logger.info(f'var01 = {var01}')
-    current_app.logger.info(f'var02 = {var02}')
+# Delete specific project for Alex
+@alex.route('/users/0001/projects/<int:project_id>', methods=['DELETE'])
+def delete_project_for_user_0001(project_id):
+    current_app.logger.info(f'DELETE /users/0001/projects/{project_id} route')
 
-    returnVal = predict(var01, var02)
-    return_dict = {'result': returnVal}
+    query = '''
+        DELETE FROM projects
+        WHERE project_id = %s AND user_id = %s
+    '''
+    data = (project_id, '0001')  
 
-    the_response = make_response(jsonify(return_dict))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
+    cursor = db.get_db().cursor()
+    r = cursor.execute(query, data)
+    db.get_db().commit()
+    return jsonify({"message": f"Project with id {project_id} deleted successfully"}), 200
