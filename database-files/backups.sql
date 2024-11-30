@@ -1,3 +1,4 @@
+use Husky_Hacks;
 insert into backups (backup_id, backup_date, backup_size, status, error_log_id) values ('7956006570', '11/14/2024', 102400, true, 1);
 insert into backups (backup_id, backup_date, backup_size, status, error_log_id) values ('7637143953', '10/28/2023', 25600, true, 2);
 insert into backups (backup_id, backup_date, backup_size, status, error_log_id) values ('3799860967', '10/28/2023', 102400, true, 3);
