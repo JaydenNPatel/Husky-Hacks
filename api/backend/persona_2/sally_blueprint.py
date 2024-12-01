@@ -27,3 +27,21 @@ def create_feedback_request():
     cursor.execute(query, data)
     db.get_db().commit()
     return make_response("Feedback request created successfully", 201)
+
+# Route 2: Delete unnecessary feedback (DELETE)
+@sally.route('/feedback/<id>', methods=['DELETE'])
+def delete_feedback(id):
+    query = 'DELETE FROM feedback WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Feedback deleted successfully", 200)
+
+# Route 3: Retrieve all feedback requests (GET)
+@sally.route('/feedback_requests', methods=['GET'])
+def get_feedback_requests():
+    query = 'SELECT * FROM feedback_requests'
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    feedback_requests = cursor.fetchall()
+    return make_response(jsonify(feedback_requests), 200)
