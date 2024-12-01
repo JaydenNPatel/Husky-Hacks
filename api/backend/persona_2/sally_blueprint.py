@@ -45,3 +45,27 @@ def get_feedback_requests():
     cursor.execute(query)
     feedback_requests = cursor.fetchall()
     return make_response(jsonify(feedback_requests), 200)
+
+# Route 4: Update project details after feedback (PUT)
+@sally.route('/projects/<id>', methods=['PUT'])
+def update_project_after_feedback(id):
+    project_data = request.json
+    query = '''
+        UPDATE projects
+        SET description = %s, tags = %s
+        WHERE id = %s
+    '''
+    data = (project_data['description'], project_data['tags'], id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, data)
+    db.get_db().commit()
+    return make_response("Project updated after feedback", 200)
+
+# Route 5: Retrieve constructive feedback (GET)
+@sally.route('/feedback/<id>', methods=['GET'])
+def get_feedback(id):
+    query = 'SELECT * FROM feedback WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    feedback = cursor.fetchall()
+    return make_response(jsonify(feedback), 200)
