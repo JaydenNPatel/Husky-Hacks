@@ -47,3 +47,25 @@ def update_metric(id):
     cursor.execute(query, data)
     db.get_db().commit()
     return make_response("Metric updated successfully", 200)
+
+# Route 4: Delete outdated metrics (DELETE)
+@devin.route('/metrics/<id>', methods=['DELETE'])
+def delete_metric(id):
+    query = 'DELETE FROM metrics WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Metric deleted successfully", 200)
+
+# Route 5: Retrieve real-time dashboard data (GET)
+@devin.route('/dashboard', methods=['GET'])
+def get_dashboard():
+    query = '''
+        SELECT metric_type, AVG(metric_value) AS avg_value, MAX(timestamp) AS last_updated
+        FROM metrics
+        GROUP BY metric_type
+    '''
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    dashboard_data = cursor.fetchall()
+    return make_response(jsonify(dashboard_data), 200)
