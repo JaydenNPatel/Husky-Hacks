@@ -47,3 +47,26 @@ def update_permissions(id):
     cursor.execute(query, data)
     db.get_db().commit()
     return make_response("Permission updated successfully", 200)
+
+# Route 4: Archive a user account (DELETE)
+@saquon.route('/users/<id>', methods=['DELETE'])
+def archive_user(id):
+    query = 'DELETE FROM users WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("User archived successfully", 200)
+
+# Route 5: Add an automated alert (POST)
+@saquon.route('/alerts', methods=['POST'])
+def add_alert():
+    alert_data = request.json
+    query = '''
+        INSERT INTO alerts (alert_type, description, timestamp)
+        VALUES (%s, %s, %s)
+    '''
+    data = (alert_data['alert_type'], alert_data['description'], alert_data['timestamp'])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, data)
+    db.get_db().commit()
+    return make_response("Alert added successfully", 201)
