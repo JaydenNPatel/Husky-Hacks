@@ -5,7 +5,7 @@ services:
     hostname: web-app
     volumes: ['./app/src:/appcode']
     ports:
-      - 8501:8501
+      - 8502:8501
 
   api:
     build: ./api

@@ -1,11 +1,3 @@
-create table notification (
-	notification_id INT,
-	metric_id VARCHAR(1),
-	timestamp DATE,
-	notification_type VARCHAR(1),
-	threshold_value INT,
-	actual_value INT
-);
 insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (1, 'error: undefined method `id'' for nil:NilClass', '3/6/2024', 'error: undefined method `id'' for nil:NilClass', 72, 69);
 insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (2, 'error: undefined method `id'' for nil:NilClass', '11/7/2024', 'error: undefined method `id'' for nil:NilClass', 91, 45);
 insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (3, 'error: undefined method `id'' for nil:NilClass', '7/17/2024', 'error: undefined method `id'' for nil:NilClass', 21, 70);

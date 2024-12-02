@@ -5,6 +5,7 @@
 
 # Set up basic logging infrastructure
 import logging
+
 logging.basicConfig(format='%(filename)s:%(lineno)s:%(levelname)s -- %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
