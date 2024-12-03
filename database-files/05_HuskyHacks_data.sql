@@ -805,81 +805,140 @@ INSERT INTO real_time_dashboard (metric_id, metric_type)
 VALUES (48, 'revenue');
 
 
-use Husky_Hacks;
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0101, 0001, 'Healthcare Correlation','Found the correlation between different healthcare providers and disease rates','Healthcare', '1/01/2023 10:58:38', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0102, 0001, 'Web Development Basics','Coded for basic web development features','Web Development', '2/02/2023 15:52:43', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0103, 0001, 'Website Visualization','Visualized a Website that had to do with Education','Website', '3/03/2023 06:17:42', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0104, 0001, 'Scatterplots','Made multiple scatterplots while practicing various coding techniques','Plots', '4/04/2023 14:35:36', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0105, 0001, 'COVID correlation','Found the correlation between COVID-19 cases and various factors','COVID', '5/05/2023 11:57:01', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0106, 0001, 'Annual GDP','Looked at the annual GDP overtime and what factors caused it to change','GDP', '6/06/2023 22:48:59', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0107, 0001, 'Income Regression','Looked at the income over the last 5 years and how it shifted','Income', '7/07/2023 17:52:57', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0108, 0001, 'Retail Comparison','Compared different retailers over numerous factors','Retailer Comparison', '8/018/2023 16:57:50', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0201, 0002, 'European Soccer Team','Analyzed European Soccer team spending to players` success','Euro Soccer', '1/01/2020 21:55:59', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0202, 0002, 'Soccer Correlation','Found the correlation between Soccer winnings and a multitude of factors','Soccer Winnings', '2/02/2020 15:20:54', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0203, 0002, 'Soccer Sales','Looked and visualized the sales of multiple soccer teams over the last 5 years','Soccer Sales', '3/03/2020 04:50:13', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0204, 0002, 'Soccer Visualization','Visualized using a scatterplots the overall retail sales of soccer teams','Soccer Retail', '4/04/2020 11:39:34', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0205, 0002, 'Average Player Stats','Used various statistical techniques to analyze many players on a team','Player Stats', '5/05/2020 14:22:43', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0206, 0002, 'Total Goals','Looked at overall player data to see which player and which team had the most goals over the last 5 years','Goals', '6/06/2020 13:27:32', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0207, 0002, 'Goals Prediction','Used data science techniques to predict which player will score the most goals next season','Player Prediction', '7/07/2020 07:45:52', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0208, 0002, 'Best Player','Analyzed past player stats and championships to find the `best player`','Best Player', '8/08/2020 13:57:56', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0301, 0003, 'Management Data','Analyzed management data for multiple education businesses','Management', '1/01/2019 02:55:11', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0302, 0003, 'Security Data','Analyzed the security performance of his softwares','Security', '2/02/2019 06:04:12', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0303, 0003, 'Sector Performance','Found the sector that performed the best over the last period','Sector', '3/03/2019 13:09:43', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0304, 0003, 'Sector Prediction','Predicted which sector will result in the least maintenance based on past performance','Sector Prediction', '4/04/2019 00:18:49', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0305, 0003, 'IT management','Analyzed IT management data and visualized stability','IT Stability', '5/05/2019 13:10:55', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0306, 0003, 'User Permissions','Analyzed the permissions of different users to solve bugs and issues','Permissions', '6/06/2019 13:05:57', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0307, 0003, 'Maintenance Data','Used maintenence data to find which issue was the most prevalent','Maintenance Prevalency', '7/07/2019 17:44:44', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0308, 0003, 'Maintenance Prediction','Used maintenence data to predict which issue will most likely occur','Prediction', '8/08/2019 05:29:34', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0401, 0004, 'Revenue Insights','Analyzed revenue metrics for multiple businesses','Revenue', '1/01/2021 05:36:36', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0402, 0004, 'Overall Retention','Found which demographic and for what sectors had the varying retentions','Retention', '2/02/2021 05:56:19', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0403, 0004, 'User Prediction','Predicted which users had the most engagement to what marketing strategies','Marketing', '3/03/2021 19:31:07', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0404, 0004, 'Engagement Correlation','Found the correlation between multiple business users with various factors','Engagement', '4/04/2021 07:11:44', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0405, 0004, 'Revenue Prediction','Predicted the average revenue for businesses using past income and expense data','Revenue', '5/05/2021 12:31:48', true);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0406, 0004, 'Engagement Visualization','Visualized the different sectors in which engagement was high or low','Visualization', '6/06/2021 16:46:23', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0407, 0004, 'Marketing Breakdown','Broke down the marketing sector to understand areas of accomplishments and improvement','Marketing', '7/07/2021 17:49:30', false);
-insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0408, 0004, 'Product Visualization','Visualized which products sold the most and aided in engagement','Products', '8/08/2021 23:54:15', false);
+USE Husky_Hacks;
 
-use Husky_Hacks;
-insert into progress (progress_id, project_id, progress_description, progress_date) values (01, 0101, 'Completed correlation analysis', '1/06/2023 19:59:47');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (02, 0102, 'Added two web development features', '2/07/2023 10:57:53');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (03, 0103, 'Made title page', '3/08/2023 07:31:45');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (04, 0104, 'Completed two scatterplots', '4/09/2023 03:22:33');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (05, 0105, 'Cleaned data', '5/10/2023 05:57:55');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (06, 0106, 'Organized data by time', '6/11/2023 02:26:35');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (07, 0107, 'Implemented regression', '7/12/2023 07:08:11');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (08, 0108, 'Cleaned and organized data', '8/13/2023 00:59:20');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (09, 0101, 'Added scatterplots with regression to show correlation', '1/08/2023 11:04:19');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (10, 0102, 'Added all web development features with comments', '2/09/2023 19:07:03');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (11, 0201, 'Cleaned spending columns', '1/08/2020 10:20:09');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (12, 0202, 'Made lists based on columns', '2/09/2020 18:03:44');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (13, 0203, 'Created plots for overall soccer retail sales', '3/10/2020 16:15:52');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (14, 0204, 'Fixed axis of plots', '4/11/2020 10:36:16');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (15, 0205, 'imported and used scipy', '5/12/2020 11:15:39');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (16, 0206, 'Cleaned and organized player data for use', '6/13/2020 14:11:33');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (17, 0207, 'Utilized K Means clustering for prediciton', '7/14/2020 21:15:44');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (18, 0208, 'Put data into dictionaries', '8/15/2020 04:28:31');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (19, 0201, 'Compared spending data to player stats for each team', '1/10/2020 11:20:21');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (20, 0202, 'Implemented correlation analysis', '2/11/2020 00:48:55');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (21, 0301, 'Cleaned management data', '1/04/2019 00:07:50');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (22, 0302, 'Cleaned security data', '2/05/2019 11:12:55');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (23, 0303, 'Put sector results in different lists for use', '3/06/2019 13:13:02');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (24, 0304, 'Utilized K Means clustering for prediction', '4/07/2019 21:21:12');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (25, 0305, 'Coded for line graphs to visualize stability', '5/08/2019 18:21:26');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (26, 0306, 'Cleaned permissions data', '6/09/2019 22:48:02');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (27, 0307, 'Used stats to find the mode in data', '7/10/2019 04:06:30');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (28, 0308, 'Put maintenance data in lists for prediction', '8/11/2019 01:31:56');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (29, 0301, 'Compared management data across different businesses', '1/06/2019 21:28:04');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (30, 0302, 'Put data into dictionaries for analysis', '2/07/2019 12:18:56');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (31, 0401, 'Cleaned revenue data', '1/05/2021 00:43:15');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (32, 0402, 'Cleaned demographics data', '2/06/2021 02:12:55');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (33, 0403, 'Predicted user engagement using decision trees', '3/07/2021 12:27:50');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (34, 0404, 'Did a Pearson correlation', '4/08/2021 17:59:57');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (35, 0405, 'Predicted average revenue using decision tress', '5/09/2021 06:19:52');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (36, 0406, 'Made a bar plot for visualization', '6/10/2021 05:41:29');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (37, 0407, 'Put marketing data in lists', '7/11/2021 00:46:53');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (38, 0408, 'Made a line graph for visualization', '8/12/2021 06:01:59');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (39, 0401, 'Compared revenue metrics across companies', '1/07/2021 01:47:47');
-insert into progress (progress_id, project_id, progress_description, progress_date) values (40, 0402, 'Compared retention to demographics using scatterplots', '2/08/2021 02:24:49');
+-- Corrected INSERT statements for the projects table
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0101, 0001, 'Healthcare Correlation', 'Found the correlation between different healthcare providers and disease rates', 'Healthcare', '2023-01-01 10:58:38', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0102, 0001, 'Web Development Basics', 'Coded for basic web development features', 'Web Development', '2023-02-02 15:52:43', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0103, 0001, 'Website Visualization', 'Visualized a Website that had to do with Education', 'Website', '2023-03-03 06:17:42', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0104, 0001, 'Scatterplots', 'Made multiple scatterplots while practicing various coding techniques', 'Plots', '2023-04-04 14:35:36', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0105, 0001, 'COVID correlation', 'Found the correlation between COVID-19 cases and various factors', 'COVID', '2023-05-05 11:57:01', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0106, 0001, 'Annual GDP', 'Looked at the annual GDP overtime and what factors caused it to change', 'GDP', '2023-06-06 22:48:59', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0107, 0001, 'Income Regression', 'Looked at the income over the last 5 years and how it shifted', 'Income', '2023-07-07 17:52:57', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0108, 0001, 'Retail Comparison', 'Compared different retailers over numerous factors', 'Retailer Comparison', '2023-08-18 16:57:50', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0201, 0002, 'European Soccer Team', 'Analyzed European Soccer team spending to players` success', 'Euro Soccer', '2020-01-01 21:55:59', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0202, 0002, 'Soccer Correlation', 'Found the correlation between Soccer winnings and a multitude of factors', 'Soccer Winnings', '2020-02-02 15:20:54', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0203, 0002, 'Soccer Sales', 'Looked and visualized the sales of multiple soccer teams over the last 5 years', 'Soccer Sales', '2020-03-03 04:50:13', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0204, 0002, 'Soccer Visualization', 'Visualized using scatterplots the overall retail sales of soccer teams', 'Soccer Retail', '2020-04-04 11:39:34', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0205, 0002, 'Average Player Stats', 'Used various statistical techniques to analyze many players on a team', 'Player Stats', '2020-05-05 14:22:43', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0206, 0002, 'Total Goals', 'Looked at overall player data to see which player and which team had the most goals over the last 5 years', 'Goals', '2020-06-06 13:27:32', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0207, 0002, 'Goals Prediction', 'Used data science techniques to predict which player will score the most goals next season', 'Player Prediction', '2020-07-07 07:45:52', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0208, 0002, 'Best Player', 'Analyzed past player stats and championships to find the `best player`', 'Best Player', '2020-08-08 13:57:56', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0301, 0003, 'Management Data', 'Analyzed management data for multiple education businesses', 'Management', '2019-01-01 02:55:11', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0302, 0003, 'Security Data', 'Analyzed the security performance of his softwares', 'Security', '2019-02-02 06:04:12', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0303, 0003, 'Sector Performance', 'Found the sector that performed the best over the last period', 'Sector', '2019-03-03 13:09:43', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0304, 0003, 'Sector Prediction', 'Predicted which sector will result in the least maintenance based on past performance', 'Sector Prediction', '2019-04-04 00:18:49', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0305, 0003, 'IT management', 'Analyzed IT management data and visualized stability', 'IT Stability', '2019-05-05 13:10:55', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0306, 0003, 'User Permissions', 'Analyzed the permissions of different users to solve bugs and issues', 'Permissions', '2019-06-06 13:05:57', true);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0307, 0003, 'Maintenance Data', 'Used maintenance data to find which issue was the most prevalent', 'Maintenance Prevalency', '2019-07-07 17:44:44', false);
+INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
+VALUES (0308, 0003, 'Maintenance Prediction', 'Used maintenance data to predict which issue will most likely occur', 'Prediction', '2019-08-08 05:29:34', true);
+USE Husky_Hacks;
+
+-- Corrected INSERT statements for the progress table
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (01, 0101, 'Completed correlation analysis', '2023-01-06 19:59:47');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (02, 0102, 'Added two web development features', '2023-02-07 10:57:53');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (03, 0103, 'Made title page', '2023-03-08 07:31:45');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (04, 0104, 'Completed two scatterplots', '2023-04-09 03:22:33');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (05, 0105, 'Cleaned data', '2023-05-10 05:57:55');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (06, 0106, 'Organized data by time', '2023-06-11 02:26:35');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (07, 0107, 'Implemented regression', '2023-07-12 07:08:11');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (08, 0108, 'Cleaned and organized data', '2023-08-13 00:59:20');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (09, 0101, 'Added scatterplots with regression to show correlation', '2023-01-08 11:04:19');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (10, 0102, 'Added all web development features with comments', '2023-02-09 19:07:03');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (11, 0201, 'Cleaned spending columns', '2020-01-08 10:20:09');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (12, 0202, 'Made lists based on columns', '2020-02-09 18:03:44');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (13, 0203, 'Created plots for overall soccer retail sales', '2020-03-10 16:15:52');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (14, 0204, 'Fixed axis of plots', '2020-04-11 10:36:16');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (15, 0205, 'Imported and used scipy', '2020-05-12 11:15:39');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (16, 0206, 'Cleaned and organized player data for use', '2020-06-13 14:11:33');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (17, 0207, 'Utilized K Means clustering for prediction', '2020-07-14 21:15:44');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (18, 0208, 'Put data into dictionaries', '2020-08-15 04:28:31');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (19, 0201, 'Compared spending data to player stats for each team', '2020-01-10 11:20:21');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (20, 0202, 'Implemented correlation analysis', '2020-02-11 00:48:55');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (21, 0301, 'Cleaned management data', '2019-01-04 00:07:50');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (22, 0302, 'Cleaned security data', '2019-02-05 11:12:55');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (23, 0303, 'Put sector results in different lists for use', '2019-03-06 13:13:02');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (24, 0304, 'Utilized K Means clustering for prediction', '2019-04-07 21:21:12');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (25, 0305, 'Coded for line graphs to visualize stability', '2019-05-08 18:21:26');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (26, 0306, 'Cleaned permissions data', '2019-06-09 22:48:02');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (27, 0307, 'Used stats to find the mode in data', '2019-07-10 04:06:30');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (28, 0308, 'Put maintenance data in lists for prediction', '2019-08-11 01:31:56');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (29, 0301, 'Compared management data across different businesses', '2019-01-06 21:28:04');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (30, 0302, 'Put data into dictionaries for analysis', '2019-02-07 12:18:56');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (31, 0401, 'Cleaned revenue data', '2021-01-05 00:43:15');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (32, 0402, 'Cleaned demographics data', '2021-02-06 02:12:55');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (33, 0403, 'Predicted user engagement using decision trees', '2021-03-07 12:27:50');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (34, 0404, 'Did a Pearson correlation', '2021-04-08 17:59:57');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (35, 0405, 'Predicted average revenue using decision trees', '2021-05-09 06:19:52');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (36, 0406, 'Made a bar plot for visualization', '2021-06-10 05:41:29');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (37, 0407, 'Put marketing data in lists', '2021-07-11 00:46:53');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (38, 0408, 'Made a line graph for visualization', '2021-08-12 06:01:59');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (39, 0401, 'Compared revenue metrics across companies', '2021-01-07 01:47:47');
+INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
+VALUES (40, 0402, 'Compared retention to demographics using scatterplots', '2021-02-08 02:24:49');
 
 use Husky_Hacks;
 insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (1, 0001, 'Admin', 0002, '3/11/2024 20:10:48');
