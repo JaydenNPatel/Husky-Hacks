@@ -209,104 +209,109 @@ INSERT INTO alerts (alert_id, user_id, alert_type, message, trigger_condition, c
 (48, 0003, 5, 'Application crash detected.', 'Crash event', '2024-11-22 04:35:12'),
 (49, 0004, 3, 'Report review completed.', 'Review finalized', '2024-09-24 18:00:20'),
 (50, 0001, 7, 'Archived data access notification.', 'Archived data flagged', '2024-10-22 10:28:43');
+USE Husky_Hacks;
 
-use Husky_Hacks;
+-- Corrected INSERT statements for user_engagement_metrics (up to metric_id = 50)
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
 VALUES (23.45, 1500, 200, 1300, 1);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
 VALUES (17.89, 1200, 180, 1020, 2);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (45.67, 2000, 500, 1500, 1);
+VALUES (45.67, 2000, 500, 1500, 3);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (33.21, 1800, 300, 1500, 3);
+VALUES (33.21, 1800, 300, 1500, 4);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (27.63, 1600, 220, 1380, 4);
+VALUES (27.63, 1600, 220, 1380, 5);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (12.34, 1000, 150, 850, 2);
+VALUES (12.34, 1000, 150, 850, 6);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (54.21, 2500, 600, 1900, 5);
+VALUES (54.21, 2500, 600, 1900, 7);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (30.56, 1800, 300, 1500, 3);
+VALUES (30.56, 1800, 300, 1500, 8);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (41.67, 2100, 400, 1700, 6);
+VALUES (41.67, 2100, 400, 1700, 9);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (37.89, 1900, 320, 1580, 1);
+VALUES (37.89, 1900, 320, 1580, 10);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (20.45, 1400, 250, 1150, 7);
+VALUES (20.45, 1400, 250, 1150, 11);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (25.78, 1500, 300, 1200, 8);
+VALUES (25.78, 1500, 300, 1200, 12);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (32.89, 1600, 400, 1200, 9);
+VALUES (32.89, 1600, 400, 1200, 13);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (29.45, 1400, 350, 1050, 1);
+VALUES (29.45, 1400, 350, 1050, 14);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (38.23, 2000, 450, 1550, 10);
+VALUES (38.23, 2000, 450, 1550, 15);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (44.67, 2200, 500, 1700, 5);
+VALUES (44.67, 2200, 500, 1700, 16);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (18.56, 1300, 200, 1100, 7);
+VALUES (18.56, 1300, 200, 1100, 17);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (24.78, 1500, 250, 1250, 6);
+VALUES (24.78, 1500, 250, 1250, 18);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (35.67, 1800, 400, 1400, 8);
+VALUES (35.67, 1800, 400, 1400, 19);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (47.89, 2400, 600, 1800, 9);
+VALUES (47.89, 2400, 600, 1800, 20);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (21.34, 1300, 220, 1080, 10);
+VALUES (21.34, 1300, 220, 1080, 21);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (36.45, 1900, 400, 1500, 11);
+VALUES (36.45, 1900, 400, 1500, 22);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (30.23, 1700, 350, 1350, 12);
+VALUES (30.23, 1700, 350, 1350, 23);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (50.78, 2600, 700, 1900, 13);
+VALUES (50.78, 2600, 700, 1900, 24);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (43.89, 2200, 500, 1700, 14);
+VALUES (43.89, 2200, 500, 1700, 25);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (27.45, 1600, 300, 1300, 9);
+VALUES (27.45, 1600, 300, 1300, 26);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (31.56, 1800, 400, 1400, 6);
+VALUES (31.56, 1800, 400, 1400, 27);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (42.34, 2100, 500, 1600, 5);
+VALUES (42.34, 2100, 500, 1600, 28);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (26.89, 1500, 250, 1250, 8);
+VALUES (26.89, 1500, 250, 1250, 29);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (33.23, 1700, 400, 1300, 9);
+VALUES (33.23, 1700, 400, 1300, 30);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (39.78, 1900, 450, 1450, 5);
+VALUES (39.78, 1900, 450, 1450, 31);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (48.45, 2400, 600, 1800, 6);
+VALUES (48.45, 2400, 600, 1800, 32);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (35.67, 2000, 450, 1550, 7);
+VALUES (35.67, 2000, 450, 1550, 33);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (40.56, 2200, 500, 1700, 4);
+VALUES (40.56, 2200, 500, 1700, 34);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (23.45, 1400, 250, 1150, 3);
+VALUES (23.45, 1400, 250, 1150, 35);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (28.78, 1600, 300, 1300, 2);
+VALUES (28.78, 1600, 300, 1300, 36);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (34.23, 1800, 350, 1450, 1);
+VALUES (34.23, 1800, 350, 1450, 37);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (29.45, 1700, 400, 1300, 1);
+VALUES (29.45, 1700, 400, 1300, 38);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (41.56, 2100, 550, 1550, 2);
+VALUES (41.56, 2100, 550, 1550, 39);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (37.89, 1900, 450, 1450, 3);
+VALUES (37.89, 1900, 450, 1450, 40);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (22.78, 1400, 200, 1200, 9);
+VALUES (22.78, 1400, 200, 1200, 41);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (31.89, 1700, 400, 1300, 8);
+VALUES (31.89, 1700, 400, 1300, 42);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (49.23, 2600, 700, 1900, 5);
+VALUES (49.23, 2600, 700, 1900, 43);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (45.67, 2400, 600, 1800, 6);
+VALUES (45.67, 2400, 600, 1800, 44);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (38.45, 2000, 500, 1500, 3);
+VALUES (38.45, 2000, 500, 1500, 45);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (32.56, 1800, 350, 1450, 1);
+VALUES (32.56, 1800, 350, 1450, 46);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (30.89, 1600, 300, 1300, 2);
+VALUES (30.89, 1600, 300, 1300, 47);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (25.67, 1500, 250, 1250, 4);
+VALUES (25.67, 1500, 250, 1250, 48);
+INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
+VALUES (35.12, 1700, 300, 1400, 49);
+INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
+VALUES (40.75, 2200, 400, 1800, 50);
 
 use Husky_Hacks;
 INSERT INTO teams (team_name, department) VALUES
@@ -691,68 +696,108 @@ INSERT INTO retention_metrics (retention_rate, churn_rate, cohort, data_source)
 VALUES (88.45, 11.55, '2015-Q3', 16);
 INSERT INTO retention_metrics (retention_rate, churn_rate, cohort, data_source)
 VALUES (90.34, 9.66, '2015-Q4', 17);
+USE Husky_Hacks;
 
-use Husky_Hacks;
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (1, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (2, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (3, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (4, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (5, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (6, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (7, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (8, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (9, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (10, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (11, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (12, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (13, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (14, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (15, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (16, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (17, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (18, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (19, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (20, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (21, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (22, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (23, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (24, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (25, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (26, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (27, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (28, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (29, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (30, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (31, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (32, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (33, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (34, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (35, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (36, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (37, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (38, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (39, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (40, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (41, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (42, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (43, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (44, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (45, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (46, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (47, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (48, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (49, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (50, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (3, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (5, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (8, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (6, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (10, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (12, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (7, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (14, 'retention');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (25, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type) VALUES (30, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (1, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (2, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (3, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (4, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (5, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (6, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (7, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (8, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (9, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (10, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (11, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (12, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (13, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (14, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (15, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (16, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (17, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (18, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (19, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (20, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (21, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (22, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (23, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (24, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (25, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (26, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (27, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (28, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (29, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (30, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (31, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (32, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (33, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (34, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (35, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (36, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (37, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (38, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (39, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (40, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (41, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (42, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (43, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (44, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (45, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (46, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (47, 'retention');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (48, 'revenue');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (49, 'user_engagement');
+INSERT INTO real_time_dashboard (metric_id, metric_type)
+VALUES (50, 'retention');
 
 use Husky_Hacks;
 insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0101, 0001, 'Healthcare Correlation','Found the correlation between different healthcare providers and disease rates','Healthcare', '1/01/2023 10:58:38', true);
