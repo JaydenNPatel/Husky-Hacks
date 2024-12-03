@@ -1,7 +1,6 @@
 USE `Husky_Hacks`;
 
 
-
 insert into roles (role_id, role_title) values (1, 'Student');
 insert into roles (role_id, role_title) values (2, 'Teaching Assistant');
 insert into roles (role_id, role_title) values (3, 'System Administrator');
@@ -49,6 +48,103 @@ insert into users (user_id, first_name, last_name, email, role, status, date_cre
 insert into users (user_id, first_name, last_name, email, role, status, date_created) values (0002, 'Sally', 'Pigott', 'spigs@blog.com', 2, true, '2024-07-22 09:41:56');
 insert into users (user_id, first_name, last_name, email, role, status, date_created) values (0003, 'Saquon', 'Porkly', 'saquon@opera.com', 3, false, '2024-11-08 16:55:12');
 insert into users (user_id, first_name, last_name, email, role, status, date_created) values (0004, 'Devin', 'Codington', 'coder@wikispaces.com', 4, false, '2024-05-30 11:03:45');
+
+use Husky_Hacks;
+insert into data_source (source_name, data_type) values ('Google Analytics', 'user_engagement');
+insert into data_source (source_name, data_type) values ('Mixpanel', 'retention');
+insert into data_source (source_name, data_type) values ('Amplitude', 'user_engagement');
+insert into data_source (source_name, data_type) values ('Firebase', 'retention');
+insert into data_source (source_name, data_type) values ('Heap Analytics', 'conversion_rate');
+insert into data_source (source_name, data_type) values ('Segment', 'data_collection');
+insert into data_source (source_name, data_type) values ('Klaviyo', 'email_metrics');
+insert into data_source (source_name, data_type) values ('PostHog', 'user_engagement');
+insert into data_source (source_name, data_type) values ('Snowflake', 'data_warehouse');
+insert into data_source (source_name, data_type) values ('Looker', 'dashboard');
+insert into data_source (source_name, data_type) values ('Tableau', 'dashboard');
+insert into data_source (source_name, data_type) values ('Power BI', 'dashboard');
+insert into data_source (source_name, data_type) values ('Adobe Analytics', 'user_engagement');
+insert into data_source (source_name, data_type) values ('Hotjar', 'session_replay');
+insert into data_source (source_name, data_type) values ('Crazy Egg', 'heatmap');
+insert into data_source (source_name, data_type) values ('Optimizely', 'A/B_testing');
+insert into data_source (source_name, data_type) values ('VWO', 'A/B_testing');
+insert into data_source (source_name, data_type) values ('FullStory', 'session_replay');
+insert into data_source (source_name, data_type) values ('Google Tag Manager', 'data_collection');
+insert into data_source (source_name, data_type) values ('HubSpot', 'email_metrics');
+insert into data_source (source_name, data_type) values ('Mailchimp', 'email_metrics');
+insert into data_source (source_name, data_type) values ('Marketo', 'email_metrics');
+insert into data_source (source_name, data_type) values ('Salesforce', 'CRM');
+insert into data_source (source_name, data_type) values ('Zendesk', 'customer_support');
+insert into data_source (source_name, data_type) values ('Intercom', 'customer_support');
+insert into data_source (source_name, data_type) values ('Drift', 'chat_metrics');
+insert into data_source (source_name, data_type) values ('Pendo', 'user_engagement');
+insert into data_source (source_name, data_type) values ('Appcues', 'onboarding_metrics');
+insert into data_source (source_name, data_type) values ('Outbrain', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Taboola', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Google Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Facebook Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('LinkedIn Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Twitter Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('TikTok Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Instagram Ads', 'ad_performance');
+insert into data_source (source_name, data_type) values ('Spotify Ads', 'audio_metrics');
+insert into data_source (source_name, data_type) values ('YouTube Analytics', 'video_metrics');
+insert into data_source (source_name, data_type) values ('Zoom', 'webinar_engagement');
+insert into data_source (source_name, data_type) values ('GoToWebinar', 'webinar_engagement');
+insert into data_source (source_name, data_type) values ('Slack', 'internal_metrics');
+insert into data_source (source_name, data_type) values ('Trello', 'project_tracking');
+insert into data_source (source_name, data_type) values ('Asana', 'project_tracking');
+insert into data_source (source_name, data_type) values ('Monday.com', 'project_tracking');
+insert into data_source (source_name, data_type) values ('ClickUp', 'project_tracking');
+insert into data_source (source_name, data_type) values ('Basecamp', 'project_tracking');
+insert into data_source (source_name, data_type) values ('Jira', 'project_tracking');
+insert into data_source (source_name, data_type) values ('GitHub', 'version_control');
+insert into data_source (source_name, data_type) values ('Bitbucket', 'version_control');
+insert into data_source (source_name, data_type) values ('GitLab', 'version_control');
+insert into data_source (source_name, data_type) values ('CircleCI', 'CI/CD_metrics');
+insert into data_source (source_name, data_type) values ('Travis CI', 'CI/CD_metrics');
+
+use Husky_Hacks;
+INSERT INTO departments (name) VALUES
+('Engineering'),
+('Marketing'),
+('Finance'),
+('Human Resources'),
+('Information Technology'),
+('Sales'),
+('Customer Support'),
+('Legal'),
+('Operations'),
+('Product Development'),
+('Quality Assurance'),
+('Supply Chain'),
+('Procurement'),
+('Public Relations'),
+('Data Analytics'),
+('Cybersecurity'),
+('Business Development'),
+('Corporate Strategy'),
+('Risk Management'),
+('Compliance'),
+('Investor Relations'),
+('Facilities Management'),
+('Training and Development'),
+('Event Planning'),
+('Content Management'),
+('Social Media Marketing'),
+('Graphic Design'),
+('Research and Development'),
+('Environmental Sustainability'),
+('Manufacturing'),
+('Retail Operations'),
+('Technical Writing'),
+('Customer Success'),
+('DevOps'),
+('Field Services'),
+('Technical Support'),
+('Digital Transformation'),
+('Software Implementation'),
+('Hardware Engineering'),
+('Cloud Infrastructure');
 
 use Husky_Hacks;
 INSERT INTO alert_type (type_id, type_name) VALUES (1, 'Feedback Request');
@@ -935,103 +1031,6 @@ insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, ratin
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (38, 0408, 0002, 'Line graph needs more detail', 5, '8/09/2021 06:06:48');
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (39, 0401, 0001, 'Cleaned data more which improved revenue analysis', 8, '1/03/2021 06:21:28');
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (40, 0402, 0001, 'Demographics data cleaning was improved', 9, '2/04/2021 20:03:45');
-
-use Husky_Hacks;
-INSERT INTO departments (name) VALUES
-('Engineering'),
-('Marketing'),
-('Finance'),
-('Human Resources'),
-('Information Technology'),
-('Sales'),
-('Customer Support'),
-('Legal'),
-('Operations'),
-('Product Development'),
-('Quality Assurance'),
-('Supply Chain'),
-('Procurement'),
-('Public Relations'),
-('Data Analytics'),
-('Cybersecurity'),
-('Business Development'),
-('Corporate Strategy'),
-('Risk Management'),
-('Compliance'),
-('Investor Relations'),
-('Facilities Management'),
-('Training and Development'),
-('Event Planning'),
-('Content Management'),
-('Social Media Marketing'),
-('Graphic Design'),
-('Research and Development'),
-('Environmental Sustainability'),
-('Manufacturing'),
-('Retail Operations'),
-('Technical Writing'),
-('Customer Success'),
-('DevOps'),
-('Field Services'),
-('Technical Support'),
-('Digital Transformation'),
-('Software Implementation'),
-('Hardware Engineering'),
-('Cloud Infrastructure');
-
-use Husky_Hacks;
-insert into data_source (source_name, data_type) values ('Google Analytics', 'user_engagement');
-insert into data_source (source_name, data_type) values ('Mixpanel', 'retention');
-insert into data_source (source_name, data_type) values ('Amplitude', 'user_engagement');
-insert into data_source (source_name, data_type) values ('Firebase', 'retention');
-insert into data_source (source_name, data_type) values ('Heap Analytics', 'conversion_rate');
-insert into data_source (source_name, data_type) values ('Segment', 'data_collection');
-insert into data_source (source_name, data_type) values ('Klaviyo', 'email_metrics');
-insert into data_source (source_name, data_type) values ('PostHog', 'user_engagement');
-insert into data_source (source_name, data_type) values ('Snowflake', 'data_warehouse');
-insert into data_source (source_name, data_type) values ('Looker', 'dashboard');
-insert into data_source (source_name, data_type) values ('Tableau', 'dashboard');
-insert into data_source (source_name, data_type) values ('Power BI', 'dashboard');
-insert into data_source (source_name, data_type) values ('Adobe Analytics', 'user_engagement');
-insert into data_source (source_name, data_type) values ('Hotjar', 'session_replay');
-insert into data_source (source_name, data_type) values ('Crazy Egg', 'heatmap');
-insert into data_source (source_name, data_type) values ('Optimizely', 'A/B_testing');
-insert into data_source (source_name, data_type) values ('VWO', 'A/B_testing');
-insert into data_source (source_name, data_type) values ('FullStory', 'session_replay');
-insert into data_source (source_name, data_type) values ('Google Tag Manager', 'data_collection');
-insert into data_source (source_name, data_type) values ('HubSpot', 'email_metrics');
-insert into data_source (source_name, data_type) values ('Mailchimp', 'email_metrics');
-insert into data_source (source_name, data_type) values ('Marketo', 'email_metrics');
-insert into data_source (source_name, data_type) values ('Salesforce', 'CRM');
-insert into data_source (source_name, data_type) values ('Zendesk', 'customer_support');
-insert into data_source (source_name, data_type) values ('Intercom', 'customer_support');
-insert into data_source (source_name, data_type) values ('Drift', 'chat_metrics');
-insert into data_source (source_name, data_type) values ('Pendo', 'user_engagement');
-insert into data_source (source_name, data_type) values ('Appcues', 'onboarding_metrics');
-insert into data_source (source_name, data_type) values ('Outbrain', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Taboola', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Google Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Facebook Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('LinkedIn Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Twitter Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('TikTok Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Instagram Ads', 'ad_performance');
-insert into data_source (source_name, data_type) values ('Spotify Ads', 'audio_metrics');
-insert into data_source (source_name, data_type) values ('YouTube Analytics', 'video_metrics');
-insert into data_source (source_name, data_type) values ('Zoom', 'webinar_engagement');
-insert into data_source (source_name, data_type) values ('GoToWebinar', 'webinar_engagement');
-insert into data_source (source_name, data_type) values ('Slack', 'internal_metrics');
-insert into data_source (source_name, data_type) values ('Trello', 'project_tracking');
-insert into data_source (source_name, data_type) values ('Asana', 'project_tracking');
-insert into data_source (source_name, data_type) values ('Monday.com', 'project_tracking');
-insert into data_source (source_name, data_type) values ('ClickUp', 'project_tracking');
-insert into data_source (source_name, data_type) values ('Basecamp', 'project_tracking');
-insert into data_source (source_name, data_type) values ('Jira', 'project_tracking');
-insert into data_source (source_name, data_type) values ('GitHub', 'version_control');
-insert into data_source (source_name, data_type) values ('Bitbucket', 'version_control');
-insert into data_source (source_name, data_type) values ('GitLab', 'version_control');
-insert into data_source (source_name, data_type) values ('CircleCI', 'CI/CD_metrics');
-insert into data_source (source_name, data_type) values ('Travis CI', 'CI/CD_metrics');
 
 use Husky_Hacks;
 insert into backups (backup_id, backup_date, backup_size, status, error_log_id) values ('7956006570', '11/14/2024', 102400, true, 1);
