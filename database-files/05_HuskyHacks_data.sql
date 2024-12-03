@@ -309,7 +309,9 @@ VALUES (30.89, 1600, 300, 1300, 47);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
 VALUES (25.67, 1500, 250, 1250, 48);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
-VALUES (35.12, 1700, 300, 1400, 49);
+VALUES (23.45, 1500, 200, 1300, 49);
+INSERT INTO revenue_metrics (revenue, avg_revenue_per_user, transactions, currency, data_source)
+VALUES (15000, 45.23, 350, 'USD', 49);
 INSERT INTO user_engagement_metrics (engagement_rate, active_users, new_users, returning_users, data_source)
 VALUES (40.75, 2200, 400, 1800, 50);
 
@@ -702,6 +704,7 @@ INSERT INTO retention_metrics (retention_rate, churn_rate, cohort, data_source)
 VALUES (88.45, 11.55, '2015-Q3', 16);
 INSERT INTO retention_metrics (retention_rate, churn_rate, cohort, data_source)
 VALUES (90.34, 9.66, '2015-Q4', 17);
+
 USE Husky_Hacks;
 
 INSERT INTO real_time_dashboard (metric_id, metric_type)
@@ -800,10 +803,7 @@ INSERT INTO real_time_dashboard (metric_id, metric_type)
 VALUES (47, 'retention');
 INSERT INTO real_time_dashboard (metric_id, metric_type)
 VALUES (48, 'revenue');
-INSERT INTO real_time_dashboard (metric_id, metric_type)
-VALUES (49, 'user_engagement');
-INSERT INTO real_time_dashboard (metric_id, metric_type)
-VALUES (50, 'retention');
+
 
 use Husky_Hacks;
 insert into projects (project_id, user_id, title, description, tags, upload_date, is_archived) values (0101, 0001, 'Healthcare Correlation','Found the correlation between different healthcare providers and disease rates','Healthcare', '1/01/2023 10:58:38', true);
