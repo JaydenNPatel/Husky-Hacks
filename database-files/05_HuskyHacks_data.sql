@@ -912,15 +912,15 @@ VALUES (25, 0305, 'Coded for line graphs to visualize stability', '2019-05-08 18
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (26, 0306, 'Cleaned permissions data', '2019-06-09 22:48:02');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (27, 0307, 'Used stats to find the mode in data', '2019-07-10 04:06:30');
+VALUES (27, 0101, 'Used stats to find the mode in data', '2019-07-10 04:06:30'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (28, 0308, 'Put maintenance data in lists for prediction', '2019-08-11 01:31:56');
+VALUES (28, 0101, 'Put maintenance data in lists for prediction', '2019-08-11 01:31:56'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (29, 0301, 'Compared management data across different businesses', '2019-01-06 21:28:04');
+VALUES (29, 0101, 'Compared management data across different businesses', '2019-01-06 21:28:04'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (30, 0302, 'Put data into dictionaries for analysis', '2019-02-07 12:18:56');
+VALUES (30, 0101, 'Put data into dictionaries for analysis', '2019-02-07 12:18:56'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (31, 0401, 'Cleaned revenue data', '2021-01-05 00:43:15');
+VALUES (31, 0101, 'Cleaned revenue data', '2021-01-05 00:43:15'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (32, 0402, 'Cleaned demographics data', '2021-02-06 02:12:55');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
