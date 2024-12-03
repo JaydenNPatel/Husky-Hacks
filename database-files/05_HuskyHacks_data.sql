@@ -856,9 +856,11 @@ INSERT INTO projects (project_id, user_id, title, description, tags, upload_date
 VALUES (0307, 0003, 'Maintenance Data', 'Used maintenance data to find which issue was the most prevalent', 'Maintenance Prevalency', '2019-07-07 17:44:44', false);
 INSERT INTO projects (project_id, user_id, title, description, tags, upload_date, is_archived)
 VALUES (0308, 0003, 'Maintenance Prediction', 'Used maintenance data to predict which issue will most likely occur', 'Prediction', '2019-08-08 05:29:34', true);
+
+
 USE Husky_Hacks;
 
--- Corrected INSERT statements for the progress table
+-- Corrected INSERT statements for progress
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (01, 0101, 'Completed correlation analysis', '2023-01-06 19:59:47');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
@@ -880,9 +882,9 @@ VALUES (09, 0101, 'Added scatterplots with regression to show correlation', '202
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (10, 0102, 'Added all web development features with comments', '2023-02-09 19:07:03');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (11, 0201, 'Cleaned spending columns', '2020-01-08 10:20:09');
+VALUES (11, 0101, 'Cleaned spending columns', '2020-01-08 10:20:09'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (12, 0202, 'Made lists based on columns', '2020-02-09 18:03:44');
+VALUES (12, 0101, 'Made lists based on columns', '2020-02-09 18:03:44'); -- Replaced invalid project_id
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (13, 0203, 'Created plots for overall soccer retail sales', '2020-03-10 16:15:52');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
@@ -912,47 +914,75 @@ VALUES (25, 0305, 'Coded for line graphs to visualize stability', '2019-05-08 18
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
 VALUES (26, 0306, 'Cleaned permissions data', '2019-06-09 22:48:02');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (27, 0101, 'Used stats to find the mode in data', '2019-07-10 04:06:30'); -- Replaced invalid project_id
+VALUES (27, 0307, 'Used stats to find the mode in data', '2019-07-10 04:06:30');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (28, 0101, 'Put maintenance data in lists for prediction', '2019-08-11 01:31:56'); -- Replaced invalid project_id
+VALUES (28, 0308, 'Put maintenance data in lists for prediction', '2019-08-11 01:31:56');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (29, 0101, 'Compared management data across different businesses', '2019-01-06 21:28:04'); -- Replaced invalid project_id
+VALUES (29, 0301, 'Compared management data across different businesses', '2019-01-06 21:28:04');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (30, 0101, 'Put data into dictionaries for analysis', '2019-02-07 12:18:56'); -- Replaced invalid project_id
+VALUES (30, 0302, 'Put data into dictionaries for analysis', '2019-02-07 12:18:56');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (31, 0101, 'Cleaned revenue data', '2021-01-05 00:43:15'); -- Replaced invalid project_id
+VALUES (31, 0301, 'Cleaned revenue data', '2021-01-05 00:43:15');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (32, 0402, 'Cleaned demographics data', '2021-02-06 02:12:55');
+VALUES (32, 0302, 'Cleaned demographics data', '2021-02-06 02:12:55');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (33, 0403, 'Predicted user engagement using decision trees', '2021-03-07 12:27:50');
+VALUES (33, 0303, 'Predicted user engagement using decision trees', '2021-03-07 12:27:50');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (34, 0404, 'Did a Pearson correlation', '2021-04-08 17:59:57');
+VALUES (34, 0304, 'Did a Pearson correlation', '2021-04-08 17:59:57');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (35, 0405, 'Predicted average revenue using decision trees', '2021-05-09 06:19:52');
+VALUES (35, 0305, 'Predicted average revenue using decision trees', '2021-05-09 06:19:52');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (36, 0406, 'Made a bar plot for visualization', '2021-06-10 05:41:29');
+VALUES (36, 0306, 'Made a bar plot for visualization', '2021-06-10 05:41:29');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (37, 0407, 'Put marketing data in lists', '2021-07-11 00:46:53');
+VALUES (37, 0307, 'Put marketing data in lists', '2021-07-11 00:46:53');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (38, 0408, 'Made a line graph for visualization', '2021-08-12 06:01:59');
+VALUES (38, 0308, 'Made a line graph for visualization', '2021-08-12 06:01:59');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (39, 0401, 'Compared revenue metrics across companies', '2021-01-07 01:47:47');
+VALUES (39, 0301, 'Compared revenue metrics across companies', '2021-01-07 01:47:47');
 INSERT INTO progress (progress_id, project_id, progress_description, progress_date)
-VALUES (40, 0402, 'Compared retention to demographics using scatterplots', '2021-02-08 02:24:49');
+VALUES (40, 0302, 'Compared retention to demographics using scatterplots', '2021-02-08 02:24:49');
 
 use Husky_Hacks;
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (1, 0001, 'Admin', 0002, '3/11/2024 20:10:48');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (2, 0001, 'Edit', 0003, '8/15/2024 21:50:35');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (3, 0001, 'Edit', 0004, '1/28/2024 03:10:24');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (4, 0002, 'View', 0001, '9/17/2024 19:40:02');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (5, 0002, 'Admin', 0003, '11/24/2023 01:35:53');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (6, 0002, 'Admin', 0004, '1/6/2024 18:57:13');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (7, 0003, 'View', 0001, '12/1/2024 20:07:12');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (8, 0003, 'View', 0002, '8/21/2024 14:48:01');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (9, 0003, 'View', 0004, '1/2/2024 22:46:15');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (10, 0004, 'Edit', 0001, '12/21/2023 06:07:56');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (11, 0004, 'Edit', 0002, '2/1/2024 14:58:11');
-insert into permissions (permission_id, user_id, access_level, assigned_by, assigned_date) values (12, 0004, 'Edit', 0003, '11/3/2023 07:35:04');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (1, 0001, 'Admin', 0002, '2023-10-01 09:00:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (2, 0002, 'Editor', 0003, '2023-10-02 10:15:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (3, 0003, 'Viewer', 0001, '2023-10-03 11:30:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (4, 0004, 'Contributor', 0003, '2023-10-04 14:45:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (5, 0002, 'Moderator', 0002, '2023-10-05 08:00:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (6, 0001, 'Admin', 0002, '2023-10-06 18:30:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (7, 0001, 'Editor', 0004, '2023-10-07 12:15:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (8, 0002, 'Viewer', 0004, '2023-10-08 17:45:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (9, 0004, 'Contributor', 0003, '2023-10-09 14:20:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (10, 0002, 'Moderator', 0001, '2023-10-10 09:50:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (11, 0001, 'Admin', 0002, '2023-10-11 08:30:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (12, 0001, 'Edit', 0003, '2023-11-03 07:35:04');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (13, 0002, 'View', 0004, '2023-11-04 10:45:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (14, 0003, 'Admin', 0001, '2023-11-05 15:20:30');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (15, 0001, 'Contributor', 0002, '2023-11-06 12:00:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (16, 0002, 'Moderator', 0003, '2023-11-07 18:30:45');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (17, 0001, 'Edit', 0003, '2023-11-08 20:15:00');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (18, 0002, 'View', 0004, '2023-11-09 22:45:15');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (19, 0004, 'Admin', 0001, '2023-11-10 09:05:30');
+INSERT INTO permissions (permission_id, user_id, access_level, assigned_by, assigned_date)
+VALUES (20, 0004, 'Edit', 0001, '2023-11-11 14:50:20');
 
 create table notification (
 	notification_id INT,
@@ -962,56 +992,109 @@ create table notification (
 	threshold_value INT,
 	actual_value INT
 );
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (1, 'error: undefined method `id'' for nil:NilClass', '3/6/2024', 'error: undefined method `id'' for nil:NilClass', 72, 69);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (2, 'error: undefined method `id'' for nil:NilClass', '11/7/2024', 'error: undefined method `id'' for nil:NilClass', 91, 45);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (3, 'error: undefined method `id'' for nil:NilClass', '7/17/2024', 'error: undefined method `id'' for nil:NilClass', 21, 70);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (4, 'error: undefined method `id'' for nil:NilClass', '10/30/2024', 'error: undefined method `id'' for nil:NilClass', 90, 4);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (5, 'error: undefined method `id'' for nil:NilClass', '12/26/2023', 'error: undefined method `id'' for nil:NilClass', 57, 0);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (6, 'error: undefined method `id'' for nil:NilClass', '12/6/2023', 'error: undefined method `id'' for nil:NilClass', 10, 38);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (7, 'error: undefined method `id'' for nil:NilClass', '5/5/2024', 'error: undefined method `id'' for nil:NilClass', 26, 96);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (8, 'error: undefined method `id'' for nil:NilClass', '9/10/2024', 'error: undefined method `id'' for nil:NilClass', 46, 61);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (9, 'error: undefined method `id'' for nil:NilClass', '2/9/2024', 'error: undefined method `id'' for nil:NilClass', 1, 29);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (10, 'error: undefined method `id'' for nil:NilClass', '11/4/2024', 'error: undefined method `id'' for nil:NilClass', 78, 50);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (11, 'error: undefined method `id'' for nil:NilClass', '11/7/2024', 'error: undefined method `id'' for nil:NilClass', 3, 76);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (12, 'error: undefined method `id'' for nil:NilClass', '6/4/2024', 'error: undefined method `id'' for nil:NilClass', 44, 54);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (13, 'error: undefined method `id'' for nil:NilClass', '8/6/2024', 'error: undefined method `id'' for nil:NilClass', 91, 30);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (14, 'error: undefined method `id'' for nil:NilClass', '11/12/2024', 'error: undefined method `id'' for nil:NilClass', 25, 46);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (15, 'error: undefined method `id'' for nil:NilClass', '4/27/2024', 'error: undefined method `id'' for nil:NilClass', 16, 47);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (16, 'error: undefined method `id'' for nil:NilClass', '9/11/2024', 'error: undefined method `id'' for nil:NilClass', 88, 67);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (17, 'error: undefined method `id'' for nil:NilClass', '9/9/2024', 'error: undefined method `id'' for nil:NilClass', 5, 86);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (18, 'error: undefined method `id'' for nil:NilClass', '6/17/2024', 'error: undefined method `id'' for nil:NilClass', 48, 11);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (19, 'error: undefined method `id'' for nil:NilClass', '9/6/2024', 'error: undefined method `id'' for nil:NilClass', 49, 64);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (20, 'error: undefined method `id'' for nil:NilClass', '7/9/2024', 'error: undefined method `id'' for nil:NilClass', 32, 93);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (21, 'error: undefined method `id'' for nil:NilClass', '6/8/2024', 'error: undefined method `id'' for nil:NilClass', 93, 48);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (22, 'error: undefined method `id'' for nil:NilClass', '3/21/2024', 'error: undefined method `id'' for nil:NilClass', 27, 90);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (23, 'error: undefined method `id'' for nil:NilClass', '8/30/2024', 'error: undefined method `id'' for nil:NilClass', 16, 79);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (24, 'error: undefined method `id'' for nil:NilClass', '8/15/2024', 'error: undefined method `id'' for nil:NilClass', 49, 60);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (25, 'error: undefined method `id'' for nil:NilClass', '5/20/2024', 'error: undefined method `id'' for nil:NilClass', 60, 91);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (26, 'error: undefined method `id'' for nil:NilClass', '1/29/2024', 'error: undefined method `id'' for nil:NilClass', 13, 2);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (27, 'error: undefined method `id'' for nil:NilClass', '8/22/2024', 'error: undefined method `id'' for nil:NilClass', 48, 27);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (28, 'error: undefined method `id'' for nil:NilClass', '10/2/2024', 'error: undefined method `id'' for nil:NilClass', 49, 67);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (29, 'error: undefined method `id'' for nil:NilClass', '7/10/2024', 'error: undefined method `id'' for nil:NilClass', 74, 63);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (30, 'error: undefined method `id'' for nil:NilClass', '9/5/2024', 'error: undefined method `id'' for nil:NilClass', 28, 84);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (31, 'error: undefined method `id'' for nil:NilClass', '1/6/2024', 'error: undefined method `id'' for nil:NilClass', 89, 90);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (32, 'error: undefined method `id'' for nil:NilClass', '10/12/2024', 'error: undefined method `id'' for nil:NilClass', 27, 77);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (33, 'error: undefined method `id'' for nil:NilClass', '3/11/2024', 'error: undefined method `id'' for nil:NilClass', 93, 84);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (34, 'error: undefined method `id'' for nil:NilClass', '12/26/2023', 'error: undefined method `id'' for nil:NilClass', 50, 60);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (35, 'error: undefined method `id'' for nil:NilClass', '9/23/2024', 'error: undefined method `id'' for nil:NilClass', 41, 92);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (36, 'error: undefined method `id'' for nil:NilClass', '8/8/2024', 'error: undefined method `id'' for nil:NilClass', 5, 42);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (37, 'error: undefined method `id'' for nil:NilClass', '1/18/2024', 'error: undefined method `id'' for nil:NilClass', 33, 78);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (38, 'error: undefined method `id'' for nil:NilClass', '9/2/2024', 'error: undefined method `id'' for nil:NilClass', 8, 90);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (39, 'error: undefined method `id'' for nil:NilClass', '7/27/2024', 'error: undefined method `id'' for nil:NilClass', 90, 48);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (40, 'error: undefined method `id'' for nil:NilClass', '11/14/2024', 'error: undefined method `id'' for nil:NilClass', 28, 99);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (41, 'error: undefined method `id'' for nil:NilClass', '12/15/2023', 'error: undefined method `id'' for nil:NilClass', 92, 22);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (42, 'error: undefined method `id'' for nil:NilClass', '12/9/2023', 'error: undefined method `id'' for nil:NilClass', 30, 34);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (43, 'error: undefined method `id'' for nil:NilClass', '8/11/2024', 'error: undefined method `id'' for nil:NilClass', 49, 4);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (44, 'error: undefined method `id'' for nil:NilClass', '4/13/2024', 'error: undefined method `id'' for nil:NilClass', 44, 42);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (45, 'error: undefined method `id'' for nil:NilClass', '6/7/2024', 'error: undefined method `id'' for nil:NilClass', 8, 58);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (46, 'error: undefined method `id'' for nil:NilClass', '3/30/2024', 'error: undefined method `id'' for nil:NilClass', 93, 20);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (47, 'error: undefined method `id'' for nil:NilClass', '9/9/2024', 'error: undefined method `id'' for nil:NilClass', 87, 69);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (48, 'error: undefined method `id'' for nil:NilClass', '8/5/2024', 'error: undefined method `id'' for nil:NilClass', 87, 29);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (49, 'error: undefined method `id'' for nil:NilClass', '2/8/2024', 'error: undefined method `id'' for nil:NilClass', 50, 38);
-insert into notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value) values (50, 'error: undefined method `id'' for nil:NilClass', '2/26/2024', 'error: undefined method `id'' for nil:NilClass', 84, 94);
+
+USE Husky_Hacks;
+
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (1, 'system_error', '2024-03-06', 'error', 72, 69);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (2, 'user_alert', '2024-11-07', 'alert', 91, 45);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (3, 'performance_warning', '2024-07-17', 'warning', 21, 70);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (4, 'system_error', '2024-10-30', 'error', 90, 4);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (5, 'user_alert', '2023-12-26', 'alert', 57, 0);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (6, 'performance_warning', '2023-12-06', 'warning', 10, 38);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (7, 'system_error', '2024-05-05', 'error', 26, 96);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (8, 'user_alert', '2024-09-10', 'alert', 46, 61);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (9, 'performance_warning', '2024-02-09', 'warning', 1, 29);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (10, 'system_error', '2024-11-04', 'error', 78, 50);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (11, 'user_alert', '2024-11-07', 'alert', 3, 76);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (12, 'performance_warning', '2024-06-04', 'warning', 44, 54);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (13, 'system_error', '2024-08-06', 'error', 91, 30);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (14, 'user_alert', '2024-11-12', 'alert', 25, 46);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (15, 'performance_warning', '2024-04-27', 'warning', 16, 47);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (16, 'system_error', '2024-09-11', 'error', 88, 67);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (17, 'user_alert', '2024-09-09', 'alert', 5, 86);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (18, 'performance_warning', '2024-06-17', 'warning', 48, 11);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (19, 'system_error', '2024-09-06', 'error', 49, 64);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (20, 'user_alert', '2024-07-09', 'alert', 32, 93);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (21, 'performance_warning', '2024-06-08', 'warning', 93, 48);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (22, 'system_error', '2024-03-21', 'error', 27, 90);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (23, 'user_alert', '2024-08-30', 'alert', 16, 79);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (24, 'performance_warning', '2024-08-15', 'warning', 49, 60);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (25, 'system_error', '2024-05-20', 'error', 60, 91);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (26, 'user_alert', '2024-01-29', 'alert', 13, 2);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (27, 'performance_warning', '2024-08-22', 'warning', 48, 27);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (28, 'system_error', '2024-10-02', 'error', 49, 67);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (29, 'user_alert', '2024-07-10', 'alert', 74, 63);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (30, 'performance_warning', '2024-09-05', 'warning', 28, 84);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (31, 'system_error', '2024-01-06', 'error', 89, 90);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (32, 'user_alert', '2024-10-12', 'alert', 27, 77);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (33, 'performance_warning', '2024-03-11', 'warning', 93, 84);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (34, 'system_error', '2023-12-26', 'error', 50, 60);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (35, 'user_alert', '2024-09-23', 'alert', 41, 92);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (36, 'performance_warning', '2024-08-08', 'warning', 5, 42);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (37, 'system_error', '2024-01-18', 'error', 33, 78);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (38, 'user_alert', '2024-09-02', 'alert', 8, 90);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (39, 'performance_warning', '2024-07-27', 'warning', 90, 48);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (40, 'system_error', '2024-11-14', 'error', 28, 99);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (41, 'user_alert', '2023-12-15', 'alert', 92, 22);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (42, 'performance_warning', '2023-12-09', 'warning', 30, 34);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (43, 'system_error', '2024-08-11', 'error', 49, 4);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (44, 'user_alert', '2024-04-13', 'alert', 44, 42);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (45, 'performance_warning', '2024-06-07', 'warning', 8, 58);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (46, 'system_error', '2024-03-30', 'error', 93, 20);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (47, 'user_alert', '2024-09-09', 'alert', 87, 69);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (48, 'performance_warning', '2024-08-05', 'warning', 87, 29);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (49, 'system_error', '2024-02-08', 'error', 50, 38);
+INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
+VALUES (50, 'user_alert', '2024-02-26', 'alert', 84, 94);
 
 insert into notification_type (type_id, name) values (1, 'Performance Alert');
 insert into notification_type (type_id, name) values (2, 'Threshold Alert');
