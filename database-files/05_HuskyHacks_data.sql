@@ -492,7 +492,6 @@ INSERT INTO revenue_metrics (revenue, avg_revenue_per_user, transactions, curren
 VALUES (38000, 94.45, 700, 'USD', 18);
 INSERT INTO revenue_metrics (revenue, avg_revenue_per_user, transactions, currency, data_source)
 VALUES (41500, 105.56, 730, 'USD', 15);
-
 use Husky_Hacks;
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
 VALUES (1, 0001, 'Coding Progress Report', '2024-01-12 09:45:23', 'Tracked improvements in JavaScript and Python projects.');
@@ -507,15 +506,16 @@ VALUES (5, 0001, 'Interview Preparation Insights', '2024-02-12 14:25:36', 'Gener
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
 VALUES (6, 0002, 'Project Improvement Recommendations', '2024-02-20 09:30:12', 'Recommendations made for enhancing visual data presentation.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
-VALUES (7, 0003, 8, 'Scheduled maintenance window for system upgrade.', 'system_upgrade', '2024-02-15 09:30:00');
+VALUES (7, 0003, 'Scheduled Maintenance Report', '2024-02-15 09:30:00', 'Scheduled maintenance window for system upgrade.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
-VALUES (8, 0004, 10, 'Unusual spike in user activity detected.', 'user_spike', '2024-02-18 13:45:20');
+VALUES (8, 0004, 'User Activity Spike Report', '2024-02-18 13:45:20', 'Unusual spike in user activity detected.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
-VALUES (9, 0001, 9, 'New coding challenge available for data structures.', 'new_challenge', '2024-02-20 08:10:12');
+VALUES (9, 0001, 'New Coding Challenge Report', '2024-02-20 08:10:12', 'New coding challenge available for data structures.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
-VALUES (10, 0002, 6, 'Feedback received on your latest project submission.', 'project_feedback', '2024-02-23 15:22:45');
+VALUES (10, 0002, 'Project Feedback Report', '2024-02-23 15:22:45', 'Feedback received on your latest project submission.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
-VALUES (11, 0003, 7, 'Data integrity issue detected during nightly backup.', 'backup_failure', '2024-02-25 11:55:32');
+VALUES (11, 0003, 'Backup Failure Report', '2024-02-25 11:55:32', 'Data integrity issue detected during nightly backup.');
+INSERT INTO reports (report_id, generated_by, name, generated_date, content)
 VALUES (12, 0004, 'Database Integrity Report', '2024-01-10 09:45:15', 'Database integrity verified successfully.');
 INSERT INTO reports (report_id, generated_by, name, generated_date, content)
 VALUES (13, 0001, 'Network Security Report', '2024-01-15 11:35:40', 'Network security audit passed.');
