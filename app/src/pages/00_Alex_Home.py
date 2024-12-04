@@ -1,21 +1,16 @@
 import streamlit as st
 
+# Set up Alex's home page
 st.title("Welcome, Alex!")
-st.write("### Role: Developer")
-st.write("Navigate through your features:")
+st.write("### Choose an action to get started:")
 
-# Feature Buttons
+# Navigation buttons for Alex's features
 if st.button("Upload Project"):
-    st.experimental_rerun()  # Placeholder for redirection logic
-if st.button("Request Feedback"):
-    st.experimental_rerun()  # Placeholder for redirection logic
-if st.button("Track Progress"):
-    st.experimental_rerun()  # Placeholder for redirection logic
+    st.switch_page('pages/01_Alex_Upload_Project.py')  # Redirects to upload project page
 
-# Back Button
-if st.button("⬅️ Back to Home"):
-    st.session_state['authenticated'] = False  # Reset session state if needed
-    st.session_state['role'] = ''
-    st.session_state['first_name'] = ''
-    st.experimental_set_query_params(page="home")  # Redirect logic for home
-    st.switch_page("pages/Home")  # Streamlit's multi-page navigation
+if st.button("View All Projects"):
+    st.write("Feature not implemented yet.")  # Placeholder for future feature
+
+if st.button("Back to Home"):
+    st.session_state['authenticated'] = False
+    st.switch_page('ProjectHome')  # Redirect back to the main entry-point
