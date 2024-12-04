@@ -16,4 +16,4 @@ if st.button("Delete Projects"):
 
 if st.button("Back to Home"):
     st.session_state['authenticated'] = False
-    st.switch_page('ProjectHome')  # Redirect back to the main entry-point
+    st.switch_page('ProjectHome.py')  # Redirect back to the main entry-point
