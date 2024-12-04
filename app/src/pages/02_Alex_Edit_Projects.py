@@ -40,7 +40,7 @@ if st.button("Update Project"):
                 st.error(f"Failed to update project: {response.json().get('error', 'Unknown error')}")
         else:
             st.error("Could not identify the selected project.")
-
-# Back button
+            
+# Back button to Alex's home page
 if st.button("Back to Alex's Home"):
-    st.switch_page('00_Alex_Home')
+    st.switch_page('pages/00_Alex_Home.py')
