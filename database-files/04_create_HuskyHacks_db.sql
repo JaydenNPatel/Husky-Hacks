@@ -142,7 +142,7 @@ CREATE TABLE backups (
     backup_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL
                      ON UPDATE CURRENT_TIMESTAMP,
     backup_size int NOT NULL,
-    status boolean NOT NULL,
+    status varchar(50) NOT NULL,
     error_log_id int NOT NULL,
     PRIMARY KEY (backup_id),
     FOREIGN KEY (error_log_id) references system_logs(log_id)
