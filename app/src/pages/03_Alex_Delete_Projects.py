@@ -32,6 +32,6 @@ if st.button("Delete Project"):
     else:
         st.error("Could not identify the selected project.")
 
-# Back button
+# Back button to Alex's home page
 if st.button("Back to Alex's Home"):
     st.switch_page('pages/00_Alex_Home.py')

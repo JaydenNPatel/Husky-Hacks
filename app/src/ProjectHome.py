@@ -24,7 +24,7 @@ SideBarLinks(show_home=True)
 # ***************************************************
 
 logger.info("Loading the Home page")
-st.title('CS 3200 Project App')
+st.title('Husky Hacks')
 st.write('\n\n')
 st.write('### HI! As which user would you like to log in?')
 
