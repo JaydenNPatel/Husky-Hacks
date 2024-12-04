@@ -15,3 +15,7 @@ if st.button("Create KPI Views"):
 if st.button("Access Dashboard"):
     st.write("Redirecting to Access Dashboard page...")
     st.experimental_rerun()
+
+if st.button("Back to Home"):
+    st.session_state['authenticated'] = False
+    st.switch_page('ProjectHome.py') 
