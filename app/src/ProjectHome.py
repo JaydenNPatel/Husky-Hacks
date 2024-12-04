@@ -28,6 +28,21 @@ st.title('Husky Hacks')
 st.write('\n\n')
 st.write('### HI! As which user would you like to log in?')
 
+button_style = """
+    <style>
+        .stButton > button {
+            background-color: darkred;
+            color: white;
+            border: 2px solid darkred;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .stButton > button:hover {
+            background-color: lightcoral;
+        }
+    </style>
+"""
+st.markdown(button_style, unsafe_allow_html=True)
 # Login buttons for each persona
 if st.button("Login as Alex (Developer)", type='primary', use_container_width=True):
     st.session_state['authenticated'] = True
