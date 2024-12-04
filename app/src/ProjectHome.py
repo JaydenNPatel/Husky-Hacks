@@ -10,6 +10,7 @@ import streamlit as st
 from modules.nav import SideBarLinks
 
 # Set page configuration
+
 st.set_page_config(layout='wide')
 
 # Reset session state
@@ -33,7 +34,7 @@ if st.button("Login as Alex (Developer)", type='primary', use_container_width=Tr
     st.session_state['role'] = 'Developer'
     st.session_state['first_name'] = 'Alex'
     logger.info("Logging in as Alex - Persona 1")
-    st.switch_page('pages/00_Alex_Home.py')  # No directory prefix, just the file name
+    st.switch_page('pages/00_Alex_Home.py')  # Redirects to Alex's home page
 
 if st.button("Login as Sally (New Coder)", type='primary', use_container_width=True):
     st.session_state['authenticated'] = True
