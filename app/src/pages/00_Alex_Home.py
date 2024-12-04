@@ -8,8 +8,11 @@ st.write("### Choose an action to get started:")
 if st.button("Upload Project"):
     st.switch_page('pages/01_Alex_Upload_Project.py')  # Redirects to upload project page
 
-if st.button("View All Projects"):
-    st.write("Feature not implemented yet.")  # Placeholder for future feature
+if st.button("Edit Projects"):
+    st.switch_page('pages/02_Alex_Edit_Projects.py')  # Redirects to upload project page
+
+if st.button("Delete Projects"):
+    st.switch_page('pages/03_Alex_Delete_Projects.py')  # Redirects to upload project page
 
 if st.button("Back to Home"):
     st.session_state['authenticated'] = False
