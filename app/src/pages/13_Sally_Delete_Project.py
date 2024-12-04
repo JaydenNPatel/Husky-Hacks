@@ -4,10 +4,10 @@ import requests
 st.title("Delete a Project")
 st.write("Select a project to delete it from your account.")
 
-# Fetch the list of projects
+# Fetch list of projects
 response = requests.get("http://127.0.0.1:5000/projects")  # Fetch projects from backend
 if response.status_code == 200:
-    projects = response.json()  # Assuming the backend returns a list of projects
+    projects = response.json()  # Assuming backend returns a list of projects
     project_names = [p["name"] for p in projects]
 else:
     st.error("Failed to fetch projects.")
@@ -33,5 +33,5 @@ if st.button("Delete Project"):
         st.error("Could not identify the selected project.")
 
 # Back button
-if st.button("Back to Alex's Home"):
-    st.switch_page('pages/00_Alex_Home.py')
+if st.button("Back to Sally's Home"):
+    st.switch_page('pages/10_Sally_Home.py')

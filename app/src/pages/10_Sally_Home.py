@@ -1,21 +1,19 @@
 import streamlit as st
 
+# Set up Sally's home page
 st.title("Welcome, Sally!")
-st.write("### Role: New Coder")
-st.write("Navigate through your features:")
+st.write("### Choose an action to get started:")
 
-if st.button("Upload Project"):
-    st.write("Redirecting to Upload Project page...")
-    st.experimental_rerun()  # Placeholder; replace with redirection logic
+# Navigation buttons for Sally's features
+if st.button("Submit a Project for Feedback"):
+    st.switch_page('pages/11_Sally_Submit_Project.py')  # Redirects to submit project page
 
-if st.button("Review Feedback"):
-    st.write("Redirecting to Review Feedback page...")
-    st.experimental_rerun()
+if st.button("Update Feedback Requests"):
+    st.switch_page('pages/12_Sally_Update_Feedback.py')  # Redirects to update feedback page
 
-if st.button("Track Progress"):
-    st.write("Redirecting to Track Progress page...")
-    st.experimental_rerun()
+if st.button("Delete a Project"):
+    st.switch_page('pages/13_Sally_Delete_Project.py')  # Redirects to delete project page
 
 if st.button("Back to Home"):
     st.session_state['authenticated'] = False
-    st.switch_page('ProjectHome.py') 
+    st.switch_page('ProjectHome.py')  # Redirect back to the main entry-point

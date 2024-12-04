@@ -43,4 +43,4 @@ if st.button("Update Project"):
 
 # Back button
 if st.button("Back to Alex's Home"):
-    st.switch_page('00_Alex_Home')
+    st.switch_page('pages/00_Alex_Home.py')
