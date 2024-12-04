@@ -986,115 +986,117 @@ VALUES (20, 0004, 'Edit', 0001, '2023-11-11 14:50:20');
 
 create table notification (
 	notification_id INT,
-	metric_id VARCHAR(1),
+	metric_id VARCHAR(10),
 	timestamp DATE,
-	notification_type VARCHAR(1),
+	notification_type VARCHAR(10),
 	threshold_value INT,
 	actual_value INT
 );
 
 USE Husky_Hacks;
 
+-- Corrected INSERT statements for the notification table
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (1, 'system_error', '2024-03-06', 'error', 72, 69);
+VALUES (1, 1, '2024-03-06', 'error', 72, 69);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (2, 'user_alert', '2024-11-07', 'alert', 91, 45);
+VALUES (2, 2, '2024-11-07', 'alert', 91, 45);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (3, 'performance_warning', '2024-07-17', 'warning', 21, 70);
+VALUES (3, 3, '2024-07-17', 'warning', 21, 70);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (4, 'system_error', '2024-10-30', 'error', 90, 4);
+VALUES (4, 4, '2024-10-30', 'error', 90, 4);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (5, 'user_alert', '2023-12-26', 'alert', 57, 0);
+VALUES (5, 5, '2023-12-26', 'alert', 57, 0);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (6, 'performance_warning', '2023-12-06', 'warning', 10, 38);
+VALUES (6, 6, '2023-12-06', 'warning', 10, 38);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (7, 'system_error', '2024-05-05', 'error', 26, 96);
+VALUES (7, 7, '2024-05-05', 'error', 26, 96);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (8, 'user_alert', '2024-09-10', 'alert', 46, 61);
+VALUES (8, 8, '2024-09-10', 'alert', 46, 61);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (9, 'performance_warning', '2024-02-09', 'warning', 1, 29);
+VALUES (9, 9, '2024-02-09', 'warning', 1, 29);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (10, 'system_error', '2024-11-04', 'error', 78, 50);
+VALUES (10, 10, '2024-11-04', 'error', 78, 50);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (11, 'user_alert', '2024-11-07', 'alert', 3, 76);
+VALUES (11, 11, '2024-11-07', 'alert', 3, 76);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (12, 'performance_warning', '2024-06-04', 'warning', 44, 54);
+VALUES (12, 12, '2024-06-04', 'warning', 44, 54);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (13, 'system_error', '2024-08-06', 'error', 91, 30);
+VALUES (13, 13, '2024-08-06', 'error', 91, 30);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (14, 'user_alert', '2024-11-12', 'alert', 25, 46);
+VALUES (14, 14, '2024-11-12', 'alert', 25, 46);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (15, 'performance_warning', '2024-04-27', 'warning', 16, 47);
+VALUES (15, 15, '2024-04-27', 'warning', 16, 47);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (16, 'system_error', '2024-09-11', 'error', 88, 67);
+VALUES (16, 16, '2024-09-11', 'error', 88, 67);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (17, 'user_alert', '2024-09-09', 'alert', 5, 86);
+VALUES (17, 17, '2024-09-09', 'alert', 5, 86);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (18, 'performance_warning', '2024-06-17', 'warning', 48, 11);
+VALUES (18, 18, '2024-06-17', 'warning', 48, 11);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (19, 'system_error', '2024-09-06', 'error', 49, 64);
+VALUES (19, 19, '2024-09-06', 'error', 49, 64);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (20, 'user_alert', '2024-07-09', 'alert', 32, 93);
+VALUES (20, 20, '2024-07-09', 'alert', 32, 93);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (21, 'performance_warning', '2024-06-08', 'warning', 93, 48);
+VALUES (21, 21, '2024-06-08', 'warning', 93, 48);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (22, 'system_error', '2024-03-21', 'error', 27, 90);
+VALUES (22, 22, '2024-03-21', 'error', 27, 90);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (23, 'user_alert', '2024-08-30', 'alert', 16, 79);
+VALUES (23, 23, '2024-08-30', 'alert', 16, 79);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (24, 'performance_warning', '2024-08-15', 'warning', 49, 60);
+VALUES (24, 24, '2024-08-15', 'warning', 49, 60);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (25, 'system_error', '2024-05-20', 'error', 60, 91);
+VALUES (25, 25, '2024-05-20', 'error', 60, 91);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (26, 'user_alert', '2024-01-29', 'alert', 13, 2);
+VALUES (26, 26, '2024-01-29', 'alert', 13, 2);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (27, 'performance_warning', '2024-08-22', 'warning', 48, 27);
+VALUES (27, 27, '2024-08-22', 'warning', 48, 27);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (28, 'system_error', '2024-10-02', 'error', 49, 67);
+VALUES (28, 28, '2024-10-02', 'error', 49, 67);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (29, 'user_alert', '2024-07-10', 'alert', 74, 63);
+VALUES (29, 29, '2024-07-10', 'alert', 74, 63);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (30, 'performance_warning', '2024-09-05', 'warning', 28, 84);
+VALUES (30, 30, '2024-09-05', 'warning', 28, 84);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (31, 'system_error', '2024-01-06', 'error', 89, 90);
+VALUES (31, 31, '2024-01-06', 'error', 89, 90);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (32, 'user_alert', '2024-10-12', 'alert', 27, 77);
+VALUES (32, 32, '2024-10-12', 'alert', 27, 77);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (33, 'performance_warning', '2024-03-11', 'warning', 93, 84);
+VALUES (33, 33, '2024-03-11', 'warning', 93, 84);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (34, 'system_error', '2023-12-26', 'error', 50, 60);
+VALUES (34, 34, '2023-12-26', 'error', 50, 60);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (35, 'user_alert', '2024-09-23', 'alert', 41, 92);
+VALUES (35, 35, '2024-09-23', 'alert', 41, 92);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (36, 'performance_warning', '2024-08-08', 'warning', 5, 42);
+VALUES (36, 36, '2024-08-08', 'warning', 5, 42);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (37, 'system_error', '2024-01-18', 'error', 33, 78);
+VALUES (37, 37, '2024-01-18', 'error', 33, 78);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (38, 'user_alert', '2024-09-02', 'alert', 8, 90);
+VALUES (38, 38, '2024-09-02', 'alert', 8, 90);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (39, 'performance_warning', '2024-07-27', 'warning', 90, 48);
+VALUES (39, 39, '2024-07-27', 'warning', 90, 48);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (40, 'system_error', '2024-11-14', 'error', 28, 99);
+VALUES (40, 40, '2024-11-14', 'error', 28, 99);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (41, 'user_alert', '2023-12-15', 'alert', 92, 22);
+VALUES (41, 41, '2023-12-15', 'alert', 92, 22);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (42, 'performance_warning', '2023-12-09', 'warning', 30, 34);
+VALUES (42, 42, '2023-12-09', 'warning', 30, 34);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (43, 'system_error', '2024-08-11', 'error', 49, 4);
+VALUES (43, 43, '2024-08-11', 'error', 49, 4);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (44, 'user_alert', '2024-04-13', 'alert', 44, 42);
+VALUES (44, 44, '2024-04-13', 'alert', 44, 42);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (45, 'performance_warning', '2024-06-07', 'warning', 8, 58);
+VALUES (45, 45, '2024-06-07', 'warning', 8, 58);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (46, 'system_error', '2024-03-30', 'error', 93, 20);
+VALUES (46, 46, '2024-03-30', 'error', 93, 20);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (47, 'user_alert', '2024-09-09', 'alert', 87, 69);
+VALUES (47, 47, '2024-09-09', 'alert', 87, 69);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (48, 'performance_warning', '2024-08-05', 'warning', 87, 29);
+VALUES (48, 48, '2024-08-05', 'warning', 87, 29);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (49, 'system_error', '2024-02-08', 'error', 50, 38);
+VALUES (49, 49, '2024-02-08', 'error', 50, 38);
 INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (50, 'user_alert', '2024-02-26', 'alert', 84, 94);
+VALUES (50, 50, '2024-02-26', 'alert', 84, 94);
+
 
 insert into notification_type (type_id, name) values (1, 'Performance Alert');
 insert into notification_type (type_id, name) values (2, 'Threshold Alert');
@@ -1147,43 +1149,86 @@ insert into notification_type (type_id, name) values (48, 'Performance Alert');
 insert into notification_type (type_id, name) values (49, 'Performance Alert');
 insert into notification_type (type_id, name) values (50, 'Threshold Alert');
 
-use Husky_Hacks;
-INSERT INTO kpi_views (view_name, created_by, created_date, last_updated) VALUES
-('Revenue Analysis', 1, '9/1/2023 08:15:45', '9/5/2023 10:00:00'),
-('Website Traffic Growth Report', 3, '9/10/2023 14:30:00', '9/12/2023 16:45:30'),
-('Quarterly Profit and Loss Statement', 5, '9/20/2023 09:00:00', '9/22/2023 12:30:00'),
-('New Hire Onboarding Metrics', 7, '10/5/2023 07:45:20', '10/6/2023 09:15:40'),
-('Data Breach Incident Report', 16, '10/15/2023 20:33:08', '10/17/2023 21:24:57'),
-('Daily Network Uptime Report', 2, '11/1/2023 11:25:00', '11/3/2023 13:15:10'),
-('Customer Support Satisfaction Trends', 13, '11/10/2023 08:45:30', '11/15/2023 09:20:45'),
-('Quarterly Product Release Overview', 19, '12/1/2023 15:00:00', '12/2/2023 16:30:10'),
-('Year-End Compliance Audit Summary', 20, '12/15/2023 19:28:34', '12/16/2023 19:39:57'),
-('Annual Budget Review', 5, '1/10/2024 07:00:15', '1/11/2024 18:20:50'),
-('Employee Turnover Report', 8, '1/26/2024 11:08:28', '1/28/2024 11:39:41'),
-('Social Media Engagement Analysis', 26, '2/15/2024 12:00:00', '2/17/2024 14:15:00'),
-('Supply Chain Efficiency Metrics', 22, '3/1/2024 13:30:00', '3/5/2024 14:50:00'),
-('Sales Funnel Conversion Rates', 11, '3/20/2024 09:00:00', '3/21/2024 10:15:00'),
-('Shipping Delays Heatmap', 23, '4/5/2024 06:45:20', '4/7/2024 08:15:30'),
-('Monthly Threat Assessment', 27, '4/15/2024 20:33:08', '4/18/2024 21:24:57'),
-('Year-End Customer Loyalty Trends', 13, '5/1/2024 11:25:00', '5/3/2024 13:15:10'),
-('Investor Meeting Financial Summary', 21, '5/10/2024 08:45:30', '5/12/2024 09:20:45'),
-('Environmental Impact Report', 28, '6/1/2024 15:00:00', '6/5/2024 16:30:10'),
-('Retail Foot Traffic Overview', 29, '6/15/2024 19:28:34', '6/18/2024 19:39:57'),
-('Weekly Cybersecurity Update', 16, '7/10/2024 07:00:15', '7/12/2024 18:20:50'),
-('Partnership Success Metrics', 17, '7/26/2024 11:08:28', '7/28/2024 11:39:41'),
-('Training Program Feedback Analysis', 23, '8/15/2024 12:00:00', '8/17/2024 14:15:00'),
-('Conference Attendance Summary', 24, '8/20/2024 13:30:00', '8/25/2024 14:50:00'),
-('Office Energy Usage Dashboard', 22, '9/1/2024 09:00:00', '9/3/2024 10:15:00'),
-('Shipping Performance Dashboard', 23, '9/20/2024 06:45:20', '9/25/2024 08:15:30'),
-('Crisis Management Preparedness Index', 30, '10/1/2024 20:33:08', '10/5/2024 21:24:57'),
-('Monthly Risk Exposure Assessment', 19, '10/10/2024 11:25:00', '10/12/2024 13:15:10'),
-('Holiday Season Sales Trends', 12, '11/1/2024 08:45:30', '11/5/2024 09:20:45'),
-('Marketing Campaign ROI Analysis', 3, '11/15/2024 15:00:00', '11/18/2024 16:30:10'),
-('Supplier Performance Evaluation', 13, '12/1/2024 19:28:34', '12/3/2024 19:39:57'),
-('Year-End Manufacturing Output Review', 30, '12/10/2024 07:00:15', '12/15/2024 18:20:50'),
-('Last-Minute Holiday Metrics', 18, '12/20/2024 11:08:28', '12/22/2024 11:39:41'),
-('Software Implementation Success', 35, '11/5/2024 08:00:15', '11/15/2024 12:30:50'),
-('Cloud Infrastructure Downtime Trends', 40, '12/15/2024 08:15:00', '12/16/2024 18:25:50');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Revenue Overview', 1, '2023-09-01 08:15:45', '2023-09-05 14:30:00');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('User Engagement', 2, '2023-10-10 12:45:30', '2023-10-15 16:20:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Retention Analysis', 3, '2023-11-01 09:25:15', '2023-11-05 18:10:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Sales Metrics', 4, '2023-08-15 11:40:25', '2023-08-20 13:50:00');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Performance Dashboard', 1, '2023-07-20 14:10:30', '2023-07-25 17:15:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Weekly Insights', 2, '2023-12-05 10:30:15', '2023-12-10 15:40:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Marketing Trends', 3, '2023-06-01 09:50:45', '2023-06-06 14:00:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Expense Summary', 4, '2023-05-25 08:20:35', '2023-05-30 12:45:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Productivity Tracker', 1, '2023-04-10 10:15:25', '2023-04-15 11:50:35');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Growth Indicators', 2, '2023-03-01 12:30:45', '2023-03-06 16:25:50');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Operational Metrics', 3, '2023-02-15 09:35:10', '2023-02-20 14:30:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Profitability Dashboard', 4, '2023-01-05 08:45:35', '2023-01-10 13:20:40');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Financial Health', 1, '2023-11-25 07:15:50', '2023-12-01 11:35:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Team Efficiency', 2, '2023-10-30 06:25:35', '2023-11-04 10:20:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Engagement Trends', 3, '2023-09-20 05:15:20', '2023-09-25 08:40:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Quarterly Goals', 4, '2023-08-05 14:30:50', '2023-08-10 17:25:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Customer Insights', 1, '2023-07-01 09:50:35', '2023-07-06 12:15:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Revenue Breakdown', 2, '2023-06-15 11:40:15', '2023-06-20 14:30:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Operational Summary', 3, '2023-05-10 08:30:25', '2023-05-15 10:40:35');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('User Statistics', 4, '2023-04-25 14:20:50', '2023-04-30 16:50:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Weekly Summary', 1, '2023-03-20 09:15:45', '2023-03-25 12:40:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Engagement Analysis', 2, '2023-02-05 10:30:25', '2023-02-10 15:20:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Retention Tracker', 3, '2023-01-15 08:25:35', '2023-01-20 11:15:55');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Sales Insights', 4, '2023-12-10 12:15:20', '2023-12-15 16:30:40');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Profit Tracker', 1, '2023-11-01 14:10:25', '2023-11-06 17:50:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Expense Monitor', 2, '2023-10-05 09:40:35', '2023-10-10 14:20:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Operational Efficiency', 3, '2023-09-15 11:30:45', '2023-09-20 16:25:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Revenue Metrics', 4, '2023-08-25 07:20:35', '2023-08-30 12:50:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Customer Retention', 1, '2023-07-05 08:15:20', '2023-07-10 13:40:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Growth Analysis', 2, '2023-06-01 09:50:30', '2023-06-06 14:25:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Market Trends', 3, '2023-05-10 12:30:40', '2023-05-15 16:45:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('User Engagement Dashboard', 4, '2023-04-20 10:25:50', '2023-04-25 14:50:35');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Performance Metrics', 1, '2023-03-15 08:30:45', '2023-03-20 13:40:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Quarterly Analysis', 2, '2023-02-10 07:20:35', '2023-02-15 11:50:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Business Overview', 3, '2023-01-05 09:15:25', '2023-01-10 12:40:35');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Engagement Summary', 4, '2022-12-15 14:30:50', '2022-12-20 17:45:30');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Retention Monitor', 1, '2022-11-10 11:40:25', '2022-11-15 15:50:15');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Expense Tracker', 2, '2022-10-05 08:50:30', '2022-10-10 13:20:45');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Profit Analysis', 3, '2022-09-15 10:30:35', '2022-09-20 14:40:25');
+INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
+VALUES ('Revenue Analysis', 4, '2022-08-01 07:25:20', '2022-08-06 12:15:50');
 
 use Husky_Hacks;
 insert into feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date) values (1, 0101, 0002, 'Make code more efficient', 4, '1/02/2023 08:36:58');
