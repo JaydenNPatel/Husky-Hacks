@@ -8,7 +8,6 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
 st.title("Metrics Dashboard")
 
-# Function to render a retention metrics card
 def retention_card(item, idx):
     return f"""
     <div style="
@@ -33,7 +32,6 @@ def retention_card(item, idx):
     </div>
     """
 
-# Function to render a revenue metrics card
 def revenue_card(item, idx):
     return f"""
     <div style="
@@ -59,7 +57,6 @@ def revenue_card(item, idx):
     </div>
     """
 
-# Function to render a user engagement metrics card
 def engagement_card(item, idx):
     return f"""
     <div style="
@@ -85,7 +82,6 @@ def engagement_card(item, idx):
     </div>
     """
 
-# Logic for Retention Metrics
 if st.button("Retention Metrics"):
     response = requests.get(f"{BASE_URL}/devin/retention_metrics")
     if response.status_code == 200:
@@ -117,7 +113,6 @@ if "retention_items" in st.session_state:
                 st.error(f"Failed to delete the metric: {delete_response.status_code}")
     st.markdown("</div>", unsafe_allow_html=True)
 
-# Logic for Revenue Metrics
 if st.button("Revenue Metrics"):
     response = requests.get(f"{BASE_URL}/devin/revenue_metrics")
     if response.status_code == 200:
@@ -149,7 +144,6 @@ if "revenue_items" in st.session_state:
                 st.error(f"Failed to delete the metric: {delete_response.status_code}")
     st.markdown("</div>", unsafe_allow_html=True)
 
-# Logic for User Engagement Metrics
 if st.button("User Engagement Metrics"):
     response = requests.get(f"{BASE_URL}/devin/user_engagement_metrics")
     if response.status_code == 200:
@@ -180,6 +174,3 @@ if "engagement_items" in st.session_state:
             else:
                 st.error(f"Failed to delete the metric: {delete_response.status_code}")
     st.markdown("</div>", unsafe_allow_html=True)
-
-if st.button("Back To Menu"):
-    st.switch_page('/pages/30_Devin_Home.py')
