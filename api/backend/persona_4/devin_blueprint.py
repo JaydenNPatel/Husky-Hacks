@@ -69,7 +69,7 @@ def update_metric(id):
 # Route 6: Delete outdated metrics (DELETE)
 @devin.route('/delete_retention_metrics/<id>', methods=['DELETE'])
 def delete_retention_metrics(id):
-    query = 'DELETE FROM retention_metrics WHERE id = %s'
+    query = 'DELETE FROM retention_metrics WHERE metric_id = %s'
     cursor = db.get_db().cursor()
     cursor.execute(query, (id,))
     db.get_db().commit()

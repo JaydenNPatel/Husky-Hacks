@@ -217,7 +217,7 @@ CREATE TABLE real_time_dashboard (
     FOREIGN KEY (metric_id) references revenue_metrics(metric_id)
                                  ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (metric_id) references retention_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE RESTRICT,
+                                 ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (dashboard_id),
     INDEX idx_data_source (metric_id)
 );
@@ -237,7 +237,7 @@ CREATE TABLE archived_data (
     FOREIGN KEY (metric_id) references revenue_metrics(metric_id)
                                  ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (metric_id) references retention_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE RESTRICT,
+                                 ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (archive_id),
     INDEX idx_metric_id (metric_id),
     INDEX idx_archived_by (archived_by)
@@ -265,7 +265,7 @@ CREATE TABLE notifications (
     FOREIGN KEY (metric_id) references revenue_metrics(metric_id)
                                  ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (metric_id) references retention_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE RESTRICT,
+                                 ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (notification_id),
     INDEX idx_notification_type (notification_type),
     INDEX idx_metric_id (metric_id)
