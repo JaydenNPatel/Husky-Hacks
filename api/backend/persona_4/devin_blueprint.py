@@ -13,8 +13,9 @@ devin = Blueprint('devin', __name__)
 # Route 1: Retrieve all metrics (GET)
 @devin.route('/metrics', methods=['GET'])
 def get_metrics():
-    query = 'SELECT * FROM metrics'
+    query = 'SELECT * FROM retention_metrics'
     cursor = db.get_db().cursor()
+    print(cursor)
     cursor.execute(query)
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)

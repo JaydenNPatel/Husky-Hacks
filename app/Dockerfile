@@ -16,6 +16,8 @@ COPY ./src/requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
+COPY ./src /app
+
 RUN ls
 
 EXPOSE 8501
@@ -24,4 +26,4 @@ EXPOSE 8501
 
 # ENTRYPOINT ["streamlit", "run", "src/Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
-CMD ["streamlit", "run", "Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "ProjectHome.py", "--server.port=8501", "--server.address=0.0.0.0"]

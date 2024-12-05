@@ -8,8 +8,7 @@ st.write("### Role: Data Analyst")
 st.write("Navigate through your features:")
 
 if st.button("View Metrics"):
-    st.write("Redirecting to View Metrics page...")
-    st.experimental_rerun()  # Placeholder; replace with redirection logic
+    st.switch_page('pages/31_Devin_View_Metrics.py')
 
 if st.button("Create KPI Views"):
     st.write("Redirecting to Create KPI Views page...")

@@ -1,29 +1,49 @@
+version: '3.8'
+
 services:
   app:
     build: ./app
-    container_name: web-app  
+    container_name: web-app
     hostname: web-app
-    volumes: ['./app/src:/appcode']
+    volumes:
+      - './app/src:/appcode'
     ports:
       - 8502:8501
+    depends_on:
+      - api
+    environment:
+      - BASE_URL=http://web-api:4000
+    networks:
+      - app-network
 
   api:
     build: ./api
     container_name: web-api
     hostname: web-api
-    volumes: ['./api:/apicode']
+    volumes:
+      - './api:/apicode'
     ports:
       - 4000:4000
-
-  db:
+    depends_on:
+      - db
     env_file:
       - ./api/.env
+    networks:
+      - app-network
+
+  db:
     image: mysql:9
     container_name: mysql_db
     hostname: db
+    env_file:
+      - ./api/.env
     volumes:
-      - ./database-files:/docker-entrypoint-initdb.d/:ro
+      - './database-files:/docker-entrypoint-initdb.d/:ro'
     ports:
       - 3200:3306
+    networks:
+      - app-network
 
-
+networks:
+  app-network:
+    driver: bridge
