@@ -1,12 +1,8 @@
 import logging
-logging.basicConfig(format='%(filename)s:%(lineno)s:%(levelname)s -- %(message)s', level=logging.INFO)
-logger = logging.getLogger(__name__)
-
 import streamlit as st
 from modules.nav import SideBarLinks
 
 # Set page configuration
-
 st.set_page_config(layout='wide')
 
 # Reset session state
@@ -15,13 +11,45 @@ st.session_state['authenticated'] = False
 # Display sidebar links
 SideBarLinks(show_home=True)
 
+# ***************************************************
+#    The major content of this page
+# ***************************************************
+
+# Set the background to black using markdown, and no CSS
+st.markdown("""
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Logging setup
+logging.basicConfig(format='%(filename)s:%(lineno)s:%(levelname)s -- %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 logger.info("Loading the Home page")
 st.title('Husky Hacks')
 st.write('\n\n')
 st.write('### HI! As which user would you like to log in?')
 
-
+# Button styling (dark red) with light hover effect
+button_style = """
+    <style>
+        .stButton > button {
+            background-color: darkred;
+            color: white;
+            border: 2px solid darkred;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .stButton > button:hover {
+            background-color: lightcoral;
+        }
+    </style>
+"""
 st.markdown(button_style, unsafe_allow_html=True)
+
 # Login buttons for each persona
 if st.button("Login as Alex (Developer)", type='primary', use_container_width=True):
     st.session_state['authenticated'] = True
