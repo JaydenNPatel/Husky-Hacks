@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 st.title("Update Feedback Requests")
 st.write("Select a project and update the feedback areas.")

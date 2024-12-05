@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 st.title("Submit Your Project for Feedback")
 st.write("Use this form to submit your project and specify areas where you need feedback.")

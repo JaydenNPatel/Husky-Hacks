@@ -1,4 +1,7 @@
 import streamlit as st
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
+
 
 st.title("Welcome, Devin!")
 st.write("### Role: Data Analyst")

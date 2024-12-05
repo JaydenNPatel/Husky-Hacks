@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 st.title("Delete a Project")
 st.write("Select a project to delete it from your account.")

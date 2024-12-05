@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 st.title("Delete Inactive Users")
 st.write("Identify and delete inactive user accounts to improve system efficiency.")

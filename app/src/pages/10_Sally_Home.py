@@ -1,4 +1,6 @@
 import streamlit as st
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 # Set up Sally's home page
 st.title("Welcome, Sally!")

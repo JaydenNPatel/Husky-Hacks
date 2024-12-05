@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 st.title("Manage User Permissions")
 st.write("Update user roles and permissions to ensure secure access control.")
