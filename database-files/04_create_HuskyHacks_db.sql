@@ -34,7 +34,7 @@ CREATE TABLE projects (
     is_archived boolean DEFAULT FALSE NOT NULL,
     PRIMARY KEY (project_id),
     FOREIGN KEY (user_id) references users(user_id)
-                    ON UPDATE CASCADE ON DELETE RESTRICT,
+                    ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (project_id),
     INDEX idx_user_id (user_id)
 );
@@ -302,3 +302,19 @@ CREATE TABLE kpi_views (
     UNIQUE INDEX uq_idx_id (view_id),
     INDEX idx_created_by (created_by)
 );
+
+ALTER TABLE feedback
+DROP FOREIGN KEY feedback_ibfk_1; -- Drop the old constraint on project_id
+
+ALTER TABLE feedback
+ADD CONSTRAINT feedback_ibfk_1
+FOREIGN KEY (project_id) REFERENCES projects(project_id)
+ON DELETE CASCADE ON UPDATE CASCADE; -- Add cascading delete
+
+ALTER TABLE progress
+DROP FOREIGN KEY progress_ibfk_1; -- Drop the old constraint on project_id
+
+ALTER TABLE progress
+ADD CONSTRAINT progress_ibfk_1
+FOREIGN KEY (project_id) REFERENCES projects(project_id)
+ON DELETE CASCADE ON UPDATE CASCADE; -- Add cascading delete

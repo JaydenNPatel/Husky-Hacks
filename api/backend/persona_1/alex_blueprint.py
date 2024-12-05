@@ -37,7 +37,7 @@ def update_project(id):
     query = '''
         UPDATE projects
         SET title = %s, description = %s, tags = %s
-        WHERE id = %s
+        WHERE project_id = %s
     '''
     data = (
         project_data['title'], 
@@ -62,7 +62,7 @@ def get_all_projects():
 # Route 4: Archive a project (DELETE)
 @alex.route('/projects/<id>', methods=['DELETE'])
 def archive_project(id):
-    query = 'DELETE FROM projects WHERE id = %s'
+    query = 'DELETE FROM projects WHERE project_id = %s'
     cursor = db.get_db().cursor()
     cursor.execute(query, (id,))
     db.get_db().commit()
