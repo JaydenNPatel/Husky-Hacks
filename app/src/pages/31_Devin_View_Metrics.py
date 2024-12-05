@@ -5,10 +5,10 @@ import os  # Import os to read environment variables
 # Use BASE_URL from the environment or provide a default fallback
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
 
-st.title("View Metrics")
+st.title("Retention Metrics")
 
 if st.button("Test"):
-    response = requests.get(f"{BASE_URL}/devin/metrics")
+    response = requests.get(f"{BASE_URL}/devin/retention_metrics")
 
     if response.status_code == 200:
         items = response.json()  # Convert JSON response to Python dictionary/list

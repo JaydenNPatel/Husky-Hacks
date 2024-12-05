@@ -10,9 +10,9 @@ from backend.ml_models.model01 import predict
 # Create a new Blueprint
 devin = Blueprint('devin', __name__)
 
-# Route 1: Retrieve all metrics (GET)
-@devin.route('/metrics', methods=['GET'])
-def get_metrics():
+# Route 1: Retrieve all retention metrics (GET)
+@devin.route('/retention_metrics', methods=['GET'])
+def get_retention_metrics():
     query = 'SELECT * FROM retention_metrics'
     cursor = db.get_db().cursor()
     print(cursor)
@@ -20,7 +20,27 @@ def get_metrics():
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
 
-# Route 2: Create a new KPI view (POST)
+# Route 2: Retrieve all revenue metrics (GET)
+@devin.route('/revenue_metrics', methods=['GET'])
+def get_revenue_metrics():
+    query = 'SELECT * FROM retention_metrics'
+    cursor = db.get_db().cursor()
+    print(cursor)
+    cursor.execute(query)
+    metrics = cursor.fetchall()
+    return make_response(jsonify(metrics), 200)
+
+# Route 3: Retrieve all user engagement metrics (GET)
+@devin.route('/user_engagement_metrics', methods=['GET'])
+def get_user_engagement_metrics():
+    query = 'SELECT * FROM retention_metrics'
+    cursor = db.get_db().cursor()
+    print(cursor)
+    cursor.execute(query)
+    metrics = cursor.fetchall()
+    return make_response(jsonify(metrics), 200)
+
+# Route 4: Create a new KPI view (POST)
 @devin.route('/kpi_views', methods=['POST'])
 def create_kpi_view():
     kpi_data = request.json
@@ -34,7 +54,7 @@ def create_kpi_view():
     db.get_db().commit()
     return make_response("KPI view created successfully", 201)
 
-# Route 3: Update a metric (PUT)
+# Route 5: Update a metric (PUT)
 @devin.route('/metrics/<id>', methods=['PUT'])
 def update_metric(id):
     metric_data = request.json
@@ -49,7 +69,7 @@ def update_metric(id):
     db.get_db().commit()
     return make_response("Metric updated successfully", 200)
 
-# Route 4: Delete outdated metrics (DELETE)
+# Route 6: Delete outdated metrics (DELETE)
 @devin.route('/metrics/<id>', methods=['DELETE'])
 def delete_metric(id):
     query = 'DELETE FROM metrics WHERE id = %s'
@@ -58,7 +78,7 @@ def delete_metric(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 5: Retrieve real-time dashboard data (GET)
+# Route 7: Retrieve real-time dashboard data (GET)
 @devin.route('/dashboard', methods=['GET'])
 def get_dashboard():
     query = '''
