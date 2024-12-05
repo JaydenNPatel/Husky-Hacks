@@ -13,9 +13,8 @@ devin = Blueprint('devin', __name__)
 # Route 1: Retrieve all retention metrics (GET)
 @devin.route('/retention_metrics', methods=['GET'])
 def get_retention_metrics():
-    query = 'SELECT * FROM retention_metrics'
+    query = 'SELECT ds.source_name, ds.data_type, rt.churn_rate, rt.retention_rate, rt.cohort, rt.timestamp  FROM retention_metrics as rt JOIN data_source as ds ON rt.data_source = ds.source_id'
     cursor = db.get_db().cursor()
-    print(cursor)
     cursor.execute(query)
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
@@ -23,9 +22,8 @@ def get_retention_metrics():
 # Route 2: Retrieve all revenue metrics (GET)
 @devin.route('/revenue_metrics', methods=['GET'])
 def get_revenue_metrics():
-    query = 'SELECT * FROM revenue_metrics'
+    query = 'SELECT ds.source_name, ds.data_type, rv.revenue, rv.avg_revenue_per_user, rv.transactions, rv.currency, rv.timestamp FROM revenue_metrics as rv JOIN data_source as ds ON rv.data_source = ds.source_id'
     cursor = db.get_db().cursor()
-    print(cursor)
     cursor.execute(query)
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
@@ -33,9 +31,8 @@ def get_revenue_metrics():
 # Route 3: Retrieve all user engagement metrics (GET)
 @devin.route('/user_engagement_metrics', methods=['GET'])
 def get_user_engagement_metrics():
-    query = 'SELECT * FROM user_engagement_metrics'
+    query = 'SELECT ds.source_name, ds.data_type, ue.engagement_rate, ue.active_users, ue.new_users, ue.returning_users, ue.timestamp FROM user_engagement_metrics as ue JOIN data_source as ds ON ue.data_source = ds.source_id'
     cursor = db.get_db().cursor()
-    print(cursor)
     cursor.execute(query)
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
