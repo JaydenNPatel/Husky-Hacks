@@ -8,6 +8,6 @@ st.write("# About this App")
 
 st.markdown (
     """
-    This app allows users to log in, track projects, and receive feedback.
+    This app allows users to log in, track projects, and receive feedback.,
     """
         )
