@@ -100,4 +100,4 @@ if st.button("User Engagement Metrics"):
 
 if st.button("Back to Home"):
     st.session_state['authenticated'] = False
-    st.switch_page('30_Devin_Home.py') 
+    st.switch_page('pages/30_Devin_Home.py') 

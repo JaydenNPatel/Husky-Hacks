@@ -67,7 +67,7 @@ def SideBarLinks(show_home=False):
     # If there is no logged in user, redirect to the Home (Landing) page
     if "authenticated" not in st.session_state:
         st.session_state.authenticated = False
-        st.switch_page("Home.py")
+        st.switch_page("ProjectHome.py")
 
     if show_home:
         # Show the Home page link (the landing page)
@@ -100,4 +100,4 @@ def SideBarLinks(show_home=False):
         if st.sidebar.button("Logout"):
             del st.session_state["role"]
             del st.session_state["authenticated"]
-            st.switch_page("Home.py")
+            st.switch_page("ProjectHome.py")
