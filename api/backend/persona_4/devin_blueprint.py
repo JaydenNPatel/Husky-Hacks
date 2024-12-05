@@ -67,15 +67,33 @@ def update_metric(id):
     return make_response("Metric updated successfully", 200)
 
 # Route 6: Delete outdated metrics (DELETE)
-@devin.route('/metrics/<id>', methods=['DELETE'])
+@devin.route('/delete_retention_metrics/<id>', methods=['DELETE'])
 def delete_metric(id):
-    query = 'DELETE FROM metrics WHERE id = %s'
+    query = 'DELETE FROM retention_metrics WHERE id = %s'
     cursor = db.get_db().cursor()
     cursor.execute(query, (id,))
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 7: Retrieve real-time dashboard data (GET)
+# Route 7: Delete outdated metrics (DELETE)
+@devin.route('/delete_revenue_metrics/<id>', methods=['DELETE'])
+def delete_metric(id):
+    query = 'DELETE FROM revenue_metrics WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Metric deleted successfully", 200)
+
+# Route 8: Delete outdated metrics (DELETE)
+@devin.route('/delete_user_engagement_metrics/<id>', methods=['DELETE'])
+def delete_metric(id):
+    query = 'DELETE FROM user_engagement_metrics WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Metric deleted successfully", 200)
+
+# Route 9: Retrieve real-time dashboard data (GET)
 @devin.route('/dashboard', methods=['GET'])
 def get_dashboard():
     query = '''
