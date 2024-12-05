@@ -1,15 +1,16 @@
 import streamlit as st
 import requests
 import os
+import time
 
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
 
 st.title("Retention Metrics")
 
-def retention_card(item, key):
+def retention_card(item, idx):
     card_style = f"""
     <div style="
-        width: 400px;
+        width: 300px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -18,6 +19,8 @@ def retention_card(item, key):
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         color: black;
         text-align: center;
+        display: inline-block;
+        vertical-align: top;
     ">
         <h4>{item['source_name']}</h4>
         <h6>{item['data_type']}</h6>
@@ -25,19 +28,6 @@ def retention_card(item, key):
         <p>Retention Rate: {item['retention_rate']}</p>
         <p>Cohort: {item['cohort']}</p>
         <p>Timestamp: {item['timestamp']}</p>
-        <form action="" method="post" style="margin-top: 16px;">
-            <button type="submit" name="{key}" style="
-                background-color: red;
-                color: white;
-                border: none;
-                border-radius: 12px;
-                padding: 8px 16px;
-                cursor: pointer;
-                font-size: 14px;
-            " onmouseover="this.style.backgroundColor='#ff6666'" onmouseout="this.style.backgroundColor='red'">
-                Delete
-            </button>
-        </form>
     </div>
     """
     return card_style
@@ -48,46 +38,59 @@ if st.button("Retention Metrics"):
     if response.status_code == 200:
         items = response.json()
 
-        cards_html = """
-        <div style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-        ">
-        """
+        st.markdown(
+            """
+            <div style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: flex-start;
+            ">
+            """,
+            unsafe_allow_html=True
+        )
 
         for idx, metric in enumerate(items):
-            delete_key = f"delete-{idx}"
+            st.markdown(retention_card(metric, idx), unsafe_allow_html=True)
 
-            cards_html += retention_card(metric, delete_key)
+            if f"delete_id-{idx}" not in st.session_state:
+                st.session_state[f"delete_id-{idx}"] = metric['metric_id']
 
-        cards_html += "</div>"
+            if st.button(f"Delete {metric['source_name']}", key=f"delete-{idx}"):
+                metric_id = st.session_state[f"delete_id-{idx}"]
 
-        st.markdown(cards_html, unsafe_allow_html=True)
+                delete_response = requests.delete(f"{BASE_URL}/devin/delete_retention_metrics/{metric_id}")
+                time.sleep(30)
 
-        for idx, metric in enumerate(items):
-            if st.session_state.get(f"delete-{idx}"):
-                st.success(f"Deleted item: {metric['source_name']}")
-                st.experimental_rerun()
+                if delete_response.status_code == 200:
+                    st.success(f"Deleted item: {metric['source_name']}")
+                    del st.session_state[f"delete_id-{idx}"]
+                else:
+                    st.error(f"Failed to delete the metric: {delete_response.status_code}")
+
+        st.markdown("</div>", unsafe_allow_html=True)
     else:
-        st.write("Failed to get data")
+        st.error("Failed to fetch Retention Metrics")
+
+
 
 
 if st.button("Revenue Metrics"):
     response = requests.get(f"{BASE_URL}/devin/revenue_metrics")
 
     if response.status_code == 200:
-        items = response.json()  
-        st.write("Items fetched from API:", items)
+        items = response.json()
+        for item in items:
+            st.write(f"{item['source_name']} - {item['data_type']}")
     else:
-        st.write("Failed to get data")
+        st.error("Failed to fetch Revenue Metrics")
 
 if st.button("User Engagement Metrics"):
     response = requests.get(f"{BASE_URL}/devin/user_engagement_metrics")
 
     if response.status_code == 200:
-        items = response.json()  
-        st.write("Items fetched from API:", items)
+        items = response.json()
+        for item in items:
+            st.write(f"{item['source_name']} - {item['data_type']}")
     else:
-        st.write("Failed to get data")
+        st.error("Failed to fetch User Engagement Metrics")
