@@ -33,6 +33,8 @@ def project_card(project, idx):
     """
     return card_style
 
+
+
 # View Projects
 if st.button("View Projects"):
     response = requests.get(f"{BASE_URL}/projects")
@@ -80,32 +82,56 @@ if st.button("View Projects"):
             st.info("No projects found for Alex.")
     else:
         st.error("Failed to fetch projects.")
-
 # Add a New Project
+
 st.subheader("Add a New Project")
+
 project_name = st.text_input("Project Name", placeholder="Enter your project name")
+
 description = st.text_area("Description", placeholder="Describe your project")
+
 tags = st.text_input("Tags", placeholder="Add comma-separated tags")
+
 user_id = 1  # Set Alex's user_id explicitly
 
+ 
+
 if st.button("Upload Project"):
+
     if not project_name or not description:
+
         st.error("Please fill out all required fields!")
+
     else:
+
         project_data = {
+
             "title": project_name,
+
             "description": description,
+
             "tags": tags,
+
             "user_id": user_id
+
         }
+
         response = requests.post(f"{BASE_URL}/projects", json=project_data)
 
+ 
+
         if response.status_code == 201:
+
             st.success("Project uploaded successfully!")
+
         else:
+
             st.error(f"Failed to upload project. Status code: {response.status_code}")
 
+ 
+
 # Back to Home Button
+
 if st.button("Back to Alex's Home"):
     st.write("Redirecting...")
     st.switch_page('pages/00_Alex_Home.py')
