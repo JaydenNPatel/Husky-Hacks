@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import os  # Import os to read environment variables
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 # Use BASE_URL from the environment or provide a default fallback
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
