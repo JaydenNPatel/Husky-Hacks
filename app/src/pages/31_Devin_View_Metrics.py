@@ -1,7 +1,10 @@
 import streamlit as st
 import requests
 import os
-import time
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
+
+
 
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
 
@@ -94,3 +97,7 @@ if st.button("User Engagement Metrics"):
             st.write(f"{item['source_name']} - {item['data_type']}")
     else:
         st.error("Failed to fetch User Engagement Metrics")
+
+if st.button("Back to Home"):
+    st.session_state['authenticated'] = False
+    st.switch_page('30_Devin_Home.py') 
