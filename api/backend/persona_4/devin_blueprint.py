@@ -22,7 +22,7 @@ def get_retention_metrics():
 # Route 2: Retrieve all revenue metrics (GET)
 @devin.route('/revenue_metrics', methods=['GET'])
 def get_revenue_metrics():
-    query = 'SELECT rt.metric_id, ds.source_name, ds.data_type, rv.revenue, rv.avg_revenue_per_user, rv.transactions, rv.currency, rv.timestamp FROM revenue_metrics as rv JOIN data_source as ds ON rv.data_source = ds.source_id'
+    query = 'SELECT rv.metric_id, ds.source_name, ds.data_type, rv.revenue, rv.avg_revenue_per_user, rv.transactions, rv.currency, rv.timestamp FROM revenue_metrics as rv JOIN data_source as ds ON rv.data_source = ds.source_id'
     cursor = db.get_db().cursor()
     cursor.execute(query)
     metrics = cursor.fetchall()
@@ -31,7 +31,7 @@ def get_revenue_metrics():
 # Route 3: Retrieve all user engagement metrics (GET)
 @devin.route('/user_engagement_metrics', methods=['GET'])
 def get_user_engagement_metrics():
-    query = 'SELECT rt.metric_id, ds.source_name, ds.data_type, ue.engagement_rate, ue.active_users, ue.new_users, ue.returning_users, ue.timestamp FROM user_engagement_metrics as ue JOIN data_source as ds ON ue.data_source = ds.source_id'
+    query = 'SELECT ue.metric_id, ds.source_name, ds.data_type, ue.engagement_rate, ue.active_users, ue.new_users, ue.returning_users, ue.timestamp FROM user_engagement_metrics as ue JOIN data_source as ds ON ue.data_source = ds.source_id'
     cursor = db.get_db().cursor()
     cursor.execute(query)
     metrics = cursor.fetchall()
