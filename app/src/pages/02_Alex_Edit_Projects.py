@@ -76,9 +76,9 @@ if alex_projects:
 
         new_name = st.text_input("New Project Name", value=project_details["title"])
 
-        new_description = st.text_area("New Description", value=project_details["description"])
+        new_description = st.text_area("New Description", value=project_details["description"] if project_details["description"] else "")
 
-        new_tags = st.text_input("New Tags", value=", ".join(project_details["tags"]))
+        new_tags = st.text_input("New Tags", value=project_details["tags"])  # Assuming tags are stored as a comma-separated string
 
  
 
@@ -98,13 +98,19 @@ if alex_projects:
 
                     "description": new_description,
 
-                    "tags": [tag.strip() for tag in new_tags.split(",")]
+                    "tags": new_tags  # Ensure this is a string
 
                 }
 
  
 
-                # Send the update request
+                # Debugging: Log the data being sent
+
+                st.write("Sending Updated Data:", updated_data)
+
+ 
+
+                # Send the PUT request
 
                 response = requests.put(f"{BASE_URL}/projects/{project_details['project_id']}", json=updated_data)
 
@@ -117,6 +123,8 @@ if alex_projects:
                 else:
 
                     st.error(f"Failed to update project. Status code: {response.status_code}")
+
+                    st.write(response.text)  # Log server response for debugging
 
     else:
 
