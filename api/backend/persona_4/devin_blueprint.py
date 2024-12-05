@@ -23,7 +23,7 @@ def get_retention_metrics():
 # Route 2: Retrieve all revenue metrics (GET)
 @devin.route('/revenue_metrics', methods=['GET'])
 def get_revenue_metrics():
-    query = 'SELECT * FROM retention_metrics'
+    query = 'SELECT * FROM revenue_metrics'
     cursor = db.get_db().cursor()
     print(cursor)
     cursor.execute(query)
@@ -33,7 +33,7 @@ def get_revenue_metrics():
 # Route 3: Retrieve all user engagement metrics (GET)
 @devin.route('/user_engagement_metrics', methods=['GET'])
 def get_user_engagement_metrics():
-    query = 'SELECT * FROM retention_metrics'
+    query = 'SELECT * FROM user_engagement_metrics'
     cursor = db.get_db().cursor()
     print(cursor)
     cursor.execute(query)
