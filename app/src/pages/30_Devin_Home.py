@@ -16,3 +16,6 @@ if st.button("Create KPI Views"):
 if st.button("Access Dashboard"):
     st.write("Redirecting to Access Dashboard page...")
     st.experimental_rerun()
+
+if st.button("See Alerts"):
+    st.switch_page('pages/33_Devin_Alerts.py')

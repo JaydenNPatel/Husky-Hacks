@@ -125,7 +125,7 @@ if st.session_state["create_view_active"]:
                 }
 
                 response = requests.post(f"{BASE_URL}/devin/kpi_views", json=new_view_data)
-                if response.status_code == 201:
+                if response.status_code == 200:
                     st.success(f"New view '{st.session_state['view_name']}' created successfully!")
                     st.session_state["view_name"] = ""
                     st.session_state["team"] = ""
@@ -134,9 +134,6 @@ if st.session_state["create_view_active"]:
                 else:
                     st.error(f"Failed to create new view. Status code: {response.status_code}")
                     st.write(response.text)
-
-if st.button("Edit Existing View"):
-    st.switch_page("pages/30_Devin_Home.py")
 
 if st.button("Back To Menu"):
     st.switch_page("pages/30_Devin_Home.py")
