@@ -63,11 +63,12 @@ if st.button("Submit Feedback Request"):
     if not selected_project or not description or not feedback_areas:
         st.error("Please fill out all fields!")
     else:
+        requester_id = 2  # Assuming Sally's user ID
         # Data to send to the backend
         data = {
             "project_id": selected_project_details["project_id"],
-            "description": description,
-            "feedback_areas": feedback_areas
+            "requester_id": requester_id,
+            "feedback_area": feedback_areas
         }
         response = requests.post(f"{BASE_URL}/feedback_requests", json=data)
 
@@ -75,8 +76,12 @@ if st.button("Submit Feedback Request"):
         if response.status_code == 201:
             st.success("Feedback request submitted successfully!")
         else:
-            st.error(f"Failed to submit feedback request: {response.json().get('error', 'Unknown error')}")
-
+            try:
+                error_message = response.json().get('error', 'Unknown error')
+            except ValueError:
+                error_message = response.text or 'Invalid response from server'
+            st.error(f"Failed to submit feedback request: {error_message}")
+            
 # Back button
 if st.button("Back to Sally's Home"):
     st.switch_page('pages/10_Sally_Home.py')

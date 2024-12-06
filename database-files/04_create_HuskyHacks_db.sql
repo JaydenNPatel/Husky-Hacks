@@ -52,7 +52,7 @@ CREATE TABLE progress (
     INDEX idx_project_id (project_id)
 );
 
-CREATE TABLE feedback_request (
+CREATE TABLE feedback_requests (
     request_id int AUTO_INCREMENT NOT NULL,
     project_id int NOT NULL,
     requester_id int NOT NULL,

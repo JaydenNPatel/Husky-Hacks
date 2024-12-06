@@ -1226,6 +1226,50 @@ VALUES ('Profit Analysis', 3, '2022-09-15 10:30:35', '2022-09-20 14:40:25');
 INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
 VALUES ('Revenue Analysis', 4, '2022-08-01 07:25:20', '2022-08-06 12:15:50');
 
+INSERT INTO feedback_requests (project_id, requester_id, feedback_area) VALUES
+(101, 1, 'UI/UX design improvements'),
+(102, 2, 'Code readability and structure'),
+(103, 3, 'Feature completeness'),
+(104, 1, 'Performance optimization'),
+(105, 2, 'Database schema feedback'),
+(106, 3, 'Overall design critique'),
+(107, 1, 'Error handling and edge cases'),
+(108, 2, 'Mobile responsiveness'),
+(201, 3, 'API documentation review'),
+(202, 1, 'Accessibility compliance'),
+(203, 2, 'Testing strategy review'),
+(204, 3, 'Workflow efficiency'),
+(205, 1, 'UI aesthetics'),
+(206, 2, 'Backend logic validation'),
+(207, 3, 'Scalability concerns'),
+(208, 1, 'Data validation techniques'),
+(301, 2, 'Deployment setup'),
+(302, 3, 'Security vulnerabilities'),
+(303, 1, 'Error logging methods'),
+(304, 2, 'Third-party integrations'),
+(305, 3, 'Code modularity'),
+(306, 1, 'Database query optimization'),
+(307, 2, 'Unit testing coverage'),
+(308, 3, 'Project organization'),
+(101, 1, 'Custom error messages'),
+(102, 2, 'Build automation'),
+(103, 3, 'Code comment clarity'),
+(104, 1, 'Version control practices'),
+(105, 2, 'UI animation smoothness'),
+(106, 3, 'Form validation'),
+(107, 1, 'Code reuse opportunities'),
+(108, 2, 'Security in authentication'),
+(201, 3, 'API response times'),
+(202, 1, 'Load balancing strategies'),
+(203, 2, 'Function naming conventions'),
+(204, 3, 'Styling consistency'),
+(205, 1, 'Integration testing'),
+(206, 2, 'Data export/import options'),
+(207, 3, 'Error recovery strategies'),
+(208, 1, 'Responsive grid layout');
+
+
+
 INSERT INTO feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date)
 VALUES (1, 0101, 0001, 'Correlation analysis is well-structured', 8, '2023-01-06 12:15:45');
 INSERT INTO feedback (feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date)

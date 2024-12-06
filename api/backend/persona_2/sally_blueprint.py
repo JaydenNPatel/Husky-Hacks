@@ -15,13 +15,13 @@ sally = Blueprint('sally', __name__)
 def create_feedback_request():
     feedback_request_data = request.json
     query = '''
-        INSERT INTO feedback_requests (project_id, highlighted_section, request_details)
-        VALUES (%s, %s, %s)
-    '''
+    INSERT INTO feedback_requests (project_id, requester_id, feedback_area)
+    VALUES (%s, %s, %s)
+'''
     data = (
         feedback_request_data['project_id'], 
-        feedback_request_data['highlighted_section'], 
-        feedback_request_data['request_details']
+        feedback_request_data['requester_id'], 
+        feedback_request_data['feedback_area']
     )
     cursor = db.get_db().cursor()
     cursor.execute(query, data)
@@ -36,7 +36,7 @@ def delete_feedback(id):
     cursor.execute(query, (id,))
     db.get_db().commit()
     return make_response("Feedback deleted successfully", 200)
-
+        
 # Route 3: Retrieve all feedback requests (GET)
 @sally.route('/feedback_requests', methods=['GET'])
 def get_feedback_requests():
