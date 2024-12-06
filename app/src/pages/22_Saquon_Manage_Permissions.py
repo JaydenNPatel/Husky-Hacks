@@ -8,6 +8,7 @@ SideBarLinks(show_home=True)
 # Use BASE_URL from environment or default to "http://web-api:4000"
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
+
 st.title("Manage User Permissions")
 
 # Function to fetch users

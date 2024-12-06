@@ -70,3 +70,11 @@ def add_alert():
     cursor.execute(query, data)
     db.get_db().commit()
     return make_response("Alert added successfully", 201)
+
+@saquon.route('/users/<id>', methods=['GET'])
+def get_users(id):
+    query = 'SELECT * FROM users WHERE id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    user = cursor.fetchall()
+    return make_response(jsonify(user), 200)
