@@ -40,7 +40,7 @@ def get_user_engagement_metrics():
 # Route 4: Retrieve all kpi views (GET)
 @devin.route('/all_views', methods=['GET'])
 def get_all_views():
-    query = 'SELECT * FROM kpi_views'
+    query = 'SELECT * FROM kpi_views as v JOIN teams as t ON v.created_by = t.team_id'
     cursor = db.get_db().cursor()
     cursor.execute(query)
     views = cursor.fetchall()
@@ -63,7 +63,7 @@ def create_kpi_view():
         INSERT INTO kpi_views (view_name, created_by, view_description)
         VALUES (%s, %s, %s)
     '''
-    data = (kpi_data['view_name'], kpi_data['team'], kpi_data['description'])
+    data = (kpi_data['view_name'], kpi_data['team_id'], kpi_data['description'])
     cursor = db.get_db().cursor()
     cursor.execute(query, data)
     db.get_db().commit()

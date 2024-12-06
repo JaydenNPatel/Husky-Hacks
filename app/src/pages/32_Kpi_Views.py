@@ -6,7 +6,6 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
 st.title("Metrics Dashboard")
 
-# Function to fetch teams
 def fetch_teams():
     response = requests.get(f"{BASE_URL}/devin/teams")
     if response.status_code == 200:
@@ -15,7 +14,19 @@ def fetch_teams():
         st.error("Failed to fetch teams from the server.")
         return []
 
-# Fetch teams once and store them in session state
+def fetch_team_id(team_name):
+    response = requests.get(f"{BASE_URL}/devin/team_id/{team_name}")
+    if response.status_code == 200:
+        result = response.json()
+        if result:
+            return result[0].get("team_id") 
+        else:
+            st.error(f"No team ID found for '{team_name}'")
+            return None
+    else:
+        st.error(f"Failed to fetch team ID for '{team_name}'. Status code: {response.status_code}")
+        return None
+
 if "teams" not in st.session_state:
     st.session_state["teams"] = fetch_teams()
 
@@ -38,13 +49,12 @@ def all_views_card(item):
         vertical-align: top;
     ">
         <h4>{item['view_name']}</h4>
-        <p>Created By {item.get('created_by', 'N/A')}</p>
+        <p>{item.get('team_name', 'N/A')}</p>
         <p>Created: {item.get('created_date', 'N/A')}</p>
         <p>Updated: {item.get('last_updated', 'N/A')}</p>
     </div>
     """
 
-# Display All Views
 if st.button("All Views"):
     response = requests.get(f"{BASE_URL}/devin/all_views")
     if response.status_code == 200:
@@ -106,22 +116,24 @@ if st.session_state["create_view_active"]:
         if not st.session_state["view_name"] or not st.session_state["team"] or not st.session_state["view_description"]:
             st.error("Please fill out all fields!")
         else:
-            new_view_data = {
-                "view_name": st.session_state["view_name"],
-                "team": st.session_state["team"],
-                "description": st.session_state["view_description"]
-            }
+            team_id = fetch_team_id(st.session_state["team"])
+            if team_id:
+                new_view_data = {
+                    "view_name": st.session_state["view_name"],
+                    "team_id": team_id,  
+                    "description": st.session_state["view_description"]
+                }
 
-            response = requests.post(f"{BASE_URL}/devin/kpi_views", json=new_view_data)
-            if response.status_code == 201:
-                st.success(f"New view '{st.session_state['view_name']}' created successfully!")
-                st.session_state["view_name"] = ""
-                st.session_state["team"] = ""
-                st.session_state["view_description"] = ""
-                st.session_state["create_view_active"] = False
-            else:
-                st.error(f"Failed to create new view. Status code: {response.status_code}")
-                st.write(response.text)
+                response = requests.post(f"{BASE_URL}/devin/kpi_views", json=new_view_data)
+                if response.status_code == 201:
+                    st.success(f"New view '{st.session_state['view_name']}' created successfully!")
+                    st.session_state["view_name"] = ""
+                    st.session_state["team"] = ""
+                    st.session_state["view_description"] = ""
+                    st.session_state["create_view_active"] = False
+                else:
+                    st.error(f"Failed to create new view. Status code: {response.status_code}")
+                    st.write(response.text)
 
 if st.button("Edit Existing View"):
     st.switch_page("pages/30_Devin_Home.py")
