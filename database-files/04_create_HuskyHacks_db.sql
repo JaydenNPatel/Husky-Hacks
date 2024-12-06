@@ -293,6 +293,7 @@ CREATE TABLE kpi_views (
     view_id int AUTO_INCREMENT NOT NULL,
     view_name varchar(50) NOT NULL,
     created_by int NOT NULL,
+    view_description varchar(200),
     created_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
     last_updated datetime DEFAULT CURRENT_TIMESTAMP NOT NULL
                        ON UPDATE CURRENT_TIMESTAMP,

@@ -6,6 +6,7 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
 st.title("Metrics Dashboard")
 
+# Function to fetch teams
 def fetch_teams():
     response = requests.get(f"{BASE_URL}/devin/teams")
     if response.status_code == 200:
@@ -14,7 +15,11 @@ def fetch_teams():
         st.error("Failed to fetch teams from the server.")
         return []
 
-teams = fetch_teams()
+# Fetch teams once and store them in session state
+if "teams" not in st.session_state:
+    st.session_state["teams"] = fetch_teams()
+
+teams = st.session_state["teams"]
 
 def all_views_card(item):
     details = "".join([f"<p>{key.capitalize()}: {value}</p>" for key, value in item.items()])
@@ -39,6 +44,7 @@ def all_views_card(item):
     </div>
     """
 
+# Display All Views
 if st.button("All Views"):
     response = requests.get(f"{BASE_URL}/devin/all_views")
     if response.status_code == 200:
@@ -63,12 +69,59 @@ if st.button("All Views"):
     else:
         st.error("Failed to fetch All Views data.")
 
+if "create_view_active" not in st.session_state:
+    st.session_state["create_view_active"] = False
 
 if st.button("Create New View"):
-    project_name = st.text_input("View Name", placeholder="Enter your project name")
+    st.session_state["create_view_active"] = True
+
+if st.session_state["create_view_active"]:
+    if "view_name" not in st.session_state:
+        st.session_state["view_name"] = ""
+    if "team" not in st.session_state:
+        st.session_state["team"] = ""
+    if "view_description" not in st.session_state:
+        st.session_state["view_description"] = ""
+
+    st.session_state["view_name"] = st.text_input(
+        "View Name", 
+        placeholder="Enter your view name", 
+        value=st.session_state["view_name"]
+    )
+
     team_options = [team['team_name'] for team in teams]
-    selected_team = st.selectbox("Assign to Team", options=team_options)
-    project_description = st.text_area("Description", placeholder="Describe your project")
+    st.session_state["team"] = st.selectbox(
+        "Assign to Team", 
+        options=team_options, 
+        index=team_options.index(st.session_state["team"]) if st.session_state["team"] in team_options else 0
+    )
+
+    st.session_state["view_description"] = st.text_area(
+        "Description", 
+        placeholder="Describe your view", 
+        value=st.session_state["view_description"]
+    )
+
+    if st.button("Submit"):
+        if not st.session_state["view_name"] or not st.session_state["team"] or not st.session_state["view_description"]:
+            st.error("Please fill out all fields!")
+        else:
+            new_view_data = {
+                "view_name": st.session_state["view_name"],
+                "team": st.session_state["team"],
+                "description": st.session_state["view_description"]
+            }
+
+            response = requests.post(f"{BASE_URL}/devin/kpi_views", json=new_view_data)
+            if response.status_code == 201:
+                st.success(f"New view '{st.session_state['view_name']}' created successfully!")
+                st.session_state["view_name"] = ""
+                st.session_state["team"] = ""
+                st.session_state["view_description"] = ""
+                st.session_state["create_view_active"] = False
+            else:
+                st.error(f"Failed to create new view. Status code: {response.status_code}")
+                st.write(response.text)
 
 if st.button("Edit Existing View"):
     st.switch_page("pages/30_Devin_Home.py")

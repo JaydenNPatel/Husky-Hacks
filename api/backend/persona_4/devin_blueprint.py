@@ -60,14 +60,14 @@ def get_all_teams():
 def create_kpi_view():
     kpi_data = request.json
     query = '''
-        INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
-        VALUES (%s, %s, %s, %s)
+        INSERT INTO kpi_views (view_name, created_by, view_description)
+        VALUES (%s, %s, %s)
     '''
-    data = (kpi_data['view_name'], kpi_data['created_by'], kpi_data['created_date'], kpi_data['last_updated'])
+    data = (kpi_data['view_name'], kpi_data['team'], kpi_data['description'])
     cursor = db.get_db().cursor()
     cursor.execute(query, data)
     db.get_db().commit()
-    return make_response("KPI view created successfully", 201)
+    return make_response("KPI view created successfully", 200)
 
 # Route 7: Update a metric (PUT)
 @devin.route('/metrics/<id>', methods=['PUT'])
