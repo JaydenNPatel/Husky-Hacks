@@ -37,6 +37,14 @@ def get_user_engagement_metrics():
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
 
+@devin.route('/all_views', methods=['GET'])
+def get_all_views():
+    query = 'SELECT * FROM kpi_views'
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    metrics = cursor.fetchall()
+    return make_response(jsonify(metrics), 200)
+
 # Route 4: Create a new KPI view (POST)
 @devin.route('/kpi_views', methods=['POST'])
 def create_kpi_view():
