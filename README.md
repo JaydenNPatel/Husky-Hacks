@@ -1,6 +1,6 @@
-# Fall 2024 CS 3200 Project Template Repository
+# Project Overview
 
-This repo is a template for your semester project.  It includes most of the infrastructure setup (containers) and sample code and data throughout.  Explore it fully and ask questions.
+Our application is a dynamic platform designed to help students and alumni develop practical skills and build confidence through real-world projects. Unlike traditional coursework or programming tutorials, our platform focuses on structure, personalized feedback, and engagement. Users can upload and share coding projects, participate in challenges, and receive feedback from peers and faculty to prepare for co-ops, internships, and technical interviews. The project uses Streamlit for the frontend interface and Flask for the backend server.
 
 ## Prerequisites
 

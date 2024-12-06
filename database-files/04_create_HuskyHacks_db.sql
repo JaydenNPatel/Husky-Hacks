@@ -61,7 +61,7 @@ CREATE TABLE feedback_requests (
                       ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (request_id),
     FOREIGN KEY (project_id) REFERENCES projects(project_id)
-                      ON UPDATE CASCADE ON DELETE RESTRICT,
+                      ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (requester_id) REFERENCES users(user_id)
                       ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_request_id (request_id),
