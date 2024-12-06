@@ -9,7 +9,8 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 st.title("Create KPI Views")
 
 if st.button("All Views"):
-    st.switch_page("pages/30_Devin_Home.py")
+    response = requests.get(f"{BASE_URL}/devin/all_views")
+    st.write(response)
 
 if st.button("Create New View"):
     st.switch_page("pages/30_Devin_Home.py")

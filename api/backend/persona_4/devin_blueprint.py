@@ -37,6 +37,7 @@ def get_user_engagement_metrics():
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
 
+# Route 4: Retrieve all kpi views (GET)
 @devin.route('/all_views', methods=['GET'])
 def get_all_views():
     query = 'SELECT * FROM kpi_views'
@@ -45,7 +46,16 @@ def get_all_views():
     metrics = cursor.fetchall()
     return make_response(jsonify(metrics), 200)
 
-# Route 4: Create a new KPI view (POST)
+# Route 5: Retrieve all teams
+@devin.route('/teams', methods=['GET'])
+def get_all_teams():
+    query = 'SELECT * FROM teams'
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    metrics = cursor.fetchall()
+    return make_response(jsonify(metrics), 200)
+
+# Route 6: Create a new KPI view (POST)
 @devin.route('/kpi_views', methods=['POST'])
 def create_kpi_view():
     kpi_data = request.json
@@ -59,7 +69,7 @@ def create_kpi_view():
     db.get_db().commit()
     return make_response("KPI view created successfully", 201)
 
-# Route 5: Update a metric (PUT)
+# Route 7: Update a metric (PUT)
 @devin.route('/metrics/<id>', methods=['PUT'])
 def update_metric(id):
     metric_data = request.json
@@ -74,7 +84,7 @@ def update_metric(id):
     db.get_db().commit()
     return make_response("Metric updated successfully", 200)
 
-# Route 6: Delete outdated metrics (DELETE)
+# Route 8: Delete outdated metrics (DELETE)
 @devin.route('/retention_metrics/<id>', methods=['DELETE'])
 def delete_retention_metrics(id):
     query = 'DELETE FROM retention_metrics WHERE metric_id = %s'
@@ -83,7 +93,7 @@ def delete_retention_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 7: Delete outdated metrics (DELETE)
+# Route 9: Delete outdated metrics (DELETE)
 @devin.route('/revenue_metrics/<id>', methods=['DELETE'])
 def delete_revenue_metrics(id):
     query = 'DELETE FROM revenue_metrics WHERE metric_id = %s'
@@ -92,7 +102,7 @@ def delete_revenue_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 8: Delete outdated metrics (DELETE)
+# Route 10: Delete outdated metrics (DELETE)
 @devin.route('/user_engagement_metrics/<id>', methods=['DELETE'])
 def delete_user_engagement_metrics(id):
     query = 'DELETE FROM user_engagement_metrics WHERE metric_id = %s'
@@ -101,7 +111,7 @@ def delete_user_engagement_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 9: Retrieve real-time dashboard data (GET)
+# Route 11: Retrieve real-time dashboard data (GET)
 @devin.route('/dashboard', methods=['GET'])
 def get_dashboard():
     query = '''
