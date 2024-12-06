@@ -994,160 +994,156 @@ create table notification (
 );
 
 USE Husky_Hacks;
+INSERT INTO notification_type (name) VALUES ('Performance Alert');
+INSERT INTO notification_type (name) VALUES ('Threshold Alert');
+INSERT INTO notification_type (name) VALUES ('Custom Alert');
+INSERT INTO notification_type (name) VALUES ('System Alert');
+INSERT INTO notification_type (name) VALUES ('Warning Alert');
+INSERT INTO notification_type (name) VALUES ('Critical Alert');
+INSERT INTO notification_type (name) VALUES ('Information Alert');
+INSERT INTO notification_type (name) VALUES ('Reminder Alert');
+INSERT INTO notification_type (name) VALUES ('Error Alert');
+INSERT INTO notification_type (name) VALUES ('Database Alert');
+INSERT INTO notification_type (name) VALUES ('Security Alert');
+INSERT INTO notification_type (name) VALUES ('Login Alert');
+INSERT INTO notification_type (name) VALUES ('Data Breach Alert');
+INSERT INTO notification_type (name) VALUES ('Access Alert');
+INSERT INTO notification_type (name) VALUES ('Network Alert');
+INSERT INTO notification_type (name) VALUES ('Update Alert');
+INSERT INTO notification_type (name) VALUES ('Resource Alert');
+INSERT INTO notification_type (name) VALUES ('Service Alert');
+INSERT INTO notification_type (name) VALUES ('Application Alert');
+INSERT INTO notification_type (name) VALUES ('Server Alert');
+INSERT INTO notification_type (name) VALUES ('High CPU Alert');
+INSERT INTO notification_type (name) VALUES ('Disk Space Alert');
+INSERT INTO notification_type (name) VALUES ('Memory Usage Alert');
+INSERT INTO notification_type (name) VALUES ('Authentication Alert');
+INSERT INTO notification_type (name) VALUES ('Backup Alert');
+INSERT INTO notification_type (name) VALUES ('Compliance Alert');
+INSERT INTO notification_type (name) VALUES ('Email Alert');
+INSERT INTO notification_type (name) VALUES ('Timeout Alert');
+INSERT INTO notification_type (name) VALUES ('Expired Session Alert');
+INSERT INTO notification_type (name) VALUES ('Rate Limit Alert');
+INSERT INTO notification_type (name) VALUES ('Configuration Alert');
+INSERT INTO notification_type (name) VALUES ('Policy Alert');
+INSERT INTO notification_type (name) VALUES ('Threshold Breach Alert');
+INSERT INTO notification_type (name) VALUES ('User Action Alert');
+INSERT INTO notification_type (name) VALUES ('Audit Alert');
+INSERT INTO notification_type (name) VALUES ('Hardware Failure Alert');
+INSERT INTO notification_type (name) VALUES ('Software Failure Alert');
+INSERT INTO notification_type (name) VALUES ('Connection Alert');
+INSERT INTO notification_type (name) VALUES ('Timeout Breach Alert');
+INSERT INTO notification_type (name) VALUES ('Disk Failure Alert');
+INSERT INTO notification_type (name) VALUES ('Unauthorized Access Alert');
+INSERT INTO notification_type (name) VALUES ('File System Alert');
+INSERT INTO notification_type (name) VALUES ('Service Down Alert');
+INSERT INTO notification_type (name) VALUES ('Queue Overload Alert');
+INSERT INTO notification_type (name) VALUES ('Job Failure Alert');
+INSERT INTO notification_type (name) VALUES ('Task Timeout Alert');
+INSERT INTO notification_type (name) VALUES ('Memory Leak Alert');
+INSERT INTO notification_type (name) VALUES ('Deployment Alert');
+INSERT INTO notification_type (name) VALUES ('Transaction Failure Alert');
 
--- Corrected INSERT statements for the notification table
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (1, 1, '2024-03-06', 'error', 72, 69);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (2, 2, '2024-11-07', 'alert', 91, 45);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (3, 3, '2024-07-17', 'warning', 21, 70);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (4, 4, '2024-10-30', 'error', 90, 4);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (5, 5, '2023-12-26', 'alert', 57, 0);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (6, 6, '2023-12-06', 'warning', 10, 38);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (7, 7, '2024-05-05', 'error', 26, 96);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (8, 8, '2024-09-10', 'alert', 46, 61);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (9, 9, '2024-02-09', 'warning', 1, 29);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (10, 10, '2024-11-04', 'error', 78, 50);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (11, 11, '2024-11-07', 'alert', 3, 76);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (12, 12, '2024-06-04', 'warning', 44, 54);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (13, 13, '2024-08-06', 'error', 91, 30);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (14, 14, '2024-11-12', 'alert', 25, 46);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (15, 15, '2024-04-27', 'warning', 16, 47);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (16, 16, '2024-09-11', 'error', 88, 67);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (17, 17, '2024-09-09', 'alert', 5, 86);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (18, 18, '2024-06-17', 'warning', 48, 11);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (19, 19, '2024-09-06', 'error', 49, 64);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (20, 20, '2024-07-09', 'alert', 32, 93);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (21, 21, '2024-06-08', 'warning', 93, 48);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (22, 22, '2024-03-21', 'error', 27, 90);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (23, 23, '2024-08-30', 'alert', 16, 79);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (24, 24, '2024-08-15', 'warning', 49, 60);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (25, 25, '2024-05-20', 'error', 60, 91);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (26, 26, '2024-01-29', 'alert', 13, 2);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (27, 27, '2024-08-22', 'warning', 48, 27);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (28, 28, '2024-10-02', 'error', 49, 67);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (29, 29, '2024-07-10', 'alert', 74, 63);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (30, 30, '2024-09-05', 'warning', 28, 84);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (31, 31, '2024-01-06', 'error', 89, 90);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (32, 32, '2024-10-12', 'alert', 27, 77);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (33, 33, '2024-03-11', 'warning', 93, 84);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (34, 34, '2023-12-26', 'error', 50, 60);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (35, 35, '2024-09-23', 'alert', 41, 92);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (36, 36, '2024-08-08', 'warning', 5, 42);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (37, 37, '2024-01-18', 'error', 33, 78);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (38, 38, '2024-09-02', 'alert', 8, 90);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (39, 39, '2024-07-27', 'warning', 90, 48);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (40, 40, '2024-11-14', 'error', 28, 99);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (41, 41, '2023-12-15', 'alert', 92, 22);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (42, 42, '2023-12-09', 'warning', 30, 34);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (43, 43, '2024-08-11', 'error', 49, 4);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (44, 44, '2024-04-13', 'alert', 44, 42);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (45, 45, '2024-06-07', 'warning', 8, 58);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (46, 46, '2024-03-30', 'error', 93, 20);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (47, 47, '2024-09-09', 'alert', 87, 69);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (48, 48, '2024-08-05', 'warning', 87, 29);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (49, 49, '2024-02-08', 'error', 50, 38);
-INSERT INTO notification (notification_id, metric_id, timestamp, notification_type, threshold_value, actual_value)
-VALUES (50, 50, '2024-02-26', 'alert', 84, 94);
-
-
-insert into notification_type (type_id, name) values (1, 'Performance Alert');
-insert into notification_type (type_id, name) values (2, 'Threshold Alert');
-insert into notification_type (type_id, name) values (3, 'Performance Alert');
-insert into notification_type (type_id, name) values (4, 'Performance Alert');
-insert into notification_type (type_id, name) values (5, 'Custom Alert');
-insert into notification_type (type_id, name) values (6, 'Performance Alert');
-insert into notification_type (type_id, name) values (7, 'Threshold Alert');
-insert into notification_type (type_id, name) values (8, 'Performance Alert');
-insert into notification_type (type_id, name) values (9, 'Threshold Alert');
-insert into notification_type (type_id, name) values (10, 'Performance Alert');
-insert into notification_type (type_id, name) values (11, 'Custom Alert');
-insert into notification_type (type_id, name) values (12, 'Custom Alert');
-insert into notification_type (type_id, name) values (13, 'Performance Alert');
-insert into notification_type (type_id, name) values (14, 'Performance Alert');
-insert into notification_type (type_id, name) values (15, 'Threshold Alert');
-insert into notification_type (type_id, name) values (16, 'Custom Alert');
-insert into notification_type (type_id, name) values (17, 'Performance Alert');
-insert into notification_type (type_id, name) values (18, 'Threshold Alert');
-insert into notification_type (type_id, name) values (19, 'Performance Alert');
-insert into notification_type (type_id, name) values (20, 'Threshold Alert');
-insert into notification_type (type_id, name) values (21, 'Performance Alert');
-insert into notification_type (type_id, name) values (22, 'Custom Alert');
-insert into notification_type (type_id, name) values (23, 'Performance Alert');
-insert into notification_type (type_id, name) values (24, 'Performance Alert');
-insert into notification_type (type_id, name) values (25, 'Performance Alert');
-insert into notification_type (type_id, name) values (26, 'Custom Alert');
-insert into notification_type (type_id, name) values (27, 'Performance Alert');
-insert into notification_type (type_id, name) values (28, 'Custom Alert');
-insert into notification_type (type_id, name) values (29, 'Threshold Alert');
-insert into notification_type (type_id, name) values (30, 'Custom Alert');
-insert into notification_type (type_id, name) values (31, 'Custom Alert');
-insert into notification_type (type_id, name) values (32, 'Threshold Alert');
-insert into notification_type (type_id, name) values (33, 'Performance Alert');
-insert into notification_type (type_id, name) values (34, 'Performance Alert');
-insert into notification_type (type_id, name) values (35, 'Custom Alert');
-insert into notification_type (type_id, name) values (36, 'Custom Alert');
-insert into notification_type (type_id, name) values (37, 'Threshold Alert');
-insert into notification_type (type_id, name) values (38, 'Performance Alert');
-insert into notification_type (type_id, name) values (39, 'Performance Alert');
-insert into notification_type (type_id, name) values (40, 'Custom Alert');
-insert into notification_type (type_id, name) values (41, 'Threshold Alert');
-insert into notification_type (type_id, name) values (42, 'Performance Alert');
-insert into notification_type (type_id, name) values (43, 'Threshold Alert');
-insert into notification_type (type_id, name) values (44, 'Performance Alert');
-insert into notification_type (type_id, name) values (45, 'Performance Alert');
-insert into notification_type (type_id, name) values (46, 'Performance Alert');
-insert into notification_type (type_id, name) values (47, 'Threshold Alert');
-insert into notification_type (type_id, name) values (48, 'Performance Alert');
-insert into notification_type (type_id, name) values (49, 'Performance Alert');
-insert into notification_type (type_id, name) values (50, 'Threshold Alert');
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 72, 69);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 91, 45);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 21, 70);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 90, 4);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 57, 0);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 10, 38);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 26, 96);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 46, 61);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 1, 29);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 78, 50);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 3, 76);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 44, 54);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 91, 30);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 25, 46);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 16, 47);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 88, 67);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 5, 86);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 48, 11);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 49, 64);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 32, 93);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 93, 48);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 27, 90);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 16, 79);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 49, 60);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 60, 91);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 13, 2);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 48, 27);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 49, 67);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 74, 63);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 28, 84);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 89, 90);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 27, 77);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 93, 84);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 50, 60);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 41, 92);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 5, 42);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 33, 78);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 8, 90);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 90, 48);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 28, 99);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 92, 22);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 30, 34);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 49, 4);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 44, 42);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (3, 8, 58);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (4, 93, 20);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (5, 87, 69);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (6, 87, 29);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (1, 50, 38);
+INSERT INTO notifications (notif_type, threshold_value, actual_value)
+VALUES (2, 84, 94);
 
 INSERT INTO kpi_views (view_name, created_by, created_date, last_updated)
 VALUES ('Revenue Overview', 1, '2023-09-01 08:15:45', '2023-09-05 14:30:00');

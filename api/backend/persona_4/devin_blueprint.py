@@ -136,7 +136,7 @@ def get_dashboard():
 # Route 13: Retrieve notifications (GET)
 @devin.route('/notifications', methods=['GET'])
 def get_notifications():
-    query = 'SELECT * FROM notifications as n JOIN notification_type as nt ON n.notification_type = nt.type_id'
+    query = 'SELECT * FROM notifications as nf JOIN notification_type as nt ON nf.notif_type = nt.type_id'
     cursor = db.get_db().cursor()
     cursor.execute(query)
     dashboard_data = cursor.fetchall()

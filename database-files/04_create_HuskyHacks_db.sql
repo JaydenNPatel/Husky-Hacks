@@ -252,23 +252,15 @@ CREATE TABLE notification_type (
 
 CREATE TABLE notifications (
     notification_id int AUTO_INCREMENT NOT NULL,
-    metric_id int NOT NULL,
     timestamp datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    notification_type int NOT NULL,
+    notif_type int NOT NULL,
     threshold_value decimal(5, 2) NOT NULL,
     actual_value decimal(5, 2) NOT NULL,
     PRIMARY KEY (notification_id),
-    FOREIGN KEY (notification_type) references notification_type(type_id)
+    FOREIGN KEY (notif_type) references notification_type(type_id)
                            ON UPDATE CASCADE ON DELETE RESTRICT,
-    FOREIGN KEY (metric_id) references user_engagement_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE RESTRICT,
-    FOREIGN KEY (metric_id) references revenue_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE RESTRICT,
-    FOREIGN KEY (metric_id) references retention_metrics(metric_id)
-                                 ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (notification_id),
-    INDEX idx_notification_type (notification_type),
-    INDEX idx_metric_id (metric_id)
+    INDEX idx_notif_type (notif_type)
 );
 
 CREATE TABLE departments (
