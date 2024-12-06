@@ -6,15 +6,13 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
 st.title("Current Notifications")
 
-# Back to Menu button
 if st.button("Back To Menu"):
     st.switch_page('pages/30_Devin_Home.py')
 
-# Function to render notification cards
 def notification_card(item, idx):
     return f"""
     <div style="
-        width: 300px;
+        width: 350px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 8px;
@@ -26,14 +24,13 @@ def notification_card(item, idx):
         display: inline-block;
         vertical-align: top;
     ">
-        <h4>{item.get('title', 'No Title')}</h4>
-        <p>Type: {item.get('type_name', 'N/A')}</p>
-        <p>Message: {item.get('message', 'N/A')}</p>
+        <h4>{item.get('name', 'N/A')}</h4>
+        <p>Threshold: {item.get('threshold_value', 'N/A')}</p>
+        <p>Actual: {item.get('actual_value', 'N/A')}</p>
         <p>Timestamp: {item.get('timestamp', 'N/A')}</p>
     </div>
     """
 
-# Fetch notifications
 def fetch_notifications():
     try:
         response = requests.get(f"{BASE_URL}/devin/notifications")
@@ -46,10 +43,8 @@ def fetch_notifications():
         st.error(f"An error occurred: {e}")
         return []
 
-# Always fetch and display notifications
 notifications = fetch_notifications()
 
-# Render notifications
 if notifications:
     st.markdown(
         """
@@ -66,11 +61,9 @@ if notifications:
     for idx, notification in enumerate(notifications):
         st.markdown(notification_card(notification, idx), unsafe_allow_html=True)
         
-        # Add dismiss button
         if st.button(f"Dismiss {notification.get('title', 'Notification')}", key=f"dismiss-{idx}"):
             notification_id = notification["notification_id"]
             
-            # Perform DELETE request to dismiss notification
             delete_response = requests.delete(f"{BASE_URL}/devin/dismiss/{notification_id}")
             
             if delete_response.status_code == 200:
