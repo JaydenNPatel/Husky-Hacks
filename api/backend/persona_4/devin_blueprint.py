@@ -124,9 +124,26 @@ def delete_user_engagement_metrics(id):
 @devin.route('/dashboard', methods=['GET'])
 def get_dashboard():
     query = '''
-        SELECT metric_type, AVG(metric_value) AS avg_value, MAX(timestamp) AS last_updated
-        FROM metrics
-        GROUP BY metric_type
+    SELECT
+        ds.source_name,
+        AVG(rm.retention_rate) AS AvgRetentionRate,
+        AVG(rm.churn_rate) AS AvgChurnRate,
+        AVG(rv.revenue) AS AvgRevenue,
+        AVG(rv.transactions) AS AvgTransactions,
+        AVG(rv.avg_revenue_per_user) AS AvgRevPerUser,
+        AVG(ue.engagement_rate) AS AvgEngagementRate,
+        AVG(ue.active_users) AS AvgActiveUsers,
+        AVG(ue.new_users) AS AvgNewUsers,
+        AVG(ue.returning_users) AS AvgReturningUsers
+    FROM data_source AS ds
+    LEFT JOIN retention_metrics AS rm
+        ON rm.data_source = ds.source_id
+    LEFT JOIN revenue_metrics AS rv
+        ON rv.data_source = ds.source_id
+    LEFT JOIN user_engagement_metrics AS ue
+        ON ue.data_source = ds.source_id
+    GROUP BY ds.source_name
+    ORDER BY ds.source_name;
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
