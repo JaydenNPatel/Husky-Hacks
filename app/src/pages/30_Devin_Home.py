@@ -11,8 +11,7 @@ if st.button("View Metrics"):
     st.switch_page('pages/31_Devin_View_Metrics.py')
 
 if st.button("Create KPI Views"):
-    st.write("Redirecting to Create KPI Views page...")
-    st.experimental_rerun()
+    st.switch_page('pages/32_Kpi_Views.py')
 
 if st.button("Access Dashboard"):
     st.write("Redirecting to Access Dashboard page...")

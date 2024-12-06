@@ -174,3 +174,6 @@ if "engagement_items" in st.session_state:
             else:
                 st.error(f"Failed to delete the metric: {delete_response.status_code}")
     st.markdown("</div>", unsafe_allow_html=True)
+
+if st.button("Back To Menu"):
+    st.switch_page('pages/31_Devin_Home.py')
