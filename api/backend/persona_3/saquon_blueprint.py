@@ -33,21 +33,34 @@ def create_backup():
     db.get_db().commit()
     return make_response("Backup created successfully", 201)
 
-# Route 3: Update user permissions (PUT)
-@saquon.route('/permissions/<id>', methods=['PUT'])
-def update_permissions(id):
-    permission_data = request.json
-    query = '''
-        UPDATE permissions
-        SET access_level = %s, assigned_by = %s
-        WHERE id = %s
-    '''
-    data = (permission_data['access_level'], permission_data['assigned_by'], id)
-    cursor = db.get_db().cursor()
-    cursor.execute(query, data)
-    db.get_db().commit()
-    return make_response("Permission updated successfully", 200)
+@saquon.route('/users/<id>', methods=['PUT'])
+def update_user(id):
+    try:
+        user_data = request.json
+        if not user_data:
+            return make_response("Invalid data", 400)
 
+        query = '''
+            UPDATE users
+            SET first_name = %s, last_name = %s, email = %s, role = %s, status = %s
+            WHERE user_id = %s
+        '''
+        data = (
+            user_data["first_name"],
+            user_data["last_name"],
+            user_data["email"],
+            user_data["role"],
+            user_data["status"],
+            id
+        )
+        cursor = db.get_db().cursor()
+        cursor.execute(query, data)
+        db.get_db().commit()
+        return make_response("User updated successfully", 200)
+    except Exception as e:
+        current_app.logger.error(f"Error updating user: {e}")
+        return make_response(f"Failed to update user: {e}", 500)
+    
 # Route 4: Archive a user account (DELETE)
 @saquon.route('/users/<id>', methods=['DELETE'])
 def archive_user(id):

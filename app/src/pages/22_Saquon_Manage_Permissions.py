@@ -76,7 +76,5 @@ if users:
 else:
     st.info("No users found.")
 
-# Back to Home Button
-if st.button("Back to Home"):
-    st.write("Redirecting...")
-    st.switch_page('pages/00_Home.py')
+if st.button("Back to Saquon's Home"):
+    st.switch_page('pages/20_Saquon_Home.py')
