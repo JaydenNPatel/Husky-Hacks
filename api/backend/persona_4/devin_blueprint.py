@@ -69,7 +69,16 @@ def create_kpi_view():
     db.get_db().commit()
     return make_response("KPI view created successfully", 200)
 
-# Route 7: Update a metric (PUT)
+# Route 7: Get the Id of a team
+@devin.route('/team_id/<team>', methods=['GET'])
+def get_team_id(team):
+    query = 'SELECT team_id FROM teams WHERE team_name = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (team,)) 
+    id = cursor.fetchall()
+    return make_response(jsonify(id), 200)
+
+# Route 8: Update a metric (PUT)
 @devin.route('/metrics/<id>', methods=['PUT'])
 def update_metric(id):
     metric_data = request.json
@@ -84,7 +93,7 @@ def update_metric(id):
     db.get_db().commit()
     return make_response("Metric updated successfully", 200)
 
-# Route 8: Delete outdated metrics (DELETE)
+# Route 9: Delete outdated metrics (DELETE)
 @devin.route('/retention_metrics/<id>', methods=['DELETE'])
 def delete_retention_metrics(id):
     query = 'DELETE FROM retention_metrics WHERE metric_id = %s'
@@ -93,7 +102,7 @@ def delete_retention_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 9: Delete outdated metrics (DELETE)
+# Route 10: Delete outdated metrics (DELETE)
 @devin.route('/revenue_metrics/<id>', methods=['DELETE'])
 def delete_revenue_metrics(id):
     query = 'DELETE FROM revenue_metrics WHERE metric_id = %s'
@@ -102,7 +111,7 @@ def delete_revenue_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 10: Delete outdated metrics (DELETE)
+# Route 11: Delete outdated metrics (DELETE)
 @devin.route('/user_engagement_metrics/<id>', methods=['DELETE'])
 def delete_user_engagement_metrics(id):
     query = 'DELETE FROM user_engagement_metrics WHERE metric_id = %s'
@@ -111,7 +120,7 @@ def delete_user_engagement_metrics(id):
     db.get_db().commit()
     return make_response("Metric deleted successfully", 200)
 
-# Route 11: Retrieve real-time dashboard data (GET)
+# Route 12: Retrieve real-time dashboard data (GET)
 @devin.route('/dashboard', methods=['GET'])
 def get_dashboard():
     query = '''
