@@ -43,8 +43,8 @@ def get_all_views():
     query = 'SELECT * FROM kpi_views'
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    metrics = cursor.fetchall()
-    return make_response(jsonify(metrics), 200)
+    views = cursor.fetchall()
+    return make_response(jsonify(views), 200)
 
 # Route 5: Retrieve all teams
 @devin.route('/teams', methods=['GET'])
@@ -52,8 +52,8 @@ def get_all_teams():
     query = 'SELECT * FROM teams'
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    metrics = cursor.fetchall()
-    return make_response(jsonify(metrics), 200)
+    teams = cursor.fetchall()
+    return make_response(jsonify(teams), 200)
 
 # Route 6: Create a new KPI view (POST)
 @devin.route('/kpi_views', methods=['POST'])
