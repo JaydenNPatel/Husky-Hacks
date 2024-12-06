@@ -86,3 +86,12 @@ def create_project():
     cursor.execute(query, data)
     db.get_db().commit()
     return make_response("Project created successfully", 201)
+
+# Route 3: Retrieve all projects (GET)
+@sally.route('/projects', methods=['GET'])
+def get_all_projects():
+    query = 'SELECT * FROM projects'
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    projects = cursor.fetchall()
+    return make_response(jsonify(projects), 200)
