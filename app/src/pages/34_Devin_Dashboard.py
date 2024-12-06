@@ -13,17 +13,14 @@ st.title("Current Notifications with Source Names")
 if st.button("Back To Menu"):
     st.switch_page('pages/30_Devin_Home.py')
 
-# Fetch data from the API
 response = requests.get(f"{BASE_URL}/devin/dashboard")
 if response.status_code == 200:
     dashboard_data = response.json()
 else:
     raise ValueError(f"Failed to fetch dashboard data from API. Status code: {response.status_code}")
 
-# Convert to DataFrame
 df = pd.DataFrame(dashboard_data)
 
-# Convert relevant columns to numeric
 numeric_columns = [
     "AvgRetentionRate",
     "AvgChurnRate",
@@ -37,20 +34,16 @@ numeric_columns = [
 ]
 df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric, errors='coerce')
 
-# Drop rows with null values in relevant columns and reset the index
 df = df.dropna(subset=["source_name"] + numeric_columns).reset_index(drop=True)
 
-# Helper function to annotate scatter plots with source names
 def annotate_points(ax, x, y, labels):
     for xi, yi, label in zip(x, y, labels):
         ax.annotate(label, (xi, yi), fontsize=8, alpha=0.75)
 
-# Function to create smaller plots
 def plot_with_smaller_figsize():
-    # Scatter Plot 1: Retention Rate vs. Churn Rate with Source Names
     if "AvgRetentionRate" in df.columns and "AvgChurnRate" in df.columns:
         st.subheader("Retention vs Churn Rate")
-        fig1, ax1 = plt.subplots(figsize=(4, 3))  # Smaller figure size
+        fig1, ax1 = plt.subplots(figsize=(4, 3)) 
         ax1.scatter(df["AvgRetentionRate"], df["AvgChurnRate"], alpha=0.7, color='blue')
         annotate_points(
             ax1, 
@@ -64,10 +57,9 @@ def plot_with_smaller_figsize():
         ax1.grid(True)
         st.pyplot(fig1)
 
-    # Scatter Plot 2: Revenue Metrics with Source Names
     if "AvgRevenue" in df.columns and "AvgTransactions" in df.columns and "AvgRevPerUser" in df.columns:
         st.subheader("Revenue Metrics")
-        fig2, ax2 = plt.subplots(figsize=(4, 3))  # Smaller figure size
+        fig2, ax2 = plt.subplots(figsize=(4, 3))  
         ax2.scatter(df["AvgRevenue"], df["AvgTransactions"], alpha=0.7, label="Revenue vs Transactions", color='green')
         ax2.scatter(df["AvgRevenue"], df["AvgRevPerUser"], alpha=0.7, label="Revenue vs Avg Rev Per User", color='red')
         annotate_points(
@@ -83,10 +75,9 @@ def plot_with_smaller_figsize():
         ax2.grid(True)
         st.pyplot(fig2)
 
-    # Scatter Plot 3: Engagement Metrics with Source Names
     if "AvgEngagementRate" in df.columns and "AvgActiveUsers" in df.columns and "AvgNewUsers" in df.columns and "AvgReturningUsers" in df.columns:
         st.subheader("Engagement Metrics")
-        fig3, ax3 = plt.subplots(figsize=(4, 3))  # Smaller figure size
+        fig3, ax3 = plt.subplots(figsize=(4, 3))  
         ax3.scatter(df["AvgEngagementRate"], df["AvgActiveUsers"], alpha=0.7, label="Engagement Rate vs Active Users", color='orange')
         ax3.scatter(df["AvgEngagementRate"], df["AvgNewUsers"], alpha=0.7, label="Engagement Rate vs New Users", color='purple')
         ax3.scatter(df["AvgEngagementRate"], df["AvgReturningUsers"], alpha=0.7, label="Engagement Rate vs Returning Users", color='cyan')
@@ -103,5 +94,4 @@ def plot_with_smaller_figsize():
         ax3.grid(True)
         st.pyplot(fig3)
 
-# Call the function to plot graphs
 plot_with_smaller_figsize()
