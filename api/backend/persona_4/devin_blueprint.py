@@ -132,3 +132,21 @@ def get_dashboard():
     cursor.execute(query)
     dashboard_data = cursor.fetchall()
     return make_response(jsonify(dashboard_data), 200)
+
+# Route 13: Retrieve notifications (GET)
+@devin.route('/notifications', methods=['GET'])
+def get_notifications():
+    query = 'SELECT * FROM notifications as n JOIN notification_type as nt ON n.notification_type = nt.type_id'
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    dashboard_data = cursor.fetchall()
+    return make_response(jsonify(dashboard_data), 200)
+
+# Route 14: Dismiss alert (DELETE)
+@devin.route('/dismiss/<id>', methods=['DELETE'])
+def dismiss_alerts(id):
+    query = 'DELETE FROM notifications WHERE notification_id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Metric deleted successfully", 200)
