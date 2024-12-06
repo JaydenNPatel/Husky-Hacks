@@ -6,6 +6,16 @@ BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
 
 st.title("Metrics Dashboard")
 
+def fetch_teams():
+    response = requests.get(f"{BASE_URL}/devin/teams")
+    if response.status_code == 200:
+        return response.json()
+    else:
+        st.error("Failed to fetch teams from the server.")
+        return []
+
+teams = fetch_teams()
+
 def all_views_card(item):
     details = "".join([f"<p>{key.capitalize()}: {value}</p>" for key, value in item.items()])
     return f"""
@@ -55,7 +65,10 @@ if st.button("All Views"):
 
 
 if st.button("Create New View"):
-    st.switch_page("pages/30_Devin_Home.py")
+    project_name = st.text_input("View Name", placeholder="Enter your project name")
+    team_options = [team['team_name'] for team in teams]
+    selected_team = st.selectbox("Assign to Team", options=team_options)
+    project_description = st.text_area("Description", placeholder="Describe your project")
 
 if st.button("Edit Existing View"):
     st.switch_page("pages/30_Devin_Home.py")
