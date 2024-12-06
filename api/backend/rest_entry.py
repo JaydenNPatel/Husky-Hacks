@@ -2,6 +2,7 @@ from flask import Flask
 
 from backend.db_connection import db
 from backend.persona_4.devin_blueprint import devin
+from backend.persona_2.sally_blueprint import sally
 from backend.persona_3.saquon_blueprint import saquon
 from backend.persona_1.alex_blueprint import alex
 import os
@@ -26,6 +27,7 @@ def create_app():
 
     app.logger.info('current_app(): registering blueprints with Flask app object.')   
     app.register_blueprint(devin, url_prefix='/devin')
+    app.register_blueprint(sally)
     app.register_blueprint(saquon)
     app.register_blueprint(alex)
 
