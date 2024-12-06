@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import os
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
 
@@ -136,4 +138,4 @@ if st.session_state["create_view_active"]:
                     st.write(response.text)
 
 if st.button("Back To Menu"):
-    st.switch_page("pages/30_Devin_Home.py")
+    st.switch_page('pages/30_Devin_Home.py')
