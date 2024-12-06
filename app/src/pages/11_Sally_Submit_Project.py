@@ -65,7 +65,7 @@ if st.button("Submit Feedback Request"):
     else:
         # Data to send to the backend
         data = {
-            "project_id": selected_project_details["id"],
+            "project_id": selected_project_details["project_id"],
             "description": description,
             "feedback_areas": feedback_areas
         }

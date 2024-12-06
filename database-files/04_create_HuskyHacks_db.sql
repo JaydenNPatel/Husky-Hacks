@@ -52,6 +52,25 @@ CREATE TABLE progress (
     INDEX idx_project_id (project_id)
 );
 
+CREATE TABLE feedback_request (
+    request_id int AUTO_INCREMENT NOT NULL,
+    project_id int NOT NULL,
+    requester_id int NOT NULL,
+    feedback_area varchar(200) NOT NULL,
+    request_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL
+                      ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (request_id),
+    FOREIGN KEY (project_id) REFERENCES projects(project_id)
+                      ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (requester_id) REFERENCES users(user_id)
+                      ON UPDATE CASCADE ON DELETE CASCADE,
+    UNIQUE INDEX uq_idx_request_id (request_id),
+    INDEX idx_project_id (project_id),
+    INDEX idx_requester_id (requester_id)
+);
+
+
+
 CREATE TABLE feedback (
     feedback_id int AUTO_INCREMENT NOT NULL,
     project_id int NOT NULL,

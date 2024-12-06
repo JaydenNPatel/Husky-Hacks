@@ -69,6 +69,7 @@ def get_feedback(id):
     cursor.execute(query, (id,))
     feedback = cursor.fetchall()
     return make_response(jsonify(feedback), 200)
+    
 
 @sally.route('/projects', methods=['POST'])
 def create_project():
