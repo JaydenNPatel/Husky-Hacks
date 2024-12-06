@@ -39,13 +39,13 @@ def all_views_card(item):
     return f"""
     <div style="
         width: 400px;
-        background-color: white;
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 16px;
         margin: 8px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        color: black;
+        background-color: #333333;
+        color: white;
         text-align: center;
         display: inline-block;
         vertical-align: top;
@@ -66,6 +66,8 @@ if st.button("All Views"):
                 """
                 <div style="
                     display: flex;
+                    background-color: #333333;
+                    color: white;
                     flex-wrap: wrap;
                     gap: 16px;
                     justify-content: center;

@@ -23,12 +23,12 @@ if response.status_code == 200:
             st.markdown(
                 f"""
                 <div style="
-                    background-color: #f9f9f9;
+                    background-color: #333333;
+                    color: white;
                     border: 1px solid #ddd;
                     border-radius: 5px;
                     padding: 10px;
                     margin-bottom: 10px;
-                    color: black;
                 ">
                     <b>Timestamp:</b> {log['timestamp']}<br>
                     <b>User ID:</b> {log['user_id']}<br>

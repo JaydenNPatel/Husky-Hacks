@@ -45,13 +45,13 @@ if projects:
             f"""
             <div style="
                 width: 300px;
-                background-color: white;
+                background-color: #333333;
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 padding: 16px;
                 margin: 8px;
                 box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-                color: black;
+                color: white;
                 text-align: center;
                 display: inline-block;
                 vertical-align: top;

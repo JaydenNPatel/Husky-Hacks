@@ -2,6 +2,10 @@ import streamlit as st
 import requests
 import os
 import time
+from modules.nav import SideBarLinks
+
+# Sidebar navigation
+SideBarLinks(show_home=True)
 
 # Use BASE_URL from environment or default to http://web-api:4000
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
@@ -13,13 +17,13 @@ def project_card(project, idx):
     card_style = f"""
     <div style="
         width: 300px;
-        background-color: white;
+        background-color: #333333;
+        color: white;
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 16px;
         margin: 8px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        color: black;
         text-align: center;
         display: inline-block;
         vertical-align: top;
@@ -51,6 +55,8 @@ if st.button("View Projects"):
                 <div style="
                     display: flex;
                     flex-wrap: wrap;
+                    background-color: #333333;
+                    color: white;
                     gap: 16px;
                     justify-content: flex-start;
                 ">
