@@ -1,13 +1,58 @@
 import streamlit as st
 import requests
+import os
 from modules.nav import SideBarLinks
 SideBarLinks(show_home=True)
+
+# Use BASE_URL from environment or default to "http://web-api:4000"
+
+BASE_URL = os.getenv("BASE_URL", "http://web-api:4000")
+
+def fetch_projects():
+
+    response = requests.get(f"{BASE_URL}/projects")
+
+    if response.status_code == 200:
+
+        return response.json()
+
+    else:
+
+        st.error("Failed to fetch projects from the server.")
+
+        return []
+
+ 
+
+# Edit a Project
+
+st.subheader("Edit a Project")
 
 st.title("Submit Your Project for Feedback")
 st.write("Use this form to submit your project and specify areas where you need feedback.")
 
-# Input fields for project details
-project_name = st.text_input("Project Name", placeholder="Enter the project name")
+
+
+# Fetch all projects
+
+projects = fetch_projects()
+
+sally_projects = [project for project in projects if project['user_id'] == 2]
+
+ 
+
+if sally_projects:
+
+    # Allow user to select a project to edit
+
+    selected_project = st.selectbox(
+
+        "Project Name:",
+
+        options=[project['title'] for project in sally_projects]
+
+    )
+
 description = st.text_area("Description", placeholder="Describe your project and its purpose")
 feedback_areas = st.text_area("Feedback Areas", placeholder="Specify areas where you want feedback (e.g., code readability, functionality)")
 

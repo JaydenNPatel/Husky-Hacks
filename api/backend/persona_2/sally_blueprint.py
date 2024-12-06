@@ -69,3 +69,20 @@ def get_feedback(id):
     cursor.execute(query, (id,))
     feedback = cursor.fetchall()
     return make_response(jsonify(feedback), 200)
+
+@sally.route('/projects', methods=['POST'])
+def create_project():
+    project_data = request.json
+    query = '''
+        INSERT INTO projects (name, description, feedback_areas)
+        VALUES (%s, %s, %s)
+    '''
+    data = (
+        project_data['name'], 
+        project_data['description'], 
+        project_data['feedback_areas']
+    )
+    cursor = db.get_db().cursor()
+    cursor.execute(query, data)
+    db.get_db().commit()
+    return make_response("Project created successfully", 201)
