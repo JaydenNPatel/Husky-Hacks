@@ -18,7 +18,7 @@ CREATE TABLE users (
     date_created datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY (user_id),
     FOREIGN KEY (role) references roles(role_id)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (user_id),
     UNIQUE INDEX uq_idx_email (email),
     INDEX idx_role (role)
@@ -64,7 +64,7 @@ CREATE TABLE feedback (
     FOREIGN KEY (project_id) references projects(project_id)
                       ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (reviewer_id) references users(user_id)
-                      ON UPDATE CASCADE ON DELETE RESTRICT,
+                      ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (feedback_id),
     INDEX idx_project_id (project_id),
     INDEX idx_reviewer_id (reviewer_id)
@@ -78,7 +78,7 @@ CREATE TABLE reports (
     content varchar(200) NOT NULL,
     PRIMARY KEY (report_id),
     FOREIGN KEY (generated_by) references users(user_id)
-                   ON UPDATE CASCADE ON DELETE RESTRICT,
+                   ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (report_id),
     INDEX idx_generated_by (generated_by)
 );
@@ -99,7 +99,7 @@ CREATE TABLE alerts (
     created_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY (alert_id),
     FOREIGN KEY (user_id) references users(user_id)
-                    ON UPDATE CASCADE ON DELETE RESTRICT,
+                    ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (alert_type) references alert_type(type_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     UNIQUE INDEX uq_idx_id (alert_id),
@@ -115,9 +115,9 @@ CREATE TABLE permissions (
     assigned_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY (permission_id),
     FOREIGN KEY (user_id) references users(user_id)
-                         ON UPDATE CASCADE ON DELETE RESTRICT,
+                         ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (assigned_by) references users(user_id)
-                    ON UPDATE CASCADE ON DELETE RESTRICT,
+                    ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (permission_id),
     INDEX idx_user_id (user_id),
     INDEX idx_assigned_by (assigned_by)
@@ -132,7 +132,7 @@ CREATE TABLE system_logs (
                          ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (log_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
-                         ON UPDATE CASCADE ON DELETE RESTRICT,
+                         ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (log_id),
     INDEX idx_user_id (user_id)
 );
@@ -146,7 +146,7 @@ CREATE TABLE backups (
     error_log_id int NOT NULL,
     PRIMARY KEY (backup_id),
     FOREIGN KEY (error_log_id) references system_logs(log_id)
-                     ON UPDATE CASCADE ON DELETE RESTRICT,
+                     ON UPDATE CASCADE ON DELETE CASCADE,
     UNIQUE INDEX uq_idx_id (backup_id),
     INDEX idx_err_log_id (error_log_id)
 );
@@ -231,7 +231,7 @@ CREATE TABLE archived_data (
     archived_by int NOT NULL,
     PRIMARY KEY (archive_id),
     FOREIGN KEY (archived_by) references users(user_id)
-                           ON UPDATE CASCADE ON DELETE RESTRICT,
+                           ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (metric_id) references user_engagement_metrics(metric_id)
                                  ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (metric_id) references revenue_metrics(metric_id)

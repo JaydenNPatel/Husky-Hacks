@@ -87,6 +87,6 @@ if inactive_users:
 else:
     st.info("No inactive users found.")
 
-# Back button to go to the home page
-if st.button("Back to Home"):
-    st.switch_page("pages/ProjectHome.py")
+# Back button
+if st.button("Back to Saquon's Home"):
+    st.switch_page('pages/20_Saquon_Home.py')

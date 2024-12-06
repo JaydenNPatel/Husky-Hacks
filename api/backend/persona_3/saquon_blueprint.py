@@ -64,11 +64,15 @@ def update_user(id):
 # Route 4: Archive a user account (DELETE)
 @saquon.route('/users/<id>', methods=['DELETE'])
 def archive_user(id):
-    query = 'DELETE FROM users WHERE id = %s'
+    query = 'DELETE FROM users WHERE user_id = %s'
     cursor = db.get_db().cursor()
     cursor.execute(query, (id,))
     db.get_db().commit()
     return make_response("User archived successfully", 200)
+
+
+
+
 
 # Route 5: Add an automated alert (POST)
 @saquon.route('/alerts', methods=['POST'])
