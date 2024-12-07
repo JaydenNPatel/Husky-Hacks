@@ -37,22 +37,6 @@ def get_feedback_requests():
     feedback_requests = cursor.fetchall()
     return make_response(jsonify(feedback_requests), 200)
 
-@sally.route('/projects', methods=['POST'])
-def create_project():
-    project_data = request.json
-    query = '''
-        INSERT INTO projects (name, description, feedback_areas)
-        VALUES (%s, %s, %s)
-    '''
-    data = (
-        project_data['name'], 
-        project_data['description'], 
-        project_data['feedback_areas']
-    )
-    cursor = db.get_db().cursor()
-    cursor.execute(query, data)
-    db.get_db().commit()
-    return make_response("Project created successfully", 201)
 
 # Route 3: Retrieve all projects (GET)
 @sally.route('/projects', methods=['GET'])
