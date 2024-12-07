@@ -17,7 +17,7 @@ MYSQL_ROOT_PASSWORD=1234 <br>
 <br>
 <br>
 Build the Docker image in the terminal using "docker compose up -d"<br>
-After that finishes, type "localhost:8502" in your web browser, or click this URL http://localhost:8502/<br>
+After that finishes, type "localhost:8502" in your web browser, or type in this URL http://localhost:8502/<br>
 To stop services type "docker-compose down" in the terminal<br>
 </p>
 
