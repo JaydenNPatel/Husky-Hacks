@@ -7,6 +7,7 @@ To open and run the Husky-Hacks repository using Docker, first ensure Docker is 
 Clone the repository from GitHub using git clone https://github.com/Mmirza964/Husky-Hacks.<br>
 Create a file named '.env' in the api folder, and paste the following code:<br>
 <br>
+<br>
 SECRET_KEY=someCrazyS3cR3T!Key.!<br>
 DB_USER=root<br>
 DB_HOST=db<br>
