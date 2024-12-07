@@ -96,3 +96,16 @@ def get_all_projects():
     cursor.execute(query)
     projects = cursor.fetchall()
     return make_response(jsonify(projects), 200)
+
+# Route: Retrieve feedback for a specific project (GET)
+@sally.route('/feedback/project/<project_id>', methods=['GET'])
+def get_feedback_for_project(project_id):
+    query = '''
+        SELECT feedback_id, project_id, reviewer_id, feedback_text, rating, feedback_date
+        FROM feedback
+        WHERE project_id = %s
+    '''
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (project_id,))
+    feedback = cursor.fetchall()
+    return make_response(jsonify(feedback), 200)
