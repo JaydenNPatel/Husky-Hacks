@@ -68,7 +68,6 @@ def engagement_card(item, idx):
         padding: 16px;
         margin: 8px;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        color: black;
         text-align: center;
         display: inline-block;
         vertical-align: top;
