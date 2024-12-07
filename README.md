@@ -1,15 +1,15 @@
-# Set-up
+## Husky Hacks
+Made by: Noel Burra, Thiago Fasolo, Matthew Mirza, Jayden Patel, Rikin Rakesh
+
+## Set-up
 
 
 
-## Prerequisites
+## Summary
 
 Our application is a dynamic platform designed to help students and alumni develop practical skills and build confidence through real-world projects. Unlike traditional coursework or programming tutorials, our platform focuses on structure, personalized feedback, and engagement. Users can upload and share coding projects, participate in challenges, and receive feedback from peers and faculty to prepare for co-ops, internships, and technical interviews. The project uses Streamlit for the frontend interface and Flask for the backend server.
 
-## 
-
-
-<h2>Database</h2>
+## Database
 <p>The database-files folder contains an SQL file named 04_create_HuskyHacks_db.sql, which includes the SQL definitions for all the tables used in the Husky_Hacks project. The 05_HuskyHacks_data.sql file also contains mock values for testing purposes. Each table is designed with primary key(s) and foreign key(s) to ensure proper relational integrity. Below is the list of tables and their attributes:
 
 <ul>
@@ -39,7 +39,7 @@ Our application is a dynamic platform designed to help students and alumni devel
 </ul>
 
 
-<h2>Pages</h2>
+## Database
 <ul>
   <li><strong>ProjectHome.py</strong>: Acts as the main landing page or routing hub for all user roles and functionalities.</li>
   <li><strong>00_Alex_Home.py</strong>: Homepage for Alex, providing navigation to manage Alex-specific tasks like uploading, editing, or deleting projects.</li>
@@ -48,7 +48,7 @@ Our application is a dynamic platform designed to help students and alumni devel
   <li><strong>03_Alex_Delete_Projects.py</strong>: Provides functionality for Alex to delete projects from their account.</li>
   <li><strong>10_Sally_Home.py</strong>: Homepage for Sally, providing navigation to manage Sally-specific tasks like submitting, updating feedback, or deleting projects.</li>
   <li><strong>11_Sally_Submit_Project.py</strong>: Allows Sally to submit new projects with feedback requests.</li>
-  <li><strong>12_Sally_Update_Feedback.py</strong>: Enables Sally to update projects after receiving feedback.</li>
+  <li><strong>12_Sally_See_Feedback.py</strong>: Enables Sally to update projects after receiving feedback.</li>
   <li><strong>13_Sally_Delete_Project.py</strong>: Allows Sally to delete projects from her account.</li>
   <li><strong>20_Saquon_Home.py</strong>: Homepage for Saquon, providing navigation to manage Saquon-specific tasks like viewing logs, managing permissions, or deleting inactive users.</li>
   <li><strong>21_Saquon_View_Logs.py</strong>: Enables Saquon to view system logs and track activities.</li>
