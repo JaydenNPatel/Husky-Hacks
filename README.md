@@ -81,4 +81,4 @@ Our application is a dynamic platform designed to help students and alumni devel
 
 ## Video Link
 
-https://drive.google.com/file/d/1s-B9nGaoYVfzi7o3SEeMCb7PQmksDxUD/view?usp=sharing
+https://drive.google.com/file/d/14FyT0BjCyLx-w1XUWn0Uhp53kSRHDu_L/view?usp=sharing
