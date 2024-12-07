@@ -17,7 +17,7 @@ st.title("Manage Projects")
 st.write("View and delete your projects as needed.")
 
 # Fetch Alex's projects
-response = requests.get(f"{BASE_URL}/projects", params={"user_id": ALEX_USER_ID})  # Fetch projects by user_id
+response = requests.get(f"{BASE_URL}/alex/projects", params={"user_id": ALEX_USER_ID})  # Fetch projects by user_id
 if response.status_code == 200:
     projects = response.json()  # Save fetched projects
     st.session_state["projects"] = projects  # Store in session state for reuse
@@ -73,7 +73,7 @@ if projects:
             project_id = st.session_state[f"delete_id-{idx}"]
 
             # Perform DELETE request to backend
-            delete_response = requests.delete(f"{BASE_URL}/projects/{project_id}")
+            delete_response = requests.delete(f"{BASE_URL}/alex/projects/{project_id}")
 
             if delete_response.status_code == 200:
                 st.success(f"Deleted project: {project.get('title', 'Unnamed Project')}")

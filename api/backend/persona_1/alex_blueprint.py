@@ -31,7 +31,7 @@ def create_project():
     return make_response("Project created successfully", 201)
 
 # Route 2: Update project details (PUT)
-@alex.route('/projects/<id>', methods=['PUT'])
+@alex.route('/projects/<project_id>', methods=['PUT'])
 def update_project(project_id):
     project_data = request.json
     query = '''

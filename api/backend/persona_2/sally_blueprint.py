@@ -109,3 +109,12 @@ def get_feedback_for_project(project_id):
     cursor.execute(query, (project_id,))
     feedback = cursor.fetchall()
     return make_response(jsonify(feedback), 200)
+
+# Route 4: Archive a project (DELETE)
+@sally.route('/projects/<id>', methods=['DELETE'])
+def archive_project(id):
+    query = 'DELETE FROM projects WHERE project_id = %s'
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (id,))
+    db.get_db().commit()
+    return make_response("Project archived successfully", 200)

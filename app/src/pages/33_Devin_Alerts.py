@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import os
+from modules.nav import SideBarLinks
+SideBarLinks(show_home=True)
 
 BASE_URL = os.getenv("BASE_URL", "http://web-api:4000") 
 

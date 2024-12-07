@@ -10,7 +10,7 @@ st.write("### Choose an action to get started:")
 if st.button("Submit a Project for Feedback"):
     st.switch_page('pages/11_Sally_Submit_Project.py')  # Redirects to submit project page
 
-if st.button("Update Feedback Requests"):
+if st.button("See Project Feedback"):
     st.switch_page('pages/12_Sally_Update_Feedback.py')  # Redirects to update feedback page
 
 if st.button("Delete a Project"):

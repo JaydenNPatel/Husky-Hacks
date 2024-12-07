@@ -14,7 +14,7 @@ st.title("Alex's Project Management")
 
 # Function to fetch projects
 def fetch_projects():
-    response = requests.get(f"{BASE_URL}/projects")
+    response = requests.get(f"{BASE_URL}/alex/projects")
     if response.status_code == 200:
         return response.json()
     else:
@@ -46,7 +46,7 @@ if alex_projects:
                     "tags": new_tags
                 }
                 st.write("Sending Updated Data:", updated_data)
-                response = requests.put(f"{BASE_URL}/projects/{project_details['project_id']}", json=updated_data)
+                response = requests.put(f"{BASE_URL}/alex/projects/{project_details['project_id']}", json=updated_data)
                 if response.status_code == 200:
                     st.success(f"Project '{new_name}' updated successfully!")
                 else:
