@@ -11,7 +11,7 @@ if st.button("Submit a Project for Feedback"):
     st.switch_page('pages/11_Sally_Submit_Project.py')  # Redirects to submit project page
 
 if st.button("See Project Feedback"):
-    st.switch_page('pages/12_Sally_Update_Feedback.py')  # Redirects to update feedback page
+    st.switch_page('pages/12_Sally_See_Feedback.py')  # Redirects to update feedback page
 
 if st.button("Delete a Project"):
     st.switch_page('pages/13_Sally_Delete_Project.py')  # Redirects to delete project page
