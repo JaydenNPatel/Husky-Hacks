@@ -41,7 +41,7 @@ def project_card(project, idx):
 
 # View Projects
 if st.button("View Projects"):
-    response = requests.get(f"{BASE_URL}/projects")
+    response = requests.get(f"{BASE_URL}/alex/projects")
 
     if response.status_code == 200:
         projects = response.json()  # Assuming backend returns all projects
@@ -74,7 +74,7 @@ if st.button("View Projects"):
                 if st.button(f"Delete {project['title']}", key=f"delete-{idx}"):
                     project_id = st.session_state[f"delete_id-{idx}"]
 
-                    delete_response = requests.delete(f"{BASE_URL}/projects/{project_id}")
+                    delete_response = requests.delete(f"{BASE_URL}/alex/projects/{project_id}")
                     time.sleep(2)
 
                     if delete_response.status_code == 200:
@@ -122,7 +122,7 @@ if st.button("Upload Project"):
 
         }
 
-        response = requests.post(f"{BASE_URL}/projects", json=project_data)
+        response = requests.post(f"{BASE_URL}/alex/projects", json=project_data)
 
  
 

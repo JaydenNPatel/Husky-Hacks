@@ -71,5 +71,4 @@ else:
 
 # Navigation Button
 if st.button("Back to Sally's Home"):
-    st.write("Redirecting...")
-    st.experimental_set_query_params(page="00_Sally_Home")
+    st.switch_page('pages/10_Sally_Home.py')

@@ -32,7 +32,7 @@ def create_project():
 
 # Route 2: Update project details (PUT)
 @alex.route('/projects/<id>', methods=['PUT'])
-def update_project(id):
+def update_project(project_id):
     project_data = request.json
     query = '''
         UPDATE projects
@@ -43,7 +43,7 @@ def update_project(id):
         project_data['title'], 
         project_data['description'], 
         project_data['tags'], 
-        id
+        project_id
     )
     cursor = db.get_db().cursor()
     cursor.execute(query, data)

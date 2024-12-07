@@ -29,6 +29,6 @@ def create_app():
     app.register_blueprint(devin, url_prefix='/devin')
     app.register_blueprint(sally)
     app.register_blueprint(saquon)
-    app.register_blueprint(alex)
+    app.register_blueprint(alex, url_prefix='/alex')
 
     return app
