@@ -7,7 +7,6 @@ To open and run the Husky-Hacks repository using Docker, first ensure Docker is 
 Clone the repository from GitHub using git clone https://github.com/Mmirza964/Husky-Hacks.<br>
 Create a file named '.env' in the api folder, and paste the following code:<br>
 <br>
-<br>
 SECRET_KEY=someCrazyS3cR3T!Key.!<br>
 DB_USER=root<br>
 DB_HOST=db<br>
@@ -20,6 +19,7 @@ Build the Docker image in the terminal using "docker compose up -d"<br>
 After that finishes, type "localhost:8502" in your web browser, or click this URL http://localhost:8502/<br>
 To stop services type "docker-compose down" in the terminal<br>
 </p>
+
 ## Summary
 
 Our application is a dynamic platform designed to help students and alumni develop practical skills and build confidence through real-world projects. Unlike traditional coursework or programming tutorials, our platform focuses on structure, personalized feedback, and engagement. Users can upload and share coding projects, participate in challenges, and receive feedback from peers and faculty to prepare for co-ops, internships, and technical interviews. The project uses Streamlit for the frontend interface and Flask for the backend server.
@@ -76,3 +76,8 @@ Our application is a dynamic platform designed to help students and alumni devel
   <li><strong>33_Devin_Alerts.py</strong>: Allows Devin to manage and view automated alerts triggered by system metrics.</li>
   <li><strong>34_Devin_Dashboard.py</strong>: Provides a real-time dashboard for Devin to monitor various metrics and system activities.</li>
 </ul>
+
+
+## Video Link
+
+https://drive.google.com/file/d/1s-B9nGaoYVfzi7o3SEeMCb7PQmksDxUD/view?usp=sharing
