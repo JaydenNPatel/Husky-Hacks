@@ -14,12 +14,12 @@ DB_HOST=db<br>
 DB_PORT=3306<br>
 DB_NAME= Husky_Hacks<br>
 MYSQL_ROOT_PASSWORD=1234 <br>
+<br>
+<br>
+Build the Docker image in the terminal using "docker compose up -d"<br>
+After that finishes, type "localhost:8502" in your web browser, or click this URL http://localhost:8502/<br>
+To stop services type "docker-compose down" in the terminal<br>
 </p>
-
-Build the Docker image in the terminal using "docker compose up -d"
-After that finishes, type "localhost:8502" in your web browser, or click this URL http://localhost:8502/
-To stop services type "docker-compose down" in the terminal
-
 ## Summary
 
 Our application is a dynamic platform designed to help students and alumni develop practical skills and build confidence through real-world projects. Unlike traditional coursework or programming tutorials, our platform focuses on structure, personalized feedback, and engagement. Users can upload and share coding projects, participate in challenges, and receive feedback from peers and faculty to prepare for co-ops, internships, and technical interviews. The project uses Streamlit for the frontend interface and Flask for the backend server.
