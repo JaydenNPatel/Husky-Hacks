@@ -2,19 +2,19 @@
 Made by: Noel Burra, Thiago Fasolo, Matthew Mirza, Jayden Patel, Rikin Rakesh
 
 ## Set-up
-
-To open and run the Husky-Hacks repository using Docker, first ensure Docker is installed and running on your system. 
-Clone the repository from GitHub using git clone https://github.com/Mmirza964/Husky-Hacks.
-Create a file named '.env' in the api folder, and paste the following code:
-
-
-SECRET_KEY=someCrazyS3cR3T!Key.!
-DB_USER=root
-DB_HOST=db
-DB_PORT=3306
-DB_NAME= Husky_Hacks
-MYSQL_ROOT_PASSWORD=1234 
-
+<p>
+To open and run the Husky-Hacks repository using Docker, first ensure Docker is installed and running on your system. <br>
+Clone the repository from GitHub using git clone https://github.com/Mmirza964/Husky-Hacks.<br>
+Create a file named '.env' in the api folder, and paste the following code:<br>
+<br>
+<br>
+SECRET_KEY=someCrazyS3cR3T!Key.!<br>
+DB_USER=root<br>
+DB_HOST=db<br>
+DB_PORT=3306<br>
+DB_NAME= Husky_Hacks<br>
+MYSQL_ROOT_PASSWORD=1234 <br>
+</p>
 
 Build the Docker image in the terminal using "docker compose up -d"
 After that finishes, type "localhost:8502" in your web browser, or click this URL http://localhost:8502/
